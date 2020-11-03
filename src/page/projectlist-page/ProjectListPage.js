@@ -9,7 +9,7 @@ import ProjectPage from "../project-page/ProjectPage";
 
 export default function ProjectListPage() {
   const projects = useFetch(
-    `http://localhost:8888/langara_web/wp-json/wp/v2/projects?=100`
+    `http://localhost:8888/langara_web/wp-json/wp/v2/projects?per_page=100`
   );
 
   return (

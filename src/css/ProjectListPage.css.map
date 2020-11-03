@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,aADW,CACX,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "../page/projectlist-page/ProjectListPage.scss"
+    ],
+    "names": [],
+    "file": "ProjectListPage.css"
+}

@@ -6,7 +6,7 @@ export default function FooterNav() {
     "http://localhost:8888/langara_web/wp-json/menu/footer"
   );
   return footerNav !== null ? (
-    <div className="primary-menu">
+    <div className="footer-menu">
       <ul>
         {footerNav.map((item) => (
           <li>

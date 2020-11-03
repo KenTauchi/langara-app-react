@@ -43,6 +43,10 @@ export default function HeaderNav() {
           </li>
           {headerNav.map((item, index) =>
             item.title === "The Program" ? (
+              // <li>
+              //   <a>{item.title}</a>
+              // </li>
+
               <Accordion
                 key={index}
                 expanded={expanded === `panel${item.Id}`}
@@ -58,20 +62,21 @@ export default function HeaderNav() {
                 {headerNav.map((navItem) =>
                   navItem.menu_item_parent !== "0" ? (
                     <AccordionDetails>
-                      <Typography>
-                        <a href={navItem.url}>{navItem.title}</a>
-                      </Typography>
+                      <Typography>{navItem.title}</Typography>
                     </AccordionDetails>
                   ) : null
                 )}
               </Accordion>
-            ) : item.menu_item_parent == "0" ? (
-              <li className="menu-item">
+            ) : (
+              <li>
                 <a href={item.url}>{item.title}</a>
               </li>
-            ) : null
+            )
           )}
         </ul>
+        <div className="link-to-wmdd">
+          <a src="#"> WMDD</a>
+        </div>
       </nav>
     </div>
   ) : (

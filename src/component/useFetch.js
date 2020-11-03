@@ -8,7 +8,8 @@ export default function useFetch(url) {
       .then((posts) => {
         setData(posts);
         console.log(posts);
-      });
+      })
+      .catch(() => null);
   }, [url]);
   return data;
 }

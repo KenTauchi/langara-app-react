@@ -4,16 +4,20 @@ import useFetch from "../useFetch";
 
 export default function StudentWork() {
   const studentWork = useFetch(
-    "http://localhost:8888/langara_web/wp-json/wp/v2/projects"
+    "http://localhost:8888/langara_web/wp-json/wp/v2/projects?per_page=100"
   );
-
-  console.log("data", studentWork);
 
   return studentWork != null ? (
     <div>
-      {studentWork.map((d) => (
-        <h2>{d.title.rendered}</h2>
-      ))}
+      {studentWork.map((d) =>
+        d.slug === "langara-plus" ||
+        d.slug === "nearest" ||
+        d.slug === "avsar" ? (
+          <div>
+            <img src={d.acf.app_picture} />
+          </div>
+        ) : null
+      )}
       <h1></h1>
     </div>
   ) : (

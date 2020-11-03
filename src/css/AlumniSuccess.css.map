@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,gBADc,CACd,aAAa,CAAC;EACZ,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "../component/alumni-success/AlumniSuccess.scss"
+    ],
+    "names": [],
+    "file": "AlumniSuccess.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../page/instructors/instructor/Instructor.scss"
+    ],
+    "names": [],
+    "file": "Instructor.css"
+}

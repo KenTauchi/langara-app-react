@@ -1,0 +1,168 @@
+.primary-menu {
+  text-align: right;
+  background-color: #ffffff;
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #dedede;
+}
+
+.primary-menu div {
+  padding: 0;
+  margin: 0;
+}
+
+.primary-menu .menu-bars {
+  background: none;
+  position: relative;
+  font-size: 2rem;
+  height: 100%;
+  width: 100%;
+}
+
+.primary-menu .menu-bars svg {
+  position: absolute;
+  top: 36px;
+  right: 30px;
+  width: 36px;
+  height: 31px;
+  color: #f15a22;
+}
+
+.primary-menu .nav-menu {
+  background-color: white;
+  width: 391px;
+  height: 680px;
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  top: 0;
+  right: -130%;
+  transition: 850ms;
+}
+
+.primary-menu .nav-menu.active {
+  right: 0;
+  transition: 350ms;
+}
+
+.primary-menu .nav-text {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 8px 16px;
+  height: 60px;
+}
+
+.primary-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.primary-menu ul li {
+  text-align: left;
+  border-bottom: 1px solid #dedede;
+}
+
+.primary-menu ul li:first-child {
+  border-bottom: 1px solid #dedede;
+  height: 100px;
+}
+
+.primary-menu ul li:first-child a {
+  position: absolute;
+  top: 36px;
+  right: 32px;
+}
+
+.primary-menu ul li:last-child {
+  border: none;
+}
+
+.primary-menu ul li svg {
+  width: 32px;
+  height: 32px;
+  color: #f15a22;
+}
+
+.primary-menu ul li.menu-item {
+  padding: 17px 0 17px 53px;
+}
+
+.primary-menu ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #707070;
+}
+
+.primary-menu ul li a:hover {
+  color: #f15a22;
+}
+
+.primary-menu .link-to-wmdd {
+  text-align: center;
+}
+
+.primary-menu .MuiAccordion-root {
+  border-bottom: 1px solid #dedede;
+}
+
+.primary-menu .MuiAccordion-root:before {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.primary-menu .MuiAccordionSummary-content p {
+  color: #707070;
+  font-size: 2rem;
+  padding: 33.5px 0 18.5px 53px;
+}
+
+.primary-menu .MuiAccordionSummary-expandIcon {
+  margin: 33.5px 42px 18.5px 0;
+}
+
+.primary-menu .MuiPaper-elevation1 {
+  box-shadow: none;
+}
+
+.primary-menu .MuiCollapse-container a {
+  text-decoration: none;
+  color: #8b8b8b;
+  font-size: 25px;
+}
+
+.primary-menu .MuiCollapse-container a:hover {
+  color: #f15a22;
+}
+
+.primary-menu .MuiAccordionDetails-root {
+  padding-bottom: 28px;
+}
+
+.primary-menu .MuiAccordionDetails-root p {
+  padding-left: 53px;
+}
+
+.primary-menu .MuiAccordionDetails-root:last-child {
+  padding-bottom: 44.5px;
+}
+
+.primary-menu .MuiSvgIcon-root {
+  transform: rotate(-90deg);
+  font-size: 2.5rem;
+}
+
+.primary-menu .MuiAccordionSummary-root[aria-expanded="true"] p,
+.primary-menu .MuiAccordionSummary-root[aria-expanded="true"] svg {
+  color: #f15a22;
+}
+
+.primary-menu .Mui-expanded .MuiSvgIcon-root {
+  transform: rotate(-180deg);
+}
+
+.primary-menu .Mui-expanded.MuiAccordion-root, .primary-menu .Mui-expanded.MuiAccordionSummary-content {
+  margin: 0;
+}
+/*# sourceMappingURL=HeaderNav.css.map */
