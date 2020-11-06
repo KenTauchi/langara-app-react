@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import StudentWork from "../../component/student-work/StudentWork";
 import AlumniSuccess from "../../component/alumni-success/AlumniSuccess";
 import HeaderNav from "../../component/navigation/header-nav/HeaderNav";
@@ -19,7 +20,7 @@ export default function TopPage() {
         <div className="about-us-main-page">
           <div class="aboutus-main-top">
             <div class="aboutus-top-image">
-              <img src={cf.acf.top_image} />
+              <img src={cf.acf.top_image} alt="about-us-top" />
             </div>
             <h1>{cf.acf.top_title}</h1>
             <p>{cf.acf.top_title_description}</p>
@@ -52,14 +53,21 @@ export default function TopPage() {
               <li>{cf.acf.discovery_list_3}</li>
             </ul>
             <div>
-              <img src="" />
+              <img src="" alt="discover-pic" />
             </div>
           </div>
 
           <div class="hear-alumni">
             <h1>{cf.acf.alumni_title}</h1>
             <p>{cf.acf.alumni_description}</p>
-            <a href="">Learn More</a>
+
+            <Link
+              to={{
+                pathname: "/alumnis/",
+              }}
+            >
+              Learn More
+            </Link>
             <div>
               <img src="" alt="Discover Your Perks" />
             </div>

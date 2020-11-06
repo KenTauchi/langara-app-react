@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import useFetch from "../../useFetch";
 import { Link } from "react-router-dom";
 
-import MenuIcon from "@material-ui/icons/Menu";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 
@@ -31,6 +30,9 @@ export default function HeaderNav() {
 
   return headerNav !== null ? (
     <div className="primary-menu">
+      <div>
+        <img src="/src/assets/logo.svg" alt="logo" />
+      </div>
       <Link to="#" className="menu-bars">
         <FaIcons.FaBars onClick={showSidebar} />
       </Link>
@@ -65,7 +67,7 @@ export default function HeaderNav() {
                   ) : null
                 )}
               </Accordion>
-            ) : item.menu_item_parent == "0" ? (
+            ) : item.menu_item_parent === "0" ? (
               <li className="menu-item">
                 <a href={item.url}>{item.title}</a>
               </li>

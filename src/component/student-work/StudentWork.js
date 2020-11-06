@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import useFetch from "../useFetch";
+import "./_StudentWork.scss";
 
 export default function StudentWork() {
   const studentWork = useFetch(
@@ -13,7 +14,7 @@ export default function StudentWork() {
         d.slug === "langara-plus" ||
         d.slug === "nearest" ||
         d.slug === "avsar" ? (
-          <div>
+          <div className="student-work-image">
             <img src={d.acf.app_picture} />
           </div>
         ) : null

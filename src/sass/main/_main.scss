@@ -12,3 +12,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+p {
+  @extend %fontReg !optional;
+  font-size: 13px;
+  color: #707070;
+  letter-spacing: 0.39px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+iframe {
+  border: none;
+}

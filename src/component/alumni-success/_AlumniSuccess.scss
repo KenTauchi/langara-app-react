@@ -1,5 +1,56 @@
 .alumnis-success {
+  margin: 94px 33px 0 33px;
+  text-align: center;
+
+  h1 {
+    font-size: 23px;
+    text-align: center;
+    color: #f15a22;
+    @extend %fontS !optional;
+    margin-bottom: 30px;
+  }
+  p {
+    text-align: left;
+    margin-bottom: 30px;
+  }
   .swiper-slide {
-    width: 100%;
+    width: 367px;
+    height: 850px;
+    text-align: left;
+
+    a {
+      font-size: 14px;
+      letter-spacing: 0.14px;
+      color: #707070;
+      font-family: Arial;
+    }
+  }
+
+  .slide {
+    border: 1px solid #eb5f25;
+    border-radius: 9px;
+    padding: 28px 26px 91px 26px;
+    margin: 0 0.5rem;
+    box-shadow: 6px 6px #eb5f25;
+    // width: 367px;
+  }
+
+  .alumni-name {
+    font-size: 28px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #f15a22;
+    margin: 26px auto 0 0;
+    padding: 0;
+    height: 63px;
+  }
+  .stream,
+  .year {
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #707070;
+    margin: 0;
+    padding: 0;
   }
 }

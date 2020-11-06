@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
 import "swiper/swiper-bundle.css";
 
@@ -29,7 +30,6 @@ export default function AlumniSuccess() {
       <Swiper
         id="main"
         tag="ul"
-        pagination
         autoplay
         pagination={{ clickable: true }}
         slidesPerView={1}
@@ -38,12 +38,23 @@ export default function AlumniSuccess() {
         {alumnis.map((alumni, index) => {
           return (
             <SwiperSlide tag="li" key={index}>
-              <div>
-                <img src={alumni.acf.profile_image} />
+              <div class="slide">
+                <div>
+                  <img src={alumni.acf.profile_image} alt="alumni-prof-pic" />
+                </div>
+                <p className="alumni-name">{alumni.acf.alumni_name}</p>
+                <p className="stream">Stream chosen - {alumni.acf.stream}</p>
+                <p className="year">{alumni.acf.graduation_year}</p>
+                <p className="alumni-comment">{alumni.acf.comment}</p>
+                <Link
+                  to={{
+                    pathname: "/alumnis",
+                  }}
+                  className="link-to-alumnis"
+                >
+                  See More
+                </Link>
               </div>
-              <p>{alumni.acf.alumni_name}</p>
-              <p>Stream chosen = {alumni.acf.stream}</p>
-              <p>{alumni.acf.comment}</p>
             </SwiperSlide>
           );
         })}

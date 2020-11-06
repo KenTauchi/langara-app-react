@@ -3,4 +3,114 @@
     width: 100%;
     height: auto;
   }
+
+  .intro {
+    position: relative;
+    margin-bottom: 295px;
+
+    img {
+      width: 428px;
+      height: 422px;
+    }
+
+    .intro-desc {
+      position: absolute;
+      top: 178px;
+      left: 43px;
+      width: 329px;
+      height: 388px;
+      background-color: #ffffff;
+      border: 0.5px solid var(--unnamed-color-707070);
+      border: 0.5px solid #707070;
+      border-radius: 10px;
+      text-align: center;
+
+      h1 {
+        font-size: 23px;
+        color: #f15a22;
+        @extend %fontS !optional;
+        margin: 26px 36px 18px 36px;
+      }
+      p {
+        margin: 0 24px 49px 24px;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 538px;
+      left: 92px;
+      width: 231px;
+      height: 83px;
+      background-color: #f15a22;
+      border-radius: 5px;
+      padding: 0;
+      border: none;
+
+      a {
+        width: 192px;
+        height: 56px;
+        display: block;
+        padding: 1rem 20px 11px 20px;
+
+        @extend %fontS !optional;
+        font-size: 22px;
+        text-decoration: none;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .intro-movie {
+    margin: 0 36px;
+    iframe {
+      width: 341px;
+      height: 213px;
+    }
+  }
+
+  .studentwork-intro {
+    margin: 94px 33px 0 33px;
+    text-align: center;
+
+    h1 {
+      font-size: 23px;
+      text-align: center;
+      color: #f15a22;
+      @extend %fontS !optional;
+      margin-bottom: 30px;
+    }
+    p {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    a {
+      font-size: 14px;
+      letter-spacing: 0.14px;
+      color: #707070;
+      font-family: Arial;
+    }
+  }
+
+  .top-apply {
+    position: relative;
+    margin-bottom: 5rem;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: 2;
+    height: 464px;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(241, 90, 34, 0.89);
+    }
+  }
 }

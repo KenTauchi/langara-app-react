@@ -22,7 +22,7 @@ export default function ProjectPage() {
             <h1>{p.title.rendered}</h1>
             <p>{p.status}</p>
             <div className="">
-              <img src={p.acf.app_picture} />
+              <img src={p.acf.app_picture} alt="app-picture" />
             </div>
             <p>{p.acf.app_description}</p>
 

@@ -82,8 +82,12 @@
   src: local("Adelle Heavy Italic"), url("/sass/fonts/fontfiles/Adelle_HeavyItalic.woff") format("woff");
 }
 
-body, .primary-menu .MuiAccordionDetails-root p a {
+body, p, .primary-menu .MuiAccordionDetails-root p a {
   font-family: "Adelle Regular";
+}
+
+.front-page .intro .intro-desc h1, .front-page .intro button a, .front-page .studentwork-intro h1 {
+  font-family: "Adelle SemiBold";
 }
 
 .primary-menu .MuiAccordion-root p {
@@ -98,6 +102,18 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+p {
+  font-size: 13px;
+  color: #707070;
+  letter-spacing: 0.39px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+iframe {
+  border: none;
 }
 
 .primary-menu {
@@ -142,6 +158,7 @@ code {
   top: 0;
   right: -130%;
   transition: 850ms;
+  z-index: 5;
 }
 
 .primary-menu .nav-menu.active {
@@ -266,5 +283,117 @@ code {
 
 .primary-menu .Mui-expanded.MuiAccordion-root, .primary-menu .Mui-expanded.MuiAccordionSummary-content {
   margin: 0;
+}
+
+.front-page img {
+  width: 100%;
+  height: auto;
+}
+
+.front-page .intro {
+  position: relative;
+  margin-bottom: 295px;
+}
+
+.front-page .intro img {
+  width: 428px;
+  height: 422px;
+}
+
+.front-page .intro .intro-desc {
+  position: absolute;
+  top: 178px;
+  left: 43px;
+  width: 329px;
+  height: 388px;
+  background-color: #ffffff;
+  border: 0.5px solid var(--unnamed-color-707070);
+  border: 0.5px solid #707070;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.front-page .intro .intro-desc h1 {
+  font-size: 23px;
+  color: #f15a22;
+  margin: 26px 36px 18px 36px;
+}
+
+.front-page .intro .intro-desc p {
+  margin: 0 24px 49px 24px;
+}
+
+.front-page .intro button {
+  position: absolute;
+  top: 538px;
+  left: 92px;
+  width: 231px;
+  height: 83px;
+  background-color: #f15a22;
+  border-radius: 5px;
+  padding: 0;
+  border: none;
+}
+
+.front-page .intro button a {
+  width: 192px;
+  height: 56px;
+  display: block;
+  padding: 1rem 20px 11px 20px;
+  font-size: 22px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.front-page .intro-movie {
+  margin: 0 36px;
+}
+
+.front-page .intro-movie iframe {
+  width: 341px;
+  height: 213px;
+}
+
+.front-page .studentwork-intro {
+  margin: 94px 33px 0 33px;
+  text-align: center;
+}
+
+.front-page .studentwork-intro h1 {
+  font-size: 23px;
+  text-align: center;
+  color: #f15a22;
+  margin-bottom: 30px;
+}
+
+.front-page .studentwork-intro p {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.front-page .studentwork-intro a {
+  font-size: 14px;
+  letter-spacing: 0.14px;
+  color: #707070;
+  font-family: Arial;
+}
+
+.front-page .top-apply {
+  position: relative;
+  margin-bottom: 5rem;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: 2;
+  height: 464px;
+}
+
+.front-page .top-apply .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(241, 90, 34, 0.89);
 }
 /*# sourceMappingURL=style.css.map */
