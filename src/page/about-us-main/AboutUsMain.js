@@ -5,7 +5,7 @@ import HeaderNav from "../../component/navigation/header-nav/HeaderNav";
 import FooterNav from "../../component/navigation/footer-nav/FooterNav";
 import useFetch from "../../component/useFetch";
 
-import "./AboutUsMain.scss";
+import "./_AboutUsMain.scss";
 
 export default function TopPage() {
   const cf = useFetch(

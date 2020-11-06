@@ -1,7 +1,7 @@
 import React from "react";
 import useFetch from "../../../component/useFetch";
 
-import "./Instructor.scss";
+import "./_Instructor.scss";
 
 export default function Instructors() {
   const instructors = useFetch(
@@ -14,15 +14,17 @@ export default function Instructors() {
     "http://localhost:8888/langara_web/wp-json/wp/v2/instructor?slug=jesica-ortega-nava"
   );
 
-  const orderIns = instructors.sort((a, b) => {
-    if (a.slug > b.slug) {
-      return 1;
-    }
-    if (b.slug > a.slug) {
-      return -1;
-    }
-    return 0;
-  });
+  const orderIns = !instructors
+    ? null
+    : instructors.sort((a, b) => {
+        if (a.slug > b.slug) {
+          return 1;
+        }
+        if (b.slug > a.slug) {
+          return -1;
+        }
+        return 0;
+      });
 
   return orderIns !== null && jasonInfo !== null && jesicaInfo !== null ? (
     <div>

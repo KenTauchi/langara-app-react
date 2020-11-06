@@ -5,7 +5,7 @@ import "swiper/swiper-bundle.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Autoplay } from "swiper";
 
-import "./AlumniSuccess.scss";
+import "./_AlumniSuccess.scss";
 
 SwiperCore.use([Pagination, Autoplay]);
 
@@ -33,7 +33,7 @@ export default function AlumniSuccess() {
         autoplay
         pagination={{ clickable: true }}
         slidesPerView={1}
-        paginationStyle={{ bottom: 0 }}
+        paginationstyle={{ bottom: 0 }}
       >
         {alumnis.map((alumni, index) => {
           return (

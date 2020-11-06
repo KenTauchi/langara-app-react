@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import HeaderNav from "../../component/navigation/header-nav/HeaderNav";
 import FooterNav from "../../component/navigation/footer-nav/FooterNav";
 import useFetch from "../../component/useFetch";
-import "./ProjectListPage.scss";
+import "./_ProjectListPage.scss";
 import ProjectPage from "../project-page/ProjectPage";
 
 export default function ProjectListPage() {

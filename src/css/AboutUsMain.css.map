@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACE,mBADiB,CACjB,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACb",
-    "sources": [
-        "../page/about-us-main/AboutUsMain.scss"
-    ],
-    "names": [],
-    "file": "AboutUsMain.css"
-}

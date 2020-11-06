@@ -104,7 +104,10 @@
   }
 
   .MuiAccordion-root {
-    // border-top: 1px solid #dedede;
+    p {
+      @extend %fontB !optional;
+    }
+
     border-bottom: 1px solid #dedede;
     &:before {
       background-color: rgba(0, 0, 0, 0);
@@ -144,6 +147,9 @@
     padding-bottom: 28px;
     p {
       padding-left: 53px;
+      a {
+        @extend %fontReg !optional;
+      }
     }
 
     &:last-child {

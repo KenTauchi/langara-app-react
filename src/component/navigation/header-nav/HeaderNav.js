@@ -12,7 +12,7 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-import "./HeaderNav.scss";
+import "./_HeaderNav.scss";
 
 export default function HeaderNav() {
   const headerNav = useFetch(

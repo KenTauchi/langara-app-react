@@ -5,7 +5,7 @@ import HeaderNav from "../../component/navigation/header-nav/HeaderNav";
 import FooterNav from "../../component/navigation/footer-nav/FooterNav";
 import useFetch from "../../component/useFetch";
 
-import "./ProjectPage.scss";
+import "./_ProjectPage.scss";
 
 export default function ProjectPage() {
   let params = useParams();
