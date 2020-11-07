@@ -15,7 +15,6 @@ export default function ProjectPage() {
 
   return (
     <div>
-      <HeaderNav />
       {project !== null ? (
         project.map((p) => (
           <div className="project-page">
@@ -53,7 +52,6 @@ export default function ProjectPage() {
           <h1>Loading...</h1>
         </div>
       )}
-      <FooterNav />
     </div>
   );
 }

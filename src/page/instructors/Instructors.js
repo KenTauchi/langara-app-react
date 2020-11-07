@@ -17,7 +17,6 @@ export default function Instructors() {
 
   return (
     <div>
-      <HeaderNav />
       {cf !== null ? (
         <div className="instructors-page">
           <div class="instructor-top">
@@ -35,8 +34,6 @@ export default function Instructors() {
           <h1>Loading...</h1>
         </div>
       )}
-
-      <FooterNav />
     </div>
   );
 }

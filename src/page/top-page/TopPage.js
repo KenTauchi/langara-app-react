@@ -6,6 +6,7 @@ import HeaderNav from "../../component/navigation/header-nav/HeaderNav";
 import FooterNav from "../../component/navigation/footer-nav/FooterNav";
 
 import useFetch from "../../component/useFetch";
+import background from "../../assets/hp_bg.png";
 
 import "./_TopPage.scss";
 
@@ -20,8 +21,6 @@ export default function TopPage() {
 
   return (
     <div>
-      <HeaderNav />
-
       {cf !== null ? (
         <div className="front-page">
           <div className="intro">
@@ -38,7 +37,7 @@ export default function TopPage() {
             </button>
           </div>
 
-          <img src="../../assets/hp_bg.png" alt="hp-bg" />
+          <img src={background} alt="hp-bg" />
           <div className="intro-movie">
             <iframe src={cf.acf.intro_movie}></iframe>
           </div>
@@ -75,8 +74,6 @@ export default function TopPage() {
           <h1>Loading...</h1>
         </div>
       )}
-
-      <FooterNav />
     </div>
   );
 }

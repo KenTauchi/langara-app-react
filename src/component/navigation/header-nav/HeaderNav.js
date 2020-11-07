@@ -11,6 +11,8 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
+import Logo from "../../../assets/logo.svg";
+
 import "./_HeaderNav.scss";
 
 export default function HeaderNav() {
@@ -31,7 +33,7 @@ export default function HeaderNav() {
   return headerNav !== null ? (
     <div className="primary-menu">
       <div>
-        <img src="/src/assets/logo.svg" alt="logo" />
+        <img src={Logo} alt="logo" />
       </div>
       <Link to="#" className="menu-bars">
         <FaIcons.FaBars onClick={showSidebar} />

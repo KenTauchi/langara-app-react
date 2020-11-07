@@ -15,7 +15,6 @@ export default function TopPage() {
 
   return (
     <div>
-      <HeaderNav />
       {cf !== null ? (
         <div className="about-us-main-page">
           <div class="aboutus-main-top">
@@ -93,7 +92,6 @@ export default function TopPage() {
           <h1>Loading...</h1>
         </div>
       )}
-      <FooterNav />
     </div>
   );
 }

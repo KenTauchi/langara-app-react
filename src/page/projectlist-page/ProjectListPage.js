@@ -14,7 +14,6 @@ export default function ProjectListPage() {
 
   return (
     <div>
-      <HeaderNav />
       {projects !== null ? (
         <div className="project-list">
           {projects.map((project) => (
@@ -34,7 +33,6 @@ export default function ProjectListPage() {
           <h1>Loading...</h1>
         </div>
       )}
-      <FooterNav />
     </div>
   );
 }
