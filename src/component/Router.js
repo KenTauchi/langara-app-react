@@ -17,8 +17,8 @@ export default function Router() {
       <Route exact path="/instructors/" component={Instructors} />
       <Route exact path="/projects/" component={ProjectListPage} />
       <Route path="/project/:name" component={ProjectPage} />
-      <Route path="/news_and_events" component={NewsEventsListPage} />
-      <Route path="/news_and_events/:name" component={NewsEventsPage} />
+      <Route exact path="/news_and_events" component={NewsEventsListPage} />
+      <Route path="/news_and_events/:title" component={NewsEventsPage} />
     </Switch>
   );
 }
