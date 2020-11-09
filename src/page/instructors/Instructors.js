@@ -27,7 +27,7 @@ export default function Instructors() {
         </div>
       ) : (
         <div>
-          <h1>Loading...</h1>
+          <p>Loading...</p>
         </div>
       )}
     </div>

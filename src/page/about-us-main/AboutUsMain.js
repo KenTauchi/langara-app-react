@@ -88,7 +88,7 @@ export default function TopPage() {
         </div>
       ) : (
         <div>
-          <h1>Loading...</h1>
+          <p>Loading...</p>
         </div>
       )}
     </div>

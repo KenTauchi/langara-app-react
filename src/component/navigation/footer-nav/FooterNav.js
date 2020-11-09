@@ -20,7 +20,7 @@ export default function FooterNav() {
     </div>
   ) : (
     <div>
-      <h1>Loading...</h1>
+      <p>Loading...</p>
     </div>
   );
 }

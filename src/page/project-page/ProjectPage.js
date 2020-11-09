@@ -39,17 +39,23 @@ export default function ProjectPage() {
               </a>
             </h2>
 
-            <div className="team-member">
-              <p>The Team:</p>
-              {p.project_member.map((member) => (
-                <li>{member}</li>
-              ))}
-            </div>
+            {p.project_member !== "" ? (
+              p.project_member.map((member) => (
+                <div className="team-member">
+                  <p>The Team:</p>
+                  <li>{member}</li>
+                </div>
+              ))
+            ) : (
+              <div className="team-member">
+                <p>Team Member Info is not available for this project</p>
+              </div>
+            )}
           </div>
         ))
       ) : (
         <div>
-          <h1>Loading...</h1>
+          <p>Loading...</p>
         </div>
       )}
     </div>

@@ -5,6 +5,7 @@ import AboutUsMain from "../page/about-us-main/AboutUsMain";
 import Instructors from "../page/instructors/Instructors";
 import ProjectPage from "../page/project-page/ProjectPage";
 import ProjectListPage from "../page/projectlist-page/ProjectListPage";
+import ProjectCategoryPage from "../page/project-category-page/ProjectCategoryPage";
 import NewsEventsListPage from "../page/news-events-list-page/NewsEventsListPage";
 import NewsEventsPage from "../page/news-events-page/NewsEventsPage";
 // import StudentWork from "./student-work/StudentWork";
@@ -16,6 +17,10 @@ export default function Router() {
       <Route exact path="/about-us-main-page/" component={AboutUsMain} />
       <Route exact path="/instructors/" component={Instructors} />
       <Route exact path="/projects/" component={ProjectListPage} />
+      <Route
+        path="/projects/category/:category"
+        component={ProjectCategoryPage}
+      />
       <Route path="/project/:name" component={ProjectPage} />
       <Route exact path="/news_and_events" component={NewsEventsListPage} />
       <Route path="/news_and_events/:title" component={NewsEventsPage} />

@@ -80,7 +80,7 @@ export default function HeaderNav() {
     </div>
   ) : (
     <div>
-      <h1>Loading...</h1>
+      <p>Loading...</p>
     </div>
   );
 }
