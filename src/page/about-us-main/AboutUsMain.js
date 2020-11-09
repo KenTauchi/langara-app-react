@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import StudentWork from "../../component/student-work/StudentWork";
 import AlumniSuccess from "../../component/alumni-success/AlumniSuccess";
-import HeaderNav from "../../component/navigation/header-nav/HeaderNav";
-import FooterNav from "../../component/navigation/footer-nav/FooterNav";
+
 import useFetch from "../../component/useFetch";
 
 import "./_AboutUsMain.scss";

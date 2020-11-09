@@ -11,7 +11,7 @@ export default function NewsEventsSingle(props) {
       <h1>{props.title.rendered}</h1>
       <span>{formatDate()}</span>
       <div>
-        <img src={props.acf.article_image} />
+        <img src={props.acf.article_image} alt="news-img" />
       </div>
       {props.acf.section1_title !== "" ? (
         <h2 className="article1-title">{props.acf.section1_title}</h2>

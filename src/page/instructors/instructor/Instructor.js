@@ -31,7 +31,7 @@ export default function Instructors() {
       {jasonInfo.map((jason) => (
         <div className="instructor">
           <div>
-            <img src={jason.acf.instructor_profile_image} />
+            <img src={jason.acf.instructor_profile_image} alt="jason-img" />
           </div>
           <h3>{jason.acf.instructor_name}</h3>
           <p>{jason.acf.instructor_title}</p>
@@ -41,7 +41,7 @@ export default function Instructors() {
       {jesicaInfo.map((jesica) => (
         <div className="instructor">
           <div>
-            <img src={jesica.acf.instructor_profile_image} />
+            <img src={jesica.acf.instructor_profile_image} alt="jesica-img" />
           </div>
           <h3>{jesica.acf.instructor_name}</h3>
           <p>{jesica.acf.instructor_title}</p>
@@ -54,7 +54,10 @@ export default function Instructors() {
         instructor.slug === "jesica-ortega-nava" ? null : (
           <div className="instructor">
             <div>
-              <img src={instructor.acf.instructor_profile_image} />
+              <img
+                src={instructor.acf.instructor_profile_image}
+                alt="instructor-img"
+              />
             </div>
             <h3>{instructor.acf.instructor_name}</h3>
             <p>{instructor.acf.instructor_title}</p>

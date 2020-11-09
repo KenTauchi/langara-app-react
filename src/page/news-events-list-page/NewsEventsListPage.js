@@ -21,7 +21,7 @@ export default function NewsEventsListPage() {
 
   useEffect(() => {
     setData(dataSet);
-  });
+  }, [dataSet]);
 
   return data !== null ? (
     <div className="news-events-list-page">

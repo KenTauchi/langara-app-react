@@ -24,7 +24,7 @@ export default function NewsEventsIntro({ title, date, article, path, img }) {
           pathname: `/news_and_events/${path}`,
         }}
       >
-        <img src={img} />
+        <img src={img} alt="news-img" />
       </Link>
     </div>
   );

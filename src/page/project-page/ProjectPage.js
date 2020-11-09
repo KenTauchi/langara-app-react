@@ -1,8 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-
-import HeaderNav from "../../component/navigation/header-nav/HeaderNav";
-import FooterNav from "../../component/navigation/footer-nav/FooterNav";
 import useFetch from "../../component/useFetch";
 
 import "./_ProjectPage.scss";
@@ -19,9 +16,12 @@ export default function ProjectPage() {
         project.map((p) => (
           <div className="project-page">
             <h1>{p.title.rendered}</h1>
-            <p>{p.status}</p>
+            {p.categories_names.map((category) => (
+              <li>{category}</li>
+            ))}
+
             <div className="">
-              <img src={p.acf.app_picture} alt="app-picture" />
+              <img src={p.acf.app_picture} alt="app-main-pic" />
             </div>
             <p>{p.acf.app_description}</p>
 

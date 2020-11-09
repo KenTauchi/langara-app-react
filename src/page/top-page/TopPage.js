@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import StudentWork from "../../component/student-work/StudentWork";
 import AlumniSuccess from "../../component/alumni-success/AlumniSuccess";
-import HeaderNav from "../../component/navigation/header-nav/HeaderNav";
-import FooterNav from "../../component/navigation/footer-nav/FooterNav";
 
 import useFetch from "../../component/useFetch";
 import background from "../../assets/hp_bg.png";
@@ -39,7 +37,7 @@ export default function TopPage() {
 
           <img src={background} alt="hp-bg" />
           <div className="intro-movie">
-            <iframe src={cf.acf.intro_movie}></iframe>
+            <iframe src={cf.acf.intro_movie} title="intro-movie"></iframe>
           </div>
 
           <div className="studentwork-intro">

@@ -1,11 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import HeaderNav from "../../component/navigation/header-nav/HeaderNav";
-import FooterNav from "../../component/navigation/footer-nav/FooterNav";
 import useFetch from "../../component/useFetch";
 import "./_ProjectListPage.scss";
-import ProjectPage from "../project-page/ProjectPage";
 
 export default function ProjectListPage() {
   const projects = useFetch(
@@ -23,7 +20,7 @@ export default function ProjectListPage() {
                   pathname: `/project/${project.slug}`,
                 }}
               >
-                <img src={project.acf.app_picture} />
+                <img src={project.acf.app_picture} alt="app-list-img" />
               </Link>
             </div>
           ))}
