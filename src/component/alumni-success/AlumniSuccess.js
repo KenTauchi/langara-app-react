@@ -39,6 +39,7 @@ export default function AlumniSuccess() {
           return (
             <SwiperSlide tag="li" key={index}>
               <div class="slide">
+                <h2 className="char1">“</h2>
                 <div>
                   <img src={alumni.acf.profile_image} alt="alumni-prof-pic" />
                 </div>
@@ -54,6 +55,7 @@ export default function AlumniSuccess() {
                 >
                   See More
                 </Link>
+                <h2 className="char2">“</h2>
               </div>
             </SwiperSlide>
           );

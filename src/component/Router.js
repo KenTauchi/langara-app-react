@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import TopPage from "../page/top-page/TopPage";
 import AboutUsMain from "../page/about-us-main/AboutUsMain";
 import Instructors from "../page/instructors/Instructors";
+import Alumni from "../page/alumni/Alumni";
 import ProjectPage from "../page/project-page/ProjectPage";
 import ProjectListPage from "../page/projectlist-page/ProjectListPage";
 import ProjectCategoryPage from "../page/project-category-page/ProjectCategoryPage";
@@ -14,16 +15,17 @@ export default function Router() {
   return (
     <Switch>
       <Route exact path="/" component={TopPage} />
-      <Route exact path="/about-us-main-page/" component={AboutUsMain} />
+      <Route exact path="/about-us/" component={AboutUsMain} />
       <Route exact path="/instructors/" component={Instructors} />
+      <Route exact path="/alumni/" component={Alumni} />
       <Route exact path="/projects/" component={ProjectListPage} />
       <Route
         path="/projects/category/:category"
         component={ProjectCategoryPage}
       />
       <Route path="/project/:name" component={ProjectPage} />
-      <Route exact path="/news_and_events" component={NewsEventsListPage} />
-      <Route path="/news_and_events/:title" component={NewsEventsPage} />
+      <Route exact path="/news-and-events" component={NewsEventsListPage} />
+      <Route path="/news-and-events/:title" component={NewsEventsPage} />
     </Switch>
   );
 }

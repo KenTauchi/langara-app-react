@@ -29,12 +29,16 @@ export default function HeaderNav() {
   };
 
   // const {submenu, setSubmenu} = useState(null);
+  const endPoint = (url) => {
+    let pathArr = url.split("/");
+    return pathArr.slice(-2)[0];
+  };
 
   return headerNav !== null ? (
     <div className="primary-menu">
-      <div>
+      <Link to="/" className="logo">
         <img src={Logo} alt="logo" />
-      </div>
+      </Link>
       <Link to="#" className="menu-bars">
         <FaIcons.FaBars onClick={showSidebar} />
       </Link>
@@ -61,17 +65,17 @@ export default function HeaderNav() {
                 </AccordionSummary>
                 {headerNav.map((navItem) =>
                   navItem.menu_item_parent !== "0" ? (
-                    <AccordionDetails>
+                    <AccordionDetails onClick={showSidebar}>
                       <Typography>
-                        <a href={navItem.url}>{navItem.title}</a>
+                        <Link to={endPoint(navItem.url)}>{navItem.title}</Link>
                       </Typography>
                     </AccordionDetails>
                   ) : null
                 )}
               </Accordion>
             ) : item.menu_item_parent === "0" ? (
-              <li className="menu-item">
-                <a href={item.url}>{item.title}</a>
+              <li className="menu-item" onClick={showSidebar}>
+                <Link to={endPoint(item.url)}>{item.title}</Link>
               </li>
             ) : null
           )}

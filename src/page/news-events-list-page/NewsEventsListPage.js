@@ -7,11 +7,11 @@ import NewsEventsIntro from "../../component/news-events/NewsEventsIntro/NewsEve
 
 export default function NewsEventsListPage() {
   const newsEventsTop = useFetch(
-    `http://localhost:8888/langara_web/wp-json/wp/v2/news_and_events?orderby=date&order=desc&per_page=3`
+    `http://localhost:8888/langara_web/wp-json/wp/v2/news-and-events?orderby=date&order=desc&per_page=3`
   );
 
   const newsEventsAll = useFetch(
-    `http://localhost:8888/langara_web/wp-json/wp/v2/news_and_events?orderby=date&order=desc`
+    `http://localhost:8888/langara_web/wp-json/wp/v2/news-and-events?orderby=date&order=desc`
   );
 
   const [load, setLoad] = useState(false);

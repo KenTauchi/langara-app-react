@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import StudentWork from "../../component/student-work/StudentWork";
 import AlumniSuccess from "../../component/alumni-success/AlumniSuccess";
+// import Movie from "../../component/movie/Movie";
 
 import useFetch from "../../component/useFetch";
 import background from "../../assets/hp_bg.png";
@@ -13,31 +14,29 @@ export default function TopPage() {
     "http://localhost:8888/langara_web/wp-json/acf/v3/pages/356"
   );
 
-  // const style = {
-  //   background: url({cf.acf.apply_now_image}),
-  // }
-
   return (
     <div>
       {cf !== null ? (
         <div className="front-page">
-          <div className="intro">
-            <div className="front-top-image">
-              <img src={cf.acf.front_top_image} alt="front-top" />
-            </div>
-
+          <div
+            className="intro"
+            style={{ background: `url(${cf.acf.front_top_image})` }}
+          >
             <div class="intro-desc">
               <h1>{cf.acf.title_intro}</h1>
               <p>{cf.acf.description_intro}</p>
             </div>
-            <button>
-              <a href={cf.acf.link_top}>{cf.acf.link_text_front_top}</a>
-            </button>
+            <Link className="button" to="/about-us">
+              {cf.acf.link_text_front_top}
+            </Link>
           </div>
 
-          <img src={background} alt="hp-bg" />
-          <div className="intro-movie">
-            <iframe src={cf.acf.intro_movie} title="intro-movie"></iframe>
+          <div className="intro-movie-wrap">
+            <img src={background} alt="hp-bg" />
+            <div className="intro-movie">
+              <iframe src={cf.acf.intro_movie} title="intro-movie"></iframe>
+            </div>
+            {/*<Movie url={cf.acf.intro_movie} />*/}
           </div>
 
           <div className="studentwork-intro">
@@ -56,7 +55,7 @@ export default function TopPage() {
           <AlumniSuccess />
 
           <div
-            className="top-apply"
+            className="top-apply bcg-img"
             style={{ background: `url(${cf.acf.apply_now_image})` }}
           >
             <div className="overlay"></div>
@@ -69,7 +68,7 @@ export default function TopPage() {
         </div>
       ) : (
         <div>
-          <h1>Loading...</h1>
+          <p>Loading...</p>
         </div>
       )}
     </div>

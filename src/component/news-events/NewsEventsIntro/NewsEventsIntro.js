@@ -12,7 +12,7 @@ export default function NewsEventsIntro({ title, date, article, path, img }) {
     <div className="news-events-intro">
       <Link
         to={{
-          pathname: `/news_and_events/${path}`,
+          pathname: `/news-and-events/${path}`,
         }}
       >
         <h1>{title}</h1>
@@ -21,7 +21,7 @@ export default function NewsEventsIntro({ title, date, article, path, img }) {
       <p>{article}</p>
       <Link
         to={{
-          pathname: `/news_and_events/${path}`,
+          pathname: `/news-and-events/${path}`,
         }}
       >
         <img src={img} alt="news-img" />

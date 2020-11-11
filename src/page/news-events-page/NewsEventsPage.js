@@ -6,7 +6,7 @@ import NewsEventsSingle from "../../component/news-events/NewsEventsSingle/NewsE
 export default function NewsEventsPage() {
   let params = useParams();
   const news = useFetch(
-    `http://localhost:8888/langara_web/wp-json/wp/v2/news_and_events?slug=${params.title}`
+    `http://localhost:8888/langara_web/wp-json/wp/v2/news-and-events?slug=${params.title}`
   );
 
   console.log("params title", params.title);
