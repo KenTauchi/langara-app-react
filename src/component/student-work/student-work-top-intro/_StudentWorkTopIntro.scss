@@ -1,0 +1,23 @@
+.studentwork-top-intro {
+  margin: 94px 33px 0 33px;
+  text-align: center;
+
+  h1 {
+    font-size: 23px;
+    text-align: center;
+    color: #f15a22;
+    @extend %fontS !optional;
+    margin-bottom: 30px;
+  }
+  p {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  a {
+    font-size: 14px;
+    letter-spacing: 0.14px;
+    color: #707070;
+    font-family: Arial;
+  }
+}

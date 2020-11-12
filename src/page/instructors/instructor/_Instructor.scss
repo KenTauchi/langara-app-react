@@ -1,0 +1,32 @@
+.instructor {
+  display: flex;
+  flex-flow: column;
+
+  .instructor-single {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 26px;
+    margin: 0 25px 50px 25px;
+
+    .profile-img {
+      width: 16vw;
+      height: 16vw;
+    }
+
+    .profile {
+      display: flex;
+      flex-flow: column;
+      h3 {
+        font-size: 15px;
+        color: #707070;
+        @extend %fontB !optional;
+        margin: 0;
+      }
+      p {
+        font-size: 15px;
+        margin: 0;
+        text-align: left;
+      }
+    }
+  }
+}

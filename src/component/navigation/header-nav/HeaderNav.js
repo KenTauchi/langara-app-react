@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useFetch from "../../useFetch";
-import { Route, Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
@@ -31,7 +31,6 @@ export default function HeaderNav() {
   // const {submenu, setSubmenu} = useState(null);
   const endPoint = (url) => {
     let pathArr = url.split("/");
-    // return pathArr.slice(-2)[0];
     return pathArr.slice(-2)[0];
   };
 

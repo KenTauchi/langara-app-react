@@ -1,5 +1,6 @@
 import React from "react";
 import useFetch from "../../useFetch";
+import "./_FooterNav.scss";
 
 export default function FooterNav() {
   const footerNav = useFetch(

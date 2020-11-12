@@ -13,7 +13,7 @@ export default function StudentWork() {
       {studentWork.map((d, index) =>
         d.slug === "langara-plus" ||
         d.slug === "nearest" ||
-        d.slug === "avsar" ? (
+        d.slug === "lair" ? (
           <div className="student-work-image" key={index}>
             <img src={d.acf.app_picture} alt="app-img" />
           </div>

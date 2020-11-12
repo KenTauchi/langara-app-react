@@ -27,41 +27,47 @@ export default function Instructors() {
       });
 
   return orderIns !== null && jasonInfo !== null && jesicaInfo !== null ? (
-    <div>
+    <div className="instructor">
       {jasonInfo.map((jason) => (
-        <div className="instructor">
-          <div>
+        <div className="instructor-single">
+          <div className="profile-img">
             <img src={jason.acf.instructor_profile_image} alt="jason-img" />
           </div>
-          <h3>{jason.acf.instructor_name}</h3>
-          <p>{jason.acf.instructor_title}</p>
-          <p>{jason.acf.instructor_email}</p>
+          <div className="profile">
+            <h3>{jason.acf.instructor_name}</h3>
+            <p>({jason.acf.instructor_title})</p>
+            <p>{jason.acf.instructor_email}</p>
+          </div>
         </div>
       ))}
       {jesicaInfo.map((jesica) => (
-        <div className="instructor">
-          <div>
+        <div className="instructor-single">
+          <div className="profile-img">
             <img src={jesica.acf.instructor_profile_image} alt="jesica-img" />
           </div>
-          <h3>{jesica.acf.instructor_name}</h3>
-          <p>{jesica.acf.instructor_title}</p>
-          <p>{jesica.acf.instructor_email}</p>
+          <div className="profile">
+            <h3>{jesica.acf.instructor_name}</h3>
+            <p>({jesica.acf.instructor_title})</p>
+            <p>{jesica.acf.instructor_email}</p>
+          </div>
         </div>
       ))}
 
       {orderIns.map((instructor) =>
         instructor.slug === "jason-madar" ||
         instructor.slug === "jesica-ortega-nava" ? null : (
-          <div className="instructor">
-            <div>
+          <div className="instructor-single">
+            <div className="profile-img">
               <img
                 src={instructor.acf.instructor_profile_image}
                 alt="instructor-img"
               />
             </div>
-            <h3>{instructor.acf.instructor_name}</h3>
-            <p>{instructor.acf.instructor_title}</p>
-            <p>{instructor.acf.instructor_email}</p>
+            <div className="profile">
+              <h3>{instructor.acf.instructor_name}</h3>
+              <p>({instructor.acf.instructor_title})</p>
+              <p>{instructor.acf.instructor_email}</p>
+            </div>
           </div>
         )
       )}

@@ -3,6 +3,8 @@ import useFetch from "../../component/useFetch";
 
 import AlumniSingle from "../../component/alumni-single/AlumniSingle";
 
+import "./_Alumni.scss";
+
 export default function Alumni() {
   const cf = useFetch(
     'http://localhost:8888/langara_web/wp-json/wp/v2/pages?slug="alumni"'

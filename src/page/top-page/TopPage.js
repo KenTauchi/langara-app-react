@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import StudentWork from "../../component/student-work/StudentWork";
+// import StudentWork from "../../component/student-work/StudentWork";
 import AlumniSuccess from "../../component/alumni-success/AlumniSuccess";
+import StudentWorkTopIntro from "../../component/student-work/student-work-top-intro/StudentWorkTopIntro";
 
 import useFetch from "../../component/useFetch";
 import background from "../../assets/hp_bg.png";
@@ -41,22 +42,7 @@ export default function TopPage() {
             </div>
           </div>
 
-          <div className="studentwork-intro">
-            <h1>{cf.acf.student_work_front_title}</h1>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: cf.acf.student_work_front_description,
-              }}
-            ></p>
-            <StudentWork />
-            <Link
-              to={{
-                pathname: "/projects",
-              }}
-            >
-              See More
-            </Link>
-          </div>
+          <StudentWorkTopIntro {...cf} />
 
           <AlumniSuccess />
 
@@ -64,7 +50,6 @@ export default function TopPage() {
             className="top-apply bcg-img"
             style={{ background: `url(${cf.acf.apply_now_image})` }}
           >
-            <div className="overlay"></div>
             <h1>{cf.acf.bottom_message_title}</h1>
             <p
               dangerouslySetInnerHTML={{

@@ -1,0 +1,28 @@
+.alumna {
+  margin-bottom: 128px;
+  .alumna-desc {
+    text-align: left;
+    margin: 0 33px 35px 0;
+    border-left: 33px solid #f15a22;
+    padding-left: 33px;
+    h2 {
+      font-size: 18px;
+      color: #707070;
+      @extend %fontB !optional;
+      margin: 0;
+    }
+    p {
+      text-align: left;
+      margin: 0;
+      font-size: 15px;
+    }
+  }
+
+  .alumna-movie {
+    margin: 0 33px;
+    iframe {
+      width: 82vw;
+      height: 82vw;
+    }
+  }
+}

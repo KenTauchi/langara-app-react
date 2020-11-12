@@ -9,7 +9,6 @@ import ProjectListPage from "../page/projectlist-page/ProjectListPage";
 import ProjectCategoryPage from "../page/project-category-page/ProjectCategoryPage";
 import NewsEventsListPage from "../page/news-events-list-page/NewsEventsListPage";
 import NewsEventsPage from "../page/news-events-page/NewsEventsPage";
-// import StudentWork from "./student-work/StudentWork";
 
 export default function Router() {
   return (

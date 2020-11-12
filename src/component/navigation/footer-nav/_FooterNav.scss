@@ -1,0 +1,36 @@
+.footer-menu {
+  height: 80px;
+  border-top: 1px solid #707070;
+  ul {
+    margin: 25px 0 25px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+
+    a {
+      padding: 0 1rem;
+      border-right: 1px solid #707070;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    &:last-child {
+      a {
+        border-right: none;
+      }
+    }
+  }
+
+  .copyright {
+    margin-bottom: 2rem;
+    p {
+      font-family: Helvetica;
+      font-size: 9px;
+    }
+  }
+}

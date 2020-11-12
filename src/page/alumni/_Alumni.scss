@@ -1,0 +1,15 @@
+.alumni-page {
+  .alumni-page-head {
+    h1 {
+      font-size: 23px;
+      color: #f15a22;
+      @extend %fontS !optional;
+      margin: 60px 114px 27px 114px;
+      text-align: center;
+    }
+    p {
+      margin: 0 31px 128px 31px;
+      text-align: left;
+    }
+  }
+}

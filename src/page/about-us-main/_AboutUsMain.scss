@@ -3,4 +3,178 @@
     width: 100%;
     height: auto;
   }
+
+  .aboutus-main-top {
+    height: 416px;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-position: center !important;
+    margin-bottom: 199px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(241, 90, 34, 0.5);
+      display: block;
+    }
+
+    .top-desc {
+      z-index: 1;
+      width: 79vw;
+      height: 59vw;
+      background-color: #f15a22;
+      opacity: 0.95;
+      color: #ffffff;
+      position: absolute;
+      top: 282px;
+    }
+    h1 {
+      @extend %fontS !optional;
+      font-size: 23px;
+      margin: 23px 23px 18px 23px;
+    }
+    p {
+      color: #ffffff;
+      margin: 0 19px 21px 19px;
+    }
+  }
+
+  .program-cur {
+    display: flex;
+    flex-flow: column;
+    h1 {
+      @extend %fontS !optional;
+      font-size: 23px;
+      margin: 0 93px 30px 93px;
+      color: #f15a22;
+    }
+
+    p {
+      text-align: left;
+      margin: 0 33px 34px 33px;
+    }
+
+    a {
+      @extend %fontS !optional;
+      font-size: 22px;
+      color: #ffffff;
+      padding: 15px 18px;
+      background-color: #f15a22;
+      text-decoration: none;
+      margin: 0 auto;
+      border-radius: 5px;
+    }
+  }
+
+  .discover {
+    margin-top: 112px;
+    display: flex;
+    flex-flow: column;
+
+    h1 {
+      @extend %fontS !optional;
+      font-size: 23px;
+      margin: 0 97px 30px 97px;
+      color: #f15a22;
+    }
+
+    p {
+      text-align: left;
+      margin: 0 33px 21px 33px;
+    }
+
+    ul {
+      list-style-type: disc;
+      @extend %fontReg !optional;
+      font-size: 13px;
+      color: #707070;
+      letter-spacing: 0.39px;
+      text-align: center;
+      line-height: 1.8;
+      text-align: left;
+      margin: 0 74px 39px 50px;
+      padding: 0;
+      li {
+        margin: 0 0 21px 0;
+        padding: 0;
+      }
+    }
+
+    .discover-img {
+      width: calc(347 / 414 * 100vw);
+      height: calc(324 / 414 * 100vw);
+      margin: 0 34px 118px 34px;
+    }
+  }
+
+  .hear-alumni {
+    display: flex;
+    flex-flow: column;
+
+    h1 {
+      @extend %fontS !optional;
+      font-size: 23px;
+      margin: 0 90px 31px 90px;
+      color: #f15a22;
+    }
+
+    p {
+      margin: 0 34px 31px 34px;
+      text-align: left;
+    }
+
+    .hear-alumni-img {
+      width: 84vw;
+      height: 78vw;
+      background-position: right !important;
+      margin: 0 34px 31px 34px;
+    }
+
+    a {
+      font-family: Arial;
+      font-size: 14px;
+    }
+  }
+
+  .join-wmdd {
+    margin-top: 150px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    h1 {
+      @extend %fontS !optional;
+      font-size: 23px;
+      margin: 0 90px 31px 90px;
+      color: #707070;
+    }
+
+    p {
+      margin: 0 35px 41px 35px;
+    }
+
+    a {
+      @extend %fontS !optional;
+      font-size: 22px;
+      color: #ffffff;
+
+      background-color: #f15a22;
+      text-decoration: none;
+      margin: 0 auto 25px auto;
+      border-radius: 5px;
+    }
+    .apply-now {
+      padding: 15px 26px;
+    }
+    .admission {
+      padding: 15px 18px;
+      margin: 0 auto 41px auto;
+    }
+  }
 }

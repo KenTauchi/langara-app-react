@@ -80,43 +80,50 @@
     }
   }
 
-  .studentwork-intro {
-    margin: 94px 33px 0 33px;
-    text-align: center;
-
-    h1 {
-      font-size: 23px;
-      text-align: center;
-      color: #f15a22;
-      @extend %fontS !optional;
-      margin-bottom: 30px;
-    }
-    p {
-      text-align: left;
-      margin-bottom: 30px;
-    }
-
-    a {
-      font-size: 14px;
-      letter-spacing: 0.14px;
-      color: #707070;
-      font-family: Arial;
-    }
-  }
-
   .top-apply {
     position: relative;
-    margin-bottom: 5rem;
-
     z-index: 2;
     height: 464px;
-    .overlay {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    &::after {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
+      height: 100%;
+      width: 100%;
       background: rgba(241, 90, 34, 0.89);
+      display: block;
+    }
+
+    h1,
+    h2,
+    p {
+      z-index: 1;
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      margin: 73px 110px 22px 110px;
+      @extend %fontS !optional;
+      font-size: 23px;
+    }
+
+    p {
+      margin: 0 44px 59px 44px;
+    }
+
+    h2 a {
+      @extend %fontS !optional;
+      font-size: 22px;
+      padding: 16px 55px;
+      background-color: #ffffff;
+      color: #f15a22;
+      text-decoration: none;
     }
   }
 }
