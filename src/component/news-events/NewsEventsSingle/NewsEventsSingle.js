@@ -17,7 +17,12 @@ export default function NewsEventsSingle(props) {
         <h2 className="article1-title">{props.acf.section1_title}</h2>
       ) : null}
       {props.acf.section1_article !== "" ? (
-        <p className="article1">{props.acf.section1_article}</p>
+        <p
+          className="article1"
+          dangerouslySetInnerHTML={{
+            __html: props.acf.section1_article,
+          }}
+        ></p>
       ) : null}
       {props.acf.section1_link !== "" ? (
         <a className="article1-link" href={props.acf.section1_link}>
@@ -28,7 +33,12 @@ export default function NewsEventsSingle(props) {
         <h2 className="article2-title">{props.acf.section2_title}</h2>
       ) : null}
       {props.acf.section2_article !== "" ? (
-        <p className="article2">{props.acf.section2_article}</p>
+        <p
+          className="article2"
+          dangerouslySetInnerHTML={{
+            __html: props.acf.section2_article,
+          }}
+        ></p>
       ) : null}
       {props.acf.section2_link !== "" ? (
         <a className="article2-link" href={props.acf.section2_link}>
@@ -39,7 +49,12 @@ export default function NewsEventsSingle(props) {
         <h2 className="article1-title">{props.acf.section3_title}</h2>
       ) : null}
       {props.acf.section3_article !== "" ? (
-        <p className="article1">{props.acf.section3_article}</p>
+        <p
+          className="article3"
+          dangerouslySetInnerHTML={{
+            __html: props.acf.section3_article,
+          }}
+        ></p>
       ) : null}
       {props.acf.section3_link !== "" ? (
         <a className="article1-link" href={props.acf.section3_link}>
@@ -50,7 +65,12 @@ export default function NewsEventsSingle(props) {
         <h2 className="article1-title">{props.acf.section4_title}</h2>
       ) : null}
       {props.acf.section4_article !== "" ? (
-        <p className="article1">{props.acf.section4_article}</p>
+        <p
+          className="article4"
+          dangerouslySetInnerHTML={{
+            __html: props.acf.section4_article,
+          }}
+        ></p>
       ) : null}
       {props.acf.section4_link !== "" ? (
         <a className="article1-link" href={props.acf.section4_link}>

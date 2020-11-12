@@ -15,17 +15,18 @@ export default function Router() {
   return (
     <Switch>
       <Route exact path="/" component={TopPage} />
-      <Route exact path="/about-us/" component={AboutUsMain} />
-      <Route exact path="/instructors/" component={Instructors} />
-      <Route exact path="/alumni/" component={Alumni} />
-      <Route exact path="/projects/" component={ProjectListPage} />
+      <Route exact path="/about-us" component={AboutUsMain} />
+      <Route exact path="/instructors" component={Instructors} />
+      <Route exact path="/alumni" component={Alumni} />
+      <Route exact path="/projects" component={ProjectListPage} />
       <Route
+        exact
         path="/projects/category/:category"
         component={ProjectCategoryPage}
       />
       <Route path="/project/:name" component={ProjectPage} />
       <Route exact path="/news-and-events" component={NewsEventsListPage} />
-      <Route path="/news-and-events/:title" component={NewsEventsPage} />
+      <Route exact path="/news-and-events/:title" component={NewsEventsPage} />
     </Switch>
   );
 }

@@ -10,11 +10,11 @@ export default function StudentWork() {
 
   return studentWork != null ? (
     <div>
-      {studentWork.map((d) =>
+      {studentWork.map((d, index) =>
         d.slug === "langara-plus" ||
         d.slug === "nearest" ||
         d.slug === "avsar" ? (
-          <div className="student-work-image">
+          <div className="student-work-image" key={index}>
             <img src={d.acf.app_picture} alt="app-img" />
           </div>
         ) : null

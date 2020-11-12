@@ -8,8 +8,8 @@ export default function FooterNav() {
   return footerNav !== null ? (
     <div className="footer-menu">
       <ul>
-        {footerNav.map((item) => (
-          <li>
+        {footerNav.map((item, index) => (
+          <li key={index}>
             <a href={item.url}>{item.title}</a>
           </li>
         ))}

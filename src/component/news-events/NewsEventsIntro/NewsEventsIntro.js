@@ -18,7 +18,11 @@ export default function NewsEventsIntro({ title, date, article, path, img }) {
         <h1>{title}</h1>
       </Link>
       <span>{formatDate()}</span>
-      <p>{article}</p>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: article,
+        }}
+      ></p>
       <Link
         to={{
           pathname: `/news-and-events/${path}`,

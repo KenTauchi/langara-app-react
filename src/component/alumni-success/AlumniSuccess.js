@@ -38,7 +38,7 @@ export default function AlumniSuccess() {
         {alumnis.map((alumni, index) => {
           return (
             <SwiperSlide tag="li" key={index}>
-              <div class="slide">
+              <div className="slide">
                 <h2 className="char1">“</h2>
                 <div>
                   <img src={alumni.acf.profile_image} alt="alumni-prof-pic" />
