@@ -1,0 +1,12 @@
+.student-intro {
+  h2 {
+    @extend %fontB !optional;
+    font-size: 23px;
+    margin: 0px auto 23px 42px;
+    color: #707070;
+  }
+
+  img {
+    margin: 0 auto 94px auto;
+  }
+}

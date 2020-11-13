@@ -1,10 +1,5 @@
-.project-list-page {
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  .project-category {
+.project-category-page {
+  div {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -14,16 +9,9 @@
       margin: 72px auto 23px auto;
       color: #f15a22;
     }
-
     p {
       margin: 0 41px 94px 41px;
       text-align: left;
-    }
-
-    &:last-child {
-      a {
-        margin-bottom: 94px;
-      }
     }
   }
 }

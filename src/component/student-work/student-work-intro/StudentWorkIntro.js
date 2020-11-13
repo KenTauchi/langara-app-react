@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./_StudentWorkIntro.scss";
 
 export default function StudentWorkIntro(props) {
+  const pStyle = {
+    marginBottom: "30px",
+  };
   return (
-    <div>
+    <div className="student-intro">
       <h2>{props.acf.name_of_the_project}</h2>
-      <p>{props.acf.app_description}</p>
+      <p style={pStyle}>{props.acf.app_description}</p>
       <Link
         to={{
           pathname: `/project/${props.slug}`,

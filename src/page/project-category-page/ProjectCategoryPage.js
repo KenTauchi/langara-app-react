@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../component/useFetch";
 import StudentWorkIntro from "../../component/student-work/student-work-intro/StudentWorkIntro";
 
+import "./_ProjectCategoryPage.scss";
+
 export default function ProjectCategoryPage() {
   let params = useParams();
   const projects = useFetch(

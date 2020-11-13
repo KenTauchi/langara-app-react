@@ -38,11 +38,10 @@ export default function ProjectPage() {
                 Download Project Proposal
               </a>
             </h2>
-
+            <p>The Team:</p>
             {p.project_member !== "" ? (
               p.project_member.map((member) => (
                 <div className="team-member">
-                  <p>The Team:</p>
                   <li>{member}</li>
                 </div>
               ))
