@@ -1,0 +1,21 @@
+.contact-us-page {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  h1 {
+    @extend %fontS !optional;
+    font-size: 23px;
+    margin: 60px auto 9px auto;
+    color: #f15a22;
+  }
+
+  .map {
+    iframe {
+      width: 100vw;
+      height: 133vw;
+    }
+
+    margin: 51px 0 79px 0;
+  }
+}

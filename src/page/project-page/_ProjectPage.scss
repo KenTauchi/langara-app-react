@@ -1,6 +1,52 @@
 .project-page {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
   img {
     width: 100%;
     height: auto;
+  }
+
+  h1 {
+    @extend %fontS !optional;
+    font-size: 23px;
+    margin: 72px auto 23px auto;
+    color: #f15a22;
+  }
+
+  h2 {
+    a {
+      font-size: 16px;
+      @extend %fontB !optional;
+      color: #707070;
+      text-decoration: underline;
+    }
+    margin: 0 42px;
+
+    align-self: flex-start;
+  }
+
+  p {
+    text-align: left;
+    margin: 35px 42px;
+  }
+
+  .team-members {
+    margin: 35px auto 32px 42px;
+    align-self: flex-start;
+    p {
+      font-family: Helvetica;
+      font-size: 16px;
+      margin: 0 auto 5px 0;
+    }
+
+    li {
+      list-style-type: none;
+      font-family: Helvetica;
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #707070;
+    }
   }
 }

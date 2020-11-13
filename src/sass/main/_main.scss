@@ -14,7 +14,8 @@ code {
 }
 
 p,
-a {
+a,
+span {
   @extend %fontReg !optional;
   font-size: 13px;
   color: #707070;

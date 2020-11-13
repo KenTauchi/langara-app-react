@@ -9,6 +9,7 @@ import ProjectListPage from "../page/projectlist-page/ProjectListPage";
 import ProjectCategoryPage from "../page/project-category-page/ProjectCategoryPage";
 import NewsEventsListPage from "../page/news-events-list-page/NewsEventsListPage";
 import NewsEventsPage from "../page/news-events-page/NewsEventsPage";
+import Contact from "../page/contact/Contact";
 
 export default function Router() {
   return (
@@ -26,6 +27,7 @@ export default function Router() {
       <Route path="/project/:name" component={ProjectPage} />
       <Route exact path="/news-and-events" component={NewsEventsListPage} />
       <Route exact path="/news-and-events/:title" component={NewsEventsPage} />
+      <Route exact path="/contact" component={Contact} />
     </Switch>
   );
 }
