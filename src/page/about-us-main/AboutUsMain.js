@@ -59,6 +59,7 @@ export default function TopPage() {
               style={{ background: `url(${cf.acf.alumni_about_us_image})` }}
             ></div>
             <Link
+              className="link-to-alumni"
               to={{
                 pathname: "/alumnis/",
               }}

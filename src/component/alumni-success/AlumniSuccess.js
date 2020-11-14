@@ -30,7 +30,7 @@ export default function AlumniSuccess() {
       <Swiper
         id="main"
         tag="ul"
-        autoplay
+        // autoplay
         pagination={{ clickable: true }}
         slidesPerView={1}
         paginationstyle={{ bottom: 0 }}
@@ -43,18 +43,20 @@ export default function AlumniSuccess() {
                 <div>
                   <img src={alumni.acf.profile_image} alt="alumni-prof-pic" />
                 </div>
-                <p className="alumni-name">{alumni.acf.alumni_name}</p>
-                <p className="stream">Stream chosen - {alumni.acf.stream}</p>
-                <p className="year">{alumni.acf.graduation_year}</p>
-                <p className="alumni-comment">{alumni.acf.comment}</p>
-                <Link
-                  to={{
-                    pathname: "/alumnis",
-                  }}
-                  className="link-to-alumnis"
-                >
-                  See More
-                </Link>
+                <div class="profile">
+                  <p className="alumni-name">{alumni.acf.alumni_name}</p>
+                  <p className="stream">Stream chosen - {alumni.acf.stream}</p>
+                  <p className="year">{alumni.acf.graduation_year}</p>
+                  <p className="alumni-comment">{alumni.acf.comment}</p>
+                  <Link
+                    to={{
+                      pathname: "/alumnis",
+                    }}
+                    className="link-to-alumni"
+                  >
+                    See More
+                  </Link>
+                </div>
                 <h2 className="char2">“</h2>
               </div>
             </SwiperSlide>

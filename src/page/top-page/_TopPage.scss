@@ -13,13 +13,15 @@
     position: relative;
     margin-bottom: 295px;
     height: 422px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 
     .intro-desc {
       position: absolute;
-      top: 178px;
-      left: 43px;
-      width: 329px;
-      height: 388px;
+      top: 43vw;
+      width: 80vw;
+
       background-color: #ffffff;
       border: 0.5px solid var(--unnamed-color-707070);
       border: 0.5px solid #707070;
@@ -39,24 +41,23 @@
 
     .button {
       position: absolute;
-      top: 538px;
-      left: 92px;
-      width: 231px;
-      height: 83px;
+      top: 590px;
       background-color: #f15a22;
-      border-radius: 5px;
       padding: 0;
       border: none;
-      width: 192px;
-      height: 56px;
+      width: 54vw;
       display: block;
-      padding: 1rem 20px 11px 20px;
+      padding: 1rem 20px;
       line-height: normal;
       @extend %fontS !optional;
       font-size: 22px;
       text-decoration: none;
       color: #ffffff;
       text-align: center;
+
+      @media screen and (min-width: 414px) {
+        top: 548px;
+      }
     }
   }
 

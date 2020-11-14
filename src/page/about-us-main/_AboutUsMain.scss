@@ -27,7 +27,7 @@
     .top-desc {
       z-index: 1;
       width: 79vw;
-      height: 59vw;
+
       background-color: #f15a22;
       opacity: 0.95;
       color: #ffffff;
@@ -48,11 +48,14 @@
   .program-cur {
     display: flex;
     flex-flow: column;
+    align-items: center;
+
     h1 {
       @extend %fontS !optional;
       font-size: 23px;
       margin: 0 93px 30px 93px;
       color: #f15a22;
+      text-align: center;
     }
 
     p {
@@ -76,12 +79,14 @@
     margin-top: 112px;
     display: flex;
     flex-flow: column;
+    align-items: center;
 
     h1 {
       @extend %fontS !optional;
       font-size: 23px;
       margin: 0 97px 30px 97px;
       color: #f15a22;
+      text-align: center;
     }
 
     p {
@@ -116,12 +121,14 @@
   .hear-alumni {
     display: flex;
     flex-flow: column;
+    align-items: center;
 
     h1 {
       @extend %fontS !optional;
       font-size: 23px;
       margin: 0 90px 31px 90px;
       color: #f15a22;
+      text-align: center;
     }
 
     p {
@@ -139,6 +146,7 @@
     a {
       font-family: Arial;
       font-size: 14px;
+      width: 20vw;
     }
   }
 

@@ -1,5 +1,8 @@
+// smaller image
+//
+
 .alumnis-success {
-  margin: 94px 33px 0 33px;
+  margin: 94px 33px 5rem 33px;
   text-align: center;
 
   h1 {
@@ -15,8 +18,30 @@
   }
   .swiper-slide {
     width: 367px;
-    height: 850px;
+    height: 220vw;
     text-align: left;
+
+    @media screen and (min-width: 414px) {
+      height: 200vw;
+    }
+
+    @media screen and (min-width: 500px) {
+      height: 180vw;
+    }
+
+    @media screen and (min-width: 600px) {
+      height: 170vw;
+    }
+
+    @media screen and (min-width: 700px) {
+      height: 160vw;
+    }
+    @media screen and (min-width: 768px) {
+      height: 150vw;
+    }
+    @media screen and (min-width: 850px) {
+      height: 60vw;
+    }
 
     a {
       font-size: 14px;
@@ -43,6 +68,14 @@
     box-shadow: 6px 6px #eb5f25;
     position: relative;
     display: block;
+
+    @media screen and (min-width: 850px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem;
+
+      padding-bottom: 30px;
+    }
   }
 
   .char1,
@@ -63,6 +96,9 @@
     top: 1.5rem;
     right: 0.5rem;
     transform: rotate(360deg) scale(-1, -1);
+    @media screen and (min-width: 850px) {
+      top: -19.5rem;
+    }
   }
 
   .alumni-name {

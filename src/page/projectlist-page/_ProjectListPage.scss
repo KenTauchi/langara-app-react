@@ -12,12 +12,18 @@
       @extend %fontS !optional;
       font-size: 23px;
       margin: 72px auto 23px auto;
+      width: 71vw;
       color: #f15a22;
+      text-align: center;
     }
 
     p {
       margin: 0 41px 94px 41px;
       text-align: left;
+    }
+
+    .view-more {
+      width: 30vw;
     }
 
     &:last-child {

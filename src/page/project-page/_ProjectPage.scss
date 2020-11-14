@@ -16,6 +16,7 @@
   }
 
   h2 {
+    width: 100%;
     a {
       font-size: 16px;
       @extend %fontB !optional;
@@ -27,18 +28,24 @@
     align-self: flex-start;
   }
 
-  p {
+  .app-single-desc {
     text-align: left;
-    margin: 35px 42px;
+    margin: 35px 39px;
+  }
+  .app-cat {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 100%;
   }
 
   .team-members {
-    margin: 35px auto 32px 42px;
+    margin: 35px 42px 32px 42px;
     align-self: flex-start;
     p {
       font-family: Helvetica;
       font-size: 16px;
       margin: 0 auto 5px 0;
+      text-align: left;
     }
 
     li {

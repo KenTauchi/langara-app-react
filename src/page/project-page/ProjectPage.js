@@ -17,14 +17,19 @@ export default function ProjectPage() {
         project.map((p) => (
           <div className="project-page">
             <h1>{p.title.rendered}</h1>
-            <p>
+            <p className="app-cat">
               {p.categories_names} | {dateFormat(p.date)}
             </p>
 
             <div className="app-main-img">
               <img src={p.acf.app_picture} alt="app-main-pic" />
             </div>
-            <p>{p.acf.app_description}</p>
+            <p
+              className="app-single-desc"
+              dangerouslySetInnerHTML={{
+                __html: p.acf.app_description,
+              }}
+            ></p>
 
             <h2>
               <a href={p.acf.project_site_link}>
