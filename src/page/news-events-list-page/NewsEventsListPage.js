@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./_NewsEventsListPage.scss";
 
 import useFetch from "../../component/useFetch";
 import "./_NewsEventsListPage.scss";
@@ -34,7 +35,9 @@ export default function NewsEventsListPage() {
           img={news.acf.article_image}
         />
       ))}
-      <p onClick={() => setLoad(!load)}>{!load ? "View More" : "View Less"}</p>
+      <p className="load-news-events" onClick={() => setLoad(!load)}>
+        {!load ? "View More" : "View Less"}
+      </p>
     </div>
   ) : (
     <div>

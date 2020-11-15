@@ -36,14 +36,16 @@ export default function ProjectListPage() {
             <div className="project-category">
               <h1>{projectCat[0].categories_names[0]}</h1>
               <p
+                className="intro-desc"
                 dangerouslySetInnerHTML={{
                   __html: projectCat[0].categories_description[0],
                 }}
               ></p>
-
-              {projectCat.map((project, index) =>
-                index > 2 ? null : <StudentWorkIntro {...project} />
-              )}
+              <div className="project-cat-list">
+                {projectCat.map((project, index) =>
+                  index > 2 ? null : <StudentWorkIntro {...project} />
+                )}
+              </div>
 
               <Link
                 className="view-more"

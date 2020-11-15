@@ -6,7 +6,7 @@
   text-align: center;
 
   h1 {
-    font-size: 23px;
+    // font-size: 23px;
     text-align: center;
     color: #f15a22;
     @extend %fontS !optional;
@@ -15,6 +15,11 @@
   p {
     text-align: left;
     margin-bottom: 30px;
+  }
+  .intro-desc {
+    @media screen and (min-width: 680px) {
+      padding: 0 2rem;
+    }
   }
   .swiper-slide {
     width: 367px;
@@ -37,10 +42,15 @@
       height: 160vw;
     }
     @media screen and (min-width: 768px) {
-      height: 150vw;
-    }
-    @media screen and (min-width: 850px) {
       height: 60vw;
+
+      .alumni-name {
+        margin: 0;
+      }
+      .alumni-comment {
+        padding: 0;
+        margin: 0 0 1rem 0;
+      }
     }
 
     a {
@@ -52,6 +62,15 @@
   }
 
   .swiper-pagination {
+    width: 100%;
+    top: 98%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media screen and (min-width: 768px) {
+      top: 95%;
+    }
+
     .swiper-pagination-bullet {
       width: 12px;
       height: 12px;
@@ -69,7 +88,7 @@
     position: relative;
     display: block;
 
-    @media screen and (min-width: 850px) {
+    @media screen and (min-width: 768px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 2rem;
@@ -93,12 +112,12 @@
     left: -0.5rem;
   }
   .char2 {
-    top: 1.5rem;
+    bottom: -24rem;
     right: 0.5rem;
     transform: rotate(360deg) scale(-1, -1);
-    @media screen and (min-width: 850px) {
-      top: -19.5rem;
-    }
+    // @media screen and (min-width: 850px) {
+    //   top: -19.5rem;
+    // }
   }
 
   .alumni-name {

@@ -14,6 +14,9 @@
     iframe {
       width: 100vw;
       height: 133vw;
+      @media screen and (min-width: 768px) {
+        max-height: 470px;
+      }
     }
 
     margin: 51px 0 79px 0;

@@ -3,7 +3,7 @@
   text-align: center;
 
   h1 {
-    font-size: 23px;
+    // font-size: 23px;
     text-align: center;
     color: #f15a22;
     @extend %fontS !optional;
@@ -12,6 +12,11 @@
   p {
     text-align: left;
     margin-bottom: 30px;
+  }
+  .intro-desc {
+    @media screen and (min-width: 680px) {
+      padding: 0 2rem;
+    }
   }
 
   a {

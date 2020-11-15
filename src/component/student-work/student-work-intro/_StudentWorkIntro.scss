@@ -9,4 +9,10 @@
   img {
     margin: 0 auto 94px auto;
   }
+
+  .intro-desc {
+    @media screen and (min-width: 680px) {
+      padding: 0 2rem;
+    }
+  }
 }

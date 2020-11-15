@@ -4,6 +4,12 @@
     height: auto;
   }
 
+  .intro-desc {
+    @media screen and (min-width: 680px) {
+      padding: 0 2rem;
+    }
+  }
+
   .project-category {
     display: flex;
     flex-flow: column;

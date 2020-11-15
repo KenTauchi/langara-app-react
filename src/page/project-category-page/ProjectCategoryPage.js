@@ -16,7 +16,7 @@ export default function ProjectCategoryPage() {
       {projects !== null && projects.length !== 0 ? (
         <div>
           <h1>{projects[0].categories_names}</h1>
-          <p>{projects[0].categories_description}</p>
+          <p className="intro-desc"> {projects[0].categories_description}</p>
           {projects.map((project) => (
             <StudentWorkIntro {...project} />
           ))}

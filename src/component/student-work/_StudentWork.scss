@@ -1,6 +1,14 @@
-.student-work-image {
-  margin-bottom: 30px;
-  &:last-of-type {
-    margin-bottom: 39px;
+.project-list {
+  .student-work-image {
+    margin-bottom: 30px;
+    &:last-of-type {
+      margin-bottom: 39px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
   }
 }

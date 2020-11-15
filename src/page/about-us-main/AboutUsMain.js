@@ -29,9 +29,16 @@ export default function TopPage() {
 
           <div class="program-cur">
             <h1>{cf.acf.program_curriculum}</h1>
-            <p>{cf.acf.program_curriculum_description_1}</p>
-            <p>{cf.acf.program_curriculum_description_2}</p>
-            <p>{cf.acf.program_curriculum_description_3}</p>
+            <p className="intro-desc">
+              {cf.acf.program_curriculum_description_1}
+            </p>
+            <p className="intro-desc">
+              {cf.acf.program_curriculum_description_2}
+            </p>
+            <p className="intro-desc">
+              {" "}
+              {cf.acf.program_curriculum_description_3}
+            </p>
 
             <a href={cf.acf.full_program_link}>{cf.acf.full_program_text}</a>
           </div>
@@ -40,7 +47,7 @@ export default function TopPage() {
 
           <div class="discover">
             <h1>{cf.acf.discover_title}</h1>
-            <p>{cf.acf.discover_description}</p>
+            <p className="intro-desc">{cf.acf.discover_description}</p>
             <ul>
               <li>{cf.acf.discover_list_1}</li>
               <li>{cf.acf.discovery_list_2}</li>
@@ -53,7 +60,7 @@ export default function TopPage() {
 
           <div class="hear-alumni">
             <h1>{cf.acf.alumni_title}</h1>
-            <p>{cf.acf.alumni_description}</p>
+            <p className="intro-desc">{cf.acf.alumni_description}</p>
             <div
               className="hear-alumni-img"
               style={{ background: `url(${cf.acf.alumni_about_us_image})` }}
@@ -70,9 +77,13 @@ export default function TopPage() {
 
           <AlumniSuccess />
 
-          <div class="join-wmdd">
+          <div className="join-wmdd">
             <h1>{cf.acf.join_now_title}</h1>
-            <p>{cf.acf.join_now_description}</p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: cf.acf.join_now_description,
+              }}
+            ></p>
 
             <a className="apply-now" href={cf.acf.apply_now_link}>
               {cf.acf.apply_now_text}

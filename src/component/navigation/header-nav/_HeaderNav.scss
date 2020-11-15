@@ -38,6 +38,15 @@
     width: 100%;
     height: auto;
   }
+  .hamburger {
+    position: absolute;
+    top: 36px;
+    right: 32px;
+    width: 45px;
+  }
+  .cross {
+    width: 40px;
+  }
 
   .nav-menu {
     background-color: white;

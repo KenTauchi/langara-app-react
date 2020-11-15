@@ -29,10 +29,10 @@ export default function TopPage() {
                   __html: cf.acf.description_intro,
                 }}
               ></p>
+              <Link className="button" to="/about-us">
+                {cf.acf.link_text_front_top}
+              </Link>
             </div>
-            <Link className="button" to="/about-us">
-              {cf.acf.link_text_front_top}
-            </Link>
           </div>
 
           <div className="intro-movie-wrap">

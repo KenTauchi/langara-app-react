@@ -4,6 +4,12 @@
     height: auto;
   }
 
+  .intro-desc {
+    @media screen and (min-width: 680px) {
+      padding: 0 2rem;
+    }
+  }
+
   .aboutus-main-top {
     height: 416px;
     position: relative;
@@ -27,17 +33,19 @@
     .top-desc {
       z-index: 1;
       width: 79vw;
-
       background-color: #f15a22;
       opacity: 0.95;
       color: #ffffff;
       position: absolute;
-      top: 282px;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
     h1 {
       @extend %fontS !optional;
       font-size: 23px;
       margin: 23px 23px 18px 23px;
+      text-align: center;
     }
     p {
       color: #ffffff;
@@ -92,6 +100,9 @@
     p {
       text-align: left;
       margin: 0 33px 21px 33px;
+      @media screen and (min-width: 680px) {
+        padding: 0 2rem;
+      }
     }
 
     ul {
@@ -100,13 +111,19 @@
       font-size: 13px;
       color: #707070;
       letter-spacing: 0.39px;
-      text-align: center;
+
       line-height: 1.8;
       text-align: left;
       margin: 0 74px 39px 50px;
       padding: 0;
+
+      @media screen and (min-width: 768px) {
+        margin: 0 0 39px 80px;
+        padding: 0;
+        align-self: flex-start;
+      }
       li {
-        margin: 0 0 21px 0;
+        margin: 0 0 10px 0;
         padding: 0;
       }
     }
@@ -179,10 +196,12 @@
     }
     .apply-now {
       padding: 15px 26px;
+      border-radius: 0;
     }
     .admission {
       padding: 15px 18px;
       margin: 0 auto 41px auto;
+      border-radius: 0;
     }
   }
 }

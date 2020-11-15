@@ -17,19 +17,32 @@
     flex-flow: column;
     align-items: center;
 
+    @media screen and (min-width: 1200px) {
+      height: 48vw;
+    }
+
     .intro-desc {
       position: absolute;
-      top: 43vw;
       width: 80vw;
-
       background-color: #ffffff;
       border: 0.5px solid var(--unnamed-color-707070);
-      border: 0.5px solid #707070;
+      border: 0.5px solid #c6c5c5;
       border-radius: 10px;
       text-align: center;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media screen and (min-width: 768px) {
+        width: 60vw;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 44vw;
+      }
 
       h1 {
-        font-size: 23px;
+        // font-size: 23px;
         color: #f15a22;
         @extend %fontS !optional;
         margin: 26px 36px 18px 36px;
@@ -41,7 +54,9 @@
 
     .button {
       position: absolute;
-      top: 590px;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       background-color: #f15a22;
       padding: 0;
       border: none;
@@ -50,26 +65,24 @@
       padding: 1rem 20px;
       line-height: normal;
       @extend %fontS !optional;
-      font-size: 22px;
+      // font-size: 22px;
       text-decoration: none;
       color: #ffffff;
       text-align: center;
 
-      @media screen and (min-width: 414px) {
-        top: 548px;
+      @media screen and (min-width: 768px) {
+        width: 30vw;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 25vw;
       }
     }
   }
 
-  .intro-movie {
-    margin: 0 36px;
-    iframe {
-      width: 82vw;
-      height: 52vw;
-    }
-  }
   .intro-movie-wrap {
-    display: inline-block;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     position: relative;
     img {
       transform: scaleY(1.2);
@@ -78,6 +91,11 @@
     .intro-movie {
       position: absolute;
       top: 1rem;
+      margin: 0 36px;
+      iframe {
+        width: 82vw;
+        height: 52vw;
+      }
     }
   }
 
@@ -111,7 +129,7 @@
     h1 {
       margin: 73px 110px 22px 110px;
       @extend %fontS !optional;
-      font-size: 23px;
+      // font-size: 23px;
     }
 
     p {
@@ -120,7 +138,7 @@
 
     h2 a {
       @extend %fontS !optional;
-      font-size: 22px;
+      // font-size: 22px;
       padding: 16px 55px;
       background-color: #ffffff;
       color: #f15a22;

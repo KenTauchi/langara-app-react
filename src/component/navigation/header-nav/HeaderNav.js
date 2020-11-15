@@ -12,6 +12,8 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import Logo from "../../../assets/logo.svg";
+import Hamburger from "../../../assets/hamburger.svg";
+import Cross from "../../../assets/cross.svg";
 
 import "./_HeaderNav.scss";
 
@@ -40,13 +42,23 @@ export default function HeaderNav() {
         <img src={Logo} alt="logo" />
       </Link>
       <Link to="#" className="menu-bars">
-        <FaIcons.FaBars onClick={showSidebar} />
+        <img
+          className="hamburger"
+          src={Hamburger}
+          onClick={showSidebar}
+          alt="hamurger"
+        />
       </Link>
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items">
           <li>
             <Link>
-              <AiIcons.AiOutlineClose onClick={showSidebar} />
+              <img
+                className="cross"
+                src={Cross}
+                onClick={showSidebar}
+                alt="cross"
+              />
             </Link>
           </li>
           {headerNav.map((item, index) =>

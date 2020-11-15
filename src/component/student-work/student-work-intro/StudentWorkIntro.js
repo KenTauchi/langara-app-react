@@ -8,8 +8,9 @@ export default function StudentWorkIntro(props) {
   };
   return (
     <div className="student-intro">
-      <h2>{props.acf.name_of_the_project}</h2>
+      <h2 className="intro-desc">{props.acf.name_of_the_project}</h2>
       <p
+        className="intro-desc"
         style={pStyle}
         dangerouslySetInnerHTML={{
           __html: props.acf.app_description,

@@ -23,7 +23,11 @@ export default function Alumni() {
         </div>
       ) : null}
       {alumni !== null ? (
-        alumni.map((alumna) => <AlumniSingle {...alumna} />)
+        <div className="alumni-list">
+          {alumni.map((alumna) => (
+            <AlumniSingle {...alumna} />
+          ))}
+        </div>
       ) : (
         <p>Loading...</p>
       )}

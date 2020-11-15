@@ -8,6 +8,7 @@ export default function StudentWorkTopIntro(props) {
     <div className="studentwork-top-intro">
       <h1>{props.acf.student_work_front_title}</h1>
       <p
+        className="intro-desc"
         dangerouslySetInnerHTML={{
           __html: props.acf.student_work_front_description,
         }}

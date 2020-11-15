@@ -37,6 +37,11 @@
     margin-bottom: 35px;
     width: 100%;
   }
+  .app-main-img {
+    @media screen and (min-width: 768px) {
+      width: 70%;
+    }
+  }
 
   .team-members {
     margin: 35px 42px 32px 42px;

@@ -6,12 +6,12 @@ export default function AlumniSingle(props) {
     <div className="alumna">
       <div className="alumna-desc">
         <h2>{props.acf.alumni_name}</h2>
-        <p className="stream">Graduaet of WMDD {props.acf.stream} Stream</p>
-        <p>
-          ({props.acf.starting_year} - {props.acf.graduation_year})
-        </p>
         <p>
           {props.acf.job_position} at {props.acf.company}
+        </p>
+        <p className="stream">Graduate of WMDD {props.acf.stream} Stream</p>
+        <p className="year">
+          ({props.acf.starting_year} - {props.acf.graduation_year})
         </p>
       </div>
       <div className="alumna-movie">

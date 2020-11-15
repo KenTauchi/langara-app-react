@@ -9,7 +9,7 @@ export default function StudentWork() {
   );
 
   return studentWork != null ? (
-    <div>
+    <div className="project-list">
       {studentWork.map((d, index) =>
         d.slug === "langara-plus" ||
         d.slug === "nearest" ||
