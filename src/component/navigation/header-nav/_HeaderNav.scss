@@ -109,11 +109,6 @@
         text-decoration: none;
         font-size: 2rem;
         color: #707070;
-
-        // align-items: center;
-        // width: 100%;
-        // height: 100%;
-
         &:hover {
           color: #f15a22;
         }
@@ -199,6 +194,38 @@
     &.MuiAccordion-root,
     &.MuiAccordionSummary-content {
       margin: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .nav-menu {
+      width: auto;
+      height: 101px;
+      z-index: 1;
+      right: 0;
+    }
+    .nav-menu-items {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .MuiAccordion-root {
+      border: none;
+    }
+
+    .MuiCollapse-entered {
+      background-color: white;
+    }
+
+    ul li {
+      border: none;
+    }
+
+    li,
+    p,
+    ul {
+      margin: 0 !important;
+      padding: 0 !important;
     }
   }
 }

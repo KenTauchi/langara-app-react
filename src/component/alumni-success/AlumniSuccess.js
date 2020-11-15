@@ -43,7 +43,7 @@ export default function AlumniSuccess() {
                 <div>
                   <img src={alumni.acf.profile_image} alt="alumni-prof-pic" />
                 </div>
-                <div class="profile">
+                <div className="profile">
                   <p className="alumni-name">{alumni.acf.alumni_name}</p>
                   <p className="stream">Stream chosen - {alumni.acf.stream}</p>
                   <p className="year">{alumni.acf.graduation_year}</p>
