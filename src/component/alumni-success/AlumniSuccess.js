@@ -40,7 +40,7 @@ export default function AlumniSuccess() {
             <SwiperSlide tag="li" key={index}>
               <div className="slide">
                 <h2 className="char1">“</h2>
-                <div>
+                <div className="alumni-profile-img">
                   <img src={alumni.acf.profile_image} alt="alumni-prof-pic" />
                 </div>
                 <div className="profile">

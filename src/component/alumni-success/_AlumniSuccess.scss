@@ -1,9 +1,9 @@
-// smaller image
-//
-
 .alumnis-success {
   margin: 94px 33px 5rem 33px;
   text-align: center;
+  // display: flex;
+  // flex-flow: column;
+  // align-items: center;
 
   h1 {
     // font-size: 23px;
@@ -19,6 +19,10 @@
   .intro-desc {
     @media screen and (min-width: 680px) {
       padding: 0 2rem;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 60vw;
+      margin: 0 auto;
     }
   }
   .swiper-slide {
@@ -51,6 +55,12 @@
         padding: 0;
         margin: 0 0 1rem 0;
       }
+    }
+    @media screen and (min-width: 1200px) {
+      height: 40vw;
+    }
+    @media screen and (min-width: 1400px) {
+      height: 30vw;
     }
 
     a {
@@ -94,6 +104,19 @@
       grid-gap: 2rem;
 
       padding-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin: 0 5rem;
+
+      grid-template-columns: 1fr 2.5fr;
+    }
+  }
+
+  .alumni-profile-img {
+    @media screen and (min-width: 1200px) {
+      width: 275px;
+      align-self: center;
     }
   }
 

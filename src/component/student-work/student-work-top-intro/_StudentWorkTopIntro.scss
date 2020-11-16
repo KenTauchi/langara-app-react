@@ -1,6 +1,9 @@
 .studentwork-top-intro {
   margin: 94px 33px 0 33px;
   text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 
   h1 {
     // font-size: 23px;
@@ -17,6 +20,10 @@
     @media screen and (min-width: 680px) {
       padding: 0 2rem;
     }
+
+    @media screen and (min-width: 1200px) {
+      width: 60vw;
+    }
   }
 
   a {
@@ -24,5 +31,8 @@
     letter-spacing: 0.14px;
     color: #707070;
     font-family: Arial;
+    @media screen and (min-width: 120px) {
+      font-size: 20px;
+    }
   }
 }
