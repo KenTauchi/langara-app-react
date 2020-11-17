@@ -15,7 +15,7 @@ export default function Instructors() {
     <div>
       {cf !== null ? (
         <div className="instructors-page">
-          <div class="instructor-top">
+          <div className="instructor-top">
             <h1>{cf.acf.about_us_instructor_title}</h1>
             <p>{cf.acf.about_us_instructor_description_1}</p>
             <p>{cf.acf.about_us_instructor_description_2}</p>

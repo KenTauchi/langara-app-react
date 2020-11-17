@@ -1,4 +1,9 @@
 .alumni-page {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
   .alumni-page-head {
     h1 {
       // font-size: 23px;
@@ -13,6 +18,18 @@
       @media screen and (min-width: 768px) {
         padding: 0 2rem;
       }
+
+      @media screen and (min-width: 1200px) {
+        margin: 0 calc(435px / 2) 130px;
+      }
+    }
+  }
+
+  .alumni-list {
+    @media screen and (min-width: 1200px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5rem;
     }
   }
 }

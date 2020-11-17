@@ -36,7 +36,7 @@ export default function Instructors() {
           <div className="profile">
             <h3>{jason.acf.instructor_name}</h3>
             <p>({jason.acf.instructor_title})</p>
-            <p>{jason.acf.instructor_email}</p>
+            {/*<p>{jason.acf.instructor_email}</p>*/}
           </div>
         </div>
       ))}
@@ -48,7 +48,7 @@ export default function Instructors() {
           <div className="profile">
             <h3>{jesica.acf.instructor_name}</h3>
             <p>({jesica.acf.instructor_title})</p>
-            <p>{jesica.acf.instructor_email}</p>
+            {/*<p>{jesica.acf.instructor_email}</p>*/}
           </div>
         </div>
       ))}
@@ -66,7 +66,7 @@ export default function Instructors() {
             <div className="profile">
               <h3>{instructor.acf.instructor_name}</h3>
               <p>({instructor.acf.instructor_title})</p>
-              <p>{instructor.acf.instructor_email}</p>
+              {/*<p>{instructor.acf.instructor_email}</p>*/}
             </div>
           </div>
         )

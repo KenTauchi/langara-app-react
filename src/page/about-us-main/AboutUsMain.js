@@ -18,7 +18,7 @@ export default function TopPage() {
       {cf !== null ? (
         <div className="about-us-main-page">
           <div
-            class="aboutus-main-top"
+            className="aboutus-main-top"
             style={{ background: `url(${cf.acf.top_image})` }}
           >
             <div className="top-desc">
@@ -27,7 +27,7 @@ export default function TopPage() {
             </div>
           </div>
 
-          <div class="program-cur">
+          <div className="program-cur">
             <h1>{cf.acf.program_curriculum}</h1>
             <p className="intro-desc">
               {cf.acf.program_curriculum_description_1}
@@ -45,20 +45,22 @@ export default function TopPage() {
 
           <StudentWorkTopIntro {...cf} />
 
-          <div class="discover">
-            <h1>{cf.acf.discover_title}</h1>
-            <p className="intro-desc">{cf.acf.discover_description}</p>
-            <ul>
-              <li>{cf.acf.discover_list_1}</li>
-              <li>{cf.acf.discovery_list_2}</li>
-              <li>{cf.acf.discovery_list_3}</li>
-            </ul>
+          <div className="discover">
+            <div className="discover-desc">
+              <h1>{cf.acf.discover_title}</h1>
+              <p className="intro-desc">{cf.acf.discover_description}</p>
+              <ul>
+                <li>{cf.acf.discover_list_1}</li>
+                <li>{cf.acf.discovery_list_2}</li>
+                <li>{cf.acf.discovery_list_3}</li>
+              </ul>
+            </div>
             <div className="discover-img">
               <img src={cf.acf.discover_image} alt="discover-pic" />
             </div>
           </div>
 
-          <div class="hear-alumni">
+          <div className="hear-alumni">
             <h1>{cf.acf.alumni_title}</h1>
             <p className="intro-desc">{cf.acf.alumni_description}</p>
             <div
@@ -68,7 +70,7 @@ export default function TopPage() {
             <Link
               className="link-to-alumni"
               to={{
-                pathname: "/alumnis/",
+                pathname: "/alumni/",
               }}
             >
               Learn More

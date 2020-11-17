@@ -10,7 +10,7 @@ export default function NewsEventsSingle(props) {
   return (
     <div className="news-and-events-single">
       <h1>News & Events Details</h1>
-      <div class="news-event-single">
+      <div className="news-event-single">
         <h2>{props.title.rendered}</h2>
         <span className="post-date">{formatDate()}</span>
         <div>

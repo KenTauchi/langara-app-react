@@ -198,13 +198,14 @@
   }
 
   @media screen and (min-width: 1200px) {
-    height: 125px;
+    height: 105px;
     .logo {
       margin-left: 2rem;
+      margin: 23px auto 0 2rem;
     }
     .nav-menu {
       width: auto;
-      height: 125px;
+      height: 100%;
       z-index: 1;
       right: 0;
       position: static;
@@ -224,14 +225,14 @@
 
     .MuiAccordionSummary-content {
       p {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
         padding: 0;
       }
     }
 
     .MuiCollapse-container {
       a {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
       }
     }
 
@@ -243,7 +244,7 @@
       li.menu-item {
         padding: 0;
         a {
-          font-size: 1.5rem;
+          font-size: 1.35rem;
         }
       }
     }
@@ -251,12 +252,12 @@
     // ========Accordion Config =============
     ul {
       height: 100%;
-      margin-top: 3rem;
+      margin-top: 2.4rem;
       margin-right: 2rem;
     }
 
     li {
-      margin-right: 1.5rem;
+      margin-right: 4rem;
     }
 
     .MuiAccordionSummary-root {
@@ -264,7 +265,7 @@
     }
 
     .MuiAccordionSummary-expandIcon {
-      margin: 0 2rem 0 0;
+      margin: 0 3rem 0 0;
     }
 
     .MuiAccordionSummary-root.Mui-expanded {
@@ -273,7 +274,7 @@
     }
 
     .MuiCollapse-container {
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
 
     .MuiAccordionDetails-root {

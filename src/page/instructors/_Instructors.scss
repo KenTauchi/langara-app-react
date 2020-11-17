@@ -6,10 +6,13 @@
 
   .instructor-top {
     margin-bottom: 65px;
+    @media screen and (min-width: 1200px) {
+      margin: 47px calc(435px / 2) 83px;
+    }
 
     h1 {
       @extend %fontS !optional;
-      font-size: 23px;
+      // font-size: 23px;
       margin: 65px 90px 22px 90px;
       color: #f15a22;
       text-align: center;
@@ -21,6 +24,12 @@
       @media screen and (min-width: 768px) {
         padding: 0 2rem;
       }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .instructor-list {
+      margin-left: 4rem;
     }
   }
 }

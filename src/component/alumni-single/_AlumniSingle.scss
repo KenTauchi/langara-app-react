@@ -5,6 +5,9 @@
     margin: 0 33px 35px 0;
     border-left: 33px solid #f15a22;
     padding-left: 33px;
+    @media screen and (min-width: 1200px) {
+      border-left: 8px solid #f15a22;
+    }
     h2 {
       font-size: 18px;
       color: #707070;
@@ -32,6 +35,15 @@
     iframe {
       width: 82vw;
       height: 82vw;
+    }
+
+    @media screen and (min-width: 1200px) {
+      align-items: baseline;
+
+      iframe {
+        width: 37vw;
+        height: 21vw;
+      }
     }
   }
 }

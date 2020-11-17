@@ -57,7 +57,7 @@
       }
     }
     @media screen and (min-width: 1200px) {
-      height: 40vw;
+      height: 33vw;
     }
     @media screen and (min-width: 1400px) {
       height: 30vw;
@@ -107,7 +107,7 @@
     }
 
     @media screen and (min-width: 1200px) {
-      margin: 0 5rem;
+      margin: 0 calc(435px / 4 - 33px);
 
       grid-template-columns: 1fr 2.5fr;
     }
@@ -116,6 +116,12 @@
   .alumni-profile-img {
     @media screen and (min-width: 1200px) {
       width: 275px;
+      align-self: center;
+    }
+  }
+
+  .profile {
+    @media screen and (min-width: 1200px) {
       align-self: center;
     }
   }

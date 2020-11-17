@@ -5,6 +5,10 @@
   flex-flow: column;
   align-items: center;
 
+  @media screen and (min-width: 1200px) {
+    margin: calc(156px / 1.5) calc(435px / 4);
+  }
+
   h1 {
     // font-size: 23px;
     text-align: center;
