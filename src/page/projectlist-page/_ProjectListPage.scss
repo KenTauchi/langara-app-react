@@ -1,13 +1,10 @@
 .project-list-page {
+  @media screen and (min-width: 1200px) {
+    margin: 0 calc(435px / 4);
+  }
   img {
     width: 100%;
     height: auto;
-  }
-
-  .intro-desc {
-    @media screen and (min-width: 680px) {
-      padding: 0 2rem;
-    }
   }
 
   .project-category {
@@ -16,26 +13,54 @@
     align-items: center;
     h1 {
       @extend %fontS !optional;
-      font-size: 23px;
+      // font-size: 23px;
       margin: 72px auto 23px auto;
       width: 71vw;
       color: #f15a22;
       text-align: center;
+
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 29px;
+        font-size: 2.4rem;
+      }
     }
 
-    p {
+    .intro-desc-top {
       margin: 0 41px 94px 41px;
-      text-align: left;
+
+      @media screen and (min-width: 1200px) {
+        margin: 0 calc(435px / 2) 142px;
+      }
     }
 
     .view-more {
       width: 30vw;
+      margin-bottom: 94px;
+      span {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 121px;
+
+        span {
+          font-size: 20px;
+        }
+      }
     }
 
-    &:last-child {
-      a {
-        margin-bottom: 94px;
-      }
+    // &:last-child {
+    //   a {
+    //     margin-bottom: 94px;
+    //   }
+    // }
+  }
+
+  .project-cat-list {
+    @media screen and (min-width: 1200px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3rem;
     }
   }
 }

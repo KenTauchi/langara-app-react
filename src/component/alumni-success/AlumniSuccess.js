@@ -18,9 +18,7 @@ export default function AlumniSuccess() {
 
   console.log("alumni", alumnis);
 
-  const cf = useFetch(
-    "http://localhost:8888/langara_web/wp-json/acf/v3/pages/356"
-  );
+  const cf = useFetch(`${API_URL}/wp-json/acf/v3/pages/356`);
 
   return cf !== null && alumnis !== null ? (
     <div className="alumnis-success">

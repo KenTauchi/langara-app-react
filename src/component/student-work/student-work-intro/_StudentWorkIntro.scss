@@ -1,4 +1,8 @@
 .student-intro {
+  @media screen and (min-width: 1200px) {
+    align-self: flex-start;
+  }
+
   h2 {
     @extend %fontB !optional;
     font-size: 23px;
@@ -10,9 +14,23 @@
     margin: 0 auto 94px auto;
   }
 
+  .intro-title {
+    text-decoration: none;
+    h2 {
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+
   .intro-desc {
     @media screen and (min-width: 680px) {
       padding: 0 2rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 0;
+      padding: 0;
+      text-align: left;
     }
   }
 }

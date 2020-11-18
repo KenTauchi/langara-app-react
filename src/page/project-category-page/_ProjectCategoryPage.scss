@@ -1,13 +1,51 @@
 .project-category-page {
+  @media screen and (min-width: 1200px) {
+    margin: 0 calc(435px / 4);
+  }
   div {
     display: flex;
     flex-flow: column;
     align-items: center;
+
+    .category-route {
+      font-size: 18px;
+      @extend %fontReg !optional;
+      color: #f15a22;
+      margin: 54px auto 0px 42px;
+      display: inline;
+
+      a {
+        font-size: 18px;
+        @extend %fontReg !optional;
+        color: #f15a22;
+        text-decoration: none;
+      }
+
+      @media screen and (min-width: 1200px) {
+        font-size: 32px;
+        margin-left: 0;
+        a {
+          font-size: 32px;
+        }
+      }
+    }
     h1 {
       @extend %fontS !optional;
       font-size: 23px;
       margin: 72px auto 23px auto;
       color: #f15a22;
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 29px;
+        font-size: 2.4rem;
+      }
+    }
+
+    .intro-desc-top {
+      margin: 0 41px 94px 41px;
+
+      @media screen and (min-width: 1200px) {
+        margin: 0 calc(435px / 2) 142px;
+      }
     }
     p {
       margin: 0 41px 94px 41px;
@@ -17,6 +55,14 @@
     .intro-desc {
       @media screen and (min-width: 680px) {
         padding: 0 2rem;
+      }
+    }
+
+    .project-cat-list {
+      @media screen and (min-width: 1200px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem;
       }
     }
   }

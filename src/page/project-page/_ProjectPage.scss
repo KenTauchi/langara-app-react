@@ -3,54 +3,131 @@
   flex-flow: column;
   align-items: center;
 
+  @media screen and (min-width: 1200px) {
+    margin: 0 calc(435px / 4);
+  }
+
   img {
     width: 100%;
     height: auto;
   }
 
+  .category-route {
+    font-size: 18px;
+    @extend %fontReg !optional;
+    color: #f15a22;
+    margin: 54px auto 0px 42px;
+
+    a {
+      font-size: 18px;
+      @extend %fontReg !optional;
+      color: #f15a22;
+      text-decoration: none;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 32px;
+      margin-left: 0;
+      a {
+        font-size: 32px;
+      }
+    }
+  }
+
   h1 {
     @extend %fontS !optional;
-    font-size: 23px;
+    // font-size: 23px;
     margin: 72px auto 23px auto;
     color: #f15a22;
+
+    @media screen and (min-width: 1200px) {
+      margin: 140px auto 11px 0;
+    }
+  }
+
+  .app-cat {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 100%;
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+      margin: 0 auto 71px 0;
+    }
+  }
+
+  .project-single-wrapper {
+    @media screen and (min-width: 1200px) {
+      width: 100%;
+    }
+  }
+  .app-main-img {
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      margin: 0 auto;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 100%;
+    }
+  }
+
+  .project-lower {
+    @media screen and (min-width: 1200px) {
+      display: grid;
+      grid-template-columns: 0.7fr 1fr;
+      margin-top: 70px;
+    }
+  }
+
+  .project-desc-container {
+    padding: 0 42px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 0;
+      order: 2;
+    }
+  }
+
+  .app-single-desc {
+    text-align: left;
+    margin: 35px 0;
+    @media screen and (min-width: 1200px) {
+      margin: 0 0 45px;
+    }
   }
 
   h2 {
     width: 100%;
     a {
-      font-size: 16px;
+      // font-size: 16px;
       @extend %fontB !optional;
       color: #707070;
       text-decoration: underline;
     }
-    margin: 0 42px;
+    margin: 0;
 
     align-self: flex-start;
-  }
 
-  .app-single-desc {
-    text-align: left;
-    margin: 35px 39px;
-  }
-  .app-cat {
-    margin-top: 35px;
-    margin-bottom: 35px;
-    width: 100%;
-  }
-  .app-main-img {
-    @media screen and (min-width: 768px) {
-      width: 70%;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 20px;
     }
   }
 
   .team-members {
     margin: 35px 42px 32px 42px;
     align-self: flex-start;
+    @media screen and (min-width: 1200px) {
+      margin-top: 0;
+    }
     p {
       font-family: Helvetica;
       font-size: 16px;
       margin: 0 auto 5px 0;
       text-align: left;
+
+      @media screen and (min-width: 1200px) {
+        font-size: 22px;
+        margin-bottom: 45px;
+      }
     }
 
     li {

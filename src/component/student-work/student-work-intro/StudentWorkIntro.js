@@ -8,7 +8,14 @@ export default function StudentWorkIntro(props) {
   };
   return (
     <div className="student-intro">
-      <h2 className="intro-desc">{props.acf.name_of_the_project}</h2>
+      <Link
+        className="intro-title"
+        to={{
+          pathname: `/project/${props.slug}`,
+        }}
+      >
+        <h2>{props.acf.name_of_the_project}</h2>
+      </Link>
       <p
         className="intro-desc"
         style={pStyle}

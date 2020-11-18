@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { API_URL } from "../../global_variable";
 import { Link } from "react-router-dom";
 
@@ -23,7 +23,15 @@ export default function ProjectListPage() {
         )
       : null;
 
-  console.log("projects by category", projectCats);
+  // console.log("projects by category", projectCats);
+
+  const [width, setWidth] = useState(0);
+  const updateSize = () => setWidth(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", updateSize);
+    updateSize();
+  }, [width]);
 
   return (
     <div className="project-list-page">
@@ -33,14 +41,16 @@ export default function ProjectListPage() {
             <div className="project-category">
               <h1>{projectCat[0].categories_names[0]}</h1>
               <p
-                className="intro-desc"
+                className="intro-desc-top"
                 dangerouslySetInnerHTML={{
                   __html: projectCat[0].categories_description[0],
                 }}
               ></p>
               <div className="project-cat-list">
                 {projectCat.map((project, index) =>
-                  index > 2 ? null : <StudentWorkIntro {...project} />
+                  index > (width < 1200 ? 2 : 3) ? null : (
+                    <StudentWorkIntro {...project} />
+                  )
                 )}
               </div>
 
