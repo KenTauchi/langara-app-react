@@ -2,6 +2,18 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+  @media screen and (min-width: 1200px) {
+    padding: 0 4rem;
+  }
+
+  .news-intro-top {
+    @media screen and (min-width: 1200px) {
+      // display: grid;
+      // grid-template-columns: 1fr 1fr;
+      // grid-gap: 1rem;
+      margin: 0 calc(435px / 4);
+    }
+  }
 
   h1 {
     @extend %fontS !optional;
@@ -9,12 +21,20 @@
     margin: 72px auto 23px auto;
     color: #f15a22;
     text-decoration: none;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 29px;
+      font-size: 2.4rem;
+      margin-bottom: 78px;
+    }
   }
 
   .news-event-intro {
     padding: 2rem;
     @media screen and (min-width: 680px) {
       padding: 0 4rem;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 0;
     }
     .news-event-title {
       text-decoration: none;

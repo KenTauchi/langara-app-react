@@ -11,22 +11,24 @@ export default function NewsEventsIntro({ title, date, article, path, img }) {
   return (
     <div className="news-events-intro">
       <h1>News & Events Details</h1>
-      <div className="news-event-intro">
-        <Link
-          className="news-event-title"
-          to={{
-            pathname: `/news-and-events/${path}`,
-          }}
-        >
-          <h2>{title}</h2>
-        </Link>
-        <span className="post-date">{formatDate()}</span>
-        <p
-          className="intro-desc"
-          dangerouslySetInnerHTML={{
-            __html: article,
-          }}
-        ></p>
+      <div className="news-intro-top">
+        <div className="news-event-intro">
+          <Link
+            className="news-event-title"
+            to={{
+              pathname: `/news-and-events/`,
+            }}
+          >
+            <h2>{title}</h2>
+          </Link>
+          <span className="post-date">{formatDate()}</span>
+          <p
+            className="intro-desc"
+            dangerouslySetInnerHTML={{
+              __html: article,
+            }}
+          ></p>
+        </div>
         <Link
           to={{
             pathname: `/news-and-events/${path}`,
