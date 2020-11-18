@@ -47,7 +47,7 @@ export default function AlumniSuccess() {
                   <p className="alumni-comment">{alumni.acf.comment}</p>
                   <Link
                     to={{
-                      pathname: "/alumnis",
+                      pathname: "/alumni",
                     }}
                     className="link-to-alumni"
                   >
