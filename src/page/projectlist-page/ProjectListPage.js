@@ -1,4 +1,5 @@
 import React from "react";
+import { API_URL } from "../../global_variable";
 import { Link } from "react-router-dom";
 
 import useFetch from "../../component/useFetch";
@@ -6,13 +7,9 @@ import StudentWorkIntro from "../../component/student-work/student-work-intro/St
 import "./_ProjectListPage.scss";
 
 export default function ProjectListPage() {
-  const projects = useFetch(
-    `http://localhost:8888/langara_web/wp-json/wp/v2/projects?per_page=100`
-  );
+  const projects = useFetch(`${API_URL}/wp-json/wp/v2/projects?per_page=100`);
 
-  const categories = useFetch(
-    `http://localhost:8888/langara_web/wp-json/wp/v2/categories`
-  );
+  const categories = useFetch(`${API_URL}/wp-json/wp/v2/categories`);
 
   let foundCats =
     categories !== null ? categories.map((category) => category.slug) : null;

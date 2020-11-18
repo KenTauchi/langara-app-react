@@ -1,4 +1,5 @@
 import React from "react";
+import { API_URL } from "../../global_variable";
 import useFetch from "../../component/useFetch";
 
 import AlumniSingle from "../../component/alumni-single/AlumniSingle";
@@ -6,13 +7,9 @@ import AlumniSingle from "../../component/alumni-single/AlumniSingle";
 import "./_Alumni.scss";
 
 export default function Alumni() {
-  const cf = useFetch(
-    'http://localhost:8888/langara_web/wp-json/wp/v2/pages?slug="alumni"'
-  );
+  const cf = useFetch(`${API_URL}/wp-json/wp/v2/pages?slug="alumni`);
 
-  const alumni = useFetch(
-    "http://localhost:8888/langara_web/wp-json/wp/v2/alumni"
-  );
+  const alumni = useFetch(`${API_URL}/wp-json/wp/v2/alumni`);
 
   return (
     <div className="alumni-page">

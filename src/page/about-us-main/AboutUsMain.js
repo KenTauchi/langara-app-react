@@ -1,4 +1,5 @@
 import React from "react";
+import { API_URL } from "../../global_variable";
 import { Link } from "react-router-dom";
 // import StudentWork from "../../component/student-work/StudentWork";
 import AlumniSuccess from "../../component/alumni-success/AlumniSuccess";
@@ -9,9 +10,7 @@ import useFetch from "../../component/useFetch";
 import "./_AboutUsMain.scss";
 
 export default function TopPage() {
-  const cf = useFetch(
-    "http://localhost:8888/langara_web/wp-json/acf/v3/pages/370"
-  );
+  const cf = useFetch(`${API_URL}/wp-json/acf/v3/pages/370`);
 
   return (
     <div>

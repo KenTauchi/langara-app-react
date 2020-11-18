@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useFetch from "../../useFetch";
+import { API_URL } from "../../../global_variable";
 import { Link } from "react-router-dom";
 
 import Accordion from "@material-ui/core/Accordion";
@@ -15,9 +16,7 @@ import Cross from "../../../assets/cross.svg";
 import "./_HeaderNav.scss";
 
 export default function HeaderNav() {
-  const headerNav = useFetch(
-    "http://localhost:8888/langara_web/wp-json/menu/primary"
-  );
+  const headerNav = useFetch(`${API_URL}/wp-json/menu/primary`);
 
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);

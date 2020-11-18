@@ -1,11 +1,10 @@
 import React from "react";
+import { API_URL } from "../../../global_variable";
 import useFetch from "../../useFetch";
 import "./_FooterNav.scss";
 
 export default function FooterNav() {
-  const footerNav = useFetch(
-    "http://localhost:8888/langara_web/wp-json/menu/footer"
-  );
+  const footerNav = useFetch(`${API_URL}/wp-json/menu/footer`);
   return footerNav !== null ? (
     <div className="footer-menu">
       <ul>

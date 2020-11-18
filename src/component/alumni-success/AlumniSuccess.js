@@ -1,4 +1,5 @@
 import React from "react";
+import { API_URL } from "../../global_variable";
 import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
 import "swiper/swiper-bundle.css";
@@ -13,9 +14,7 @@ SwiperCore.use([Pagination, Autoplay]);
 // Import Swiper styles
 
 export default function AlumniSuccess() {
-  const alumnis = useFetch(
-    "http://localhost:8888/langara_web/wp-json/acf/v3/alumni"
-  );
+  const alumnis = useFetch(`${API_URL}/wp-json/acf/v3/alumni`);
 
   console.log("alumni", alumnis);
 

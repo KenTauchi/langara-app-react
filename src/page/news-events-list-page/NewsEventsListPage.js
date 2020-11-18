@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./_NewsEventsListPage.scss";
 
+import { API_URL } from "../../global_variable";
+
 import useFetch from "../../component/useFetch";
 import "./_NewsEventsListPage.scss";
 // import NewsEventsPage from "../news-events-page/NewsEventsPage;
@@ -8,11 +10,11 @@ import NewsEventsIntro from "../../component/news-events/NewsEventsIntro/NewsEve
 
 export default function NewsEventsListPage() {
   const newsEventsTop = useFetch(
-    `http://localhost:8888/langara_web/wp-json/wp/v2/news-and-events?orderby=date&order=desc&per_page=3`
+    `${API_URL}/wp-json/wp/v2/news-and-events?orderby=date&order=desc&per_page=3`
   );
 
   const newsEventsAll = useFetch(
-    `http://localhost:8888/langara_web/wp-json/wp/v2/news-and-events?orderby=date&order=desc`
+    `${API_URL}/wp-json/wp/v2/news-and-events?orderby=date&order=desc`
   );
 
   const [load, setLoad] = useState(false);

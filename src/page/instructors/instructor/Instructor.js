@@ -1,17 +1,18 @@
 import React from "react";
+import { API_URL } from "../../../global_variable";
 import useFetch from "../../../component/useFetch";
 
 import "./_Instructor.scss";
 
 export default function Instructors() {
   const instructors = useFetch(
-    "http://localhost:8888/langara_web/wp-json/wp/v2/instructor?per_page=100"
+    `${API_URL}/wp-json/wp/v2/instructor?per_page=100`
   );
   const jasonInfo = useFetch(
-    "http://localhost:8888/langara_web/wp-json/wp/v2/instructor?slug=jason-madar"
+    `${API_URL}/wp-json/wp/v2/instructor?slug=jason-madar`
   );
   const jesicaInfo = useFetch(
-    "http://localhost:8888/langara_web/wp-json/wp/v2/instructor?slug=jesica-ortega-nava"
+    `${API_URL}/wp-json/wp/v2/instructor?slug=jesica-ortega-nava`
   );
 
   const orderIns = !instructors

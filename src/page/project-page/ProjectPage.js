@@ -1,4 +1,5 @@
 import React from "react";
+import { API_URL } from "../../global_variable";
 import { useParams } from "react-router-dom";
 import useFetch from "../../component/useFetch";
 import dateFormat from "../../component/dateFormat";
@@ -8,7 +9,7 @@ import "./_ProjectPage.scss";
 export default function ProjectPage() {
   let params = useParams();
   const project = useFetch(
-    `http://localhost:8888/langara_web/wp-json/wp/v2/projects?slug=${params.name}`
+    `${API_URL}/wp-json/wp/v2/projects?slug=${params.name}`
   );
 
   return (

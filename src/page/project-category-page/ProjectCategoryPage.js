@@ -1,4 +1,5 @@
 import React from "react";
+import { API_URL } from "../../global_variable";
 import { useParams } from "react-router-dom";
 import useFetch from "../../component/useFetch";
 import StudentWorkIntro from "../../component/student-work/student-work-intro/StudentWorkIntro";
@@ -8,7 +9,7 @@ import "./_ProjectCategoryPage.scss";
 export default function ProjectCategoryPage() {
   let params = useParams();
   const projects = useFetch(
-    `http://localhost:8888/langara_web/wp-json/wp/v2/projects?categories=${params.category}`
+    `${API_URL}/wp-json/wp/v2/projects?categories=${params.category}`
   );
 
   return (

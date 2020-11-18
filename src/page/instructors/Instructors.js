@@ -1,5 +1,5 @@
 import React from "react";
-
+import { API_URL } from "../../global_variable";
 import Instructor from "./instructor/Instructor";
 
 import useFetch from "../../component/useFetch";
@@ -7,9 +7,7 @@ import useFetch from "../../component/useFetch";
 import "./_Instructors.scss";
 
 export default function Instructors() {
-  const cf = useFetch(
-    "http://localhost:8888/langara_web/wp-json/acf/v3/pages/383"
-  );
+  const cf = useFetch(`${API_URL}/wp-json/acf/v3/pages/383`);
 
   return (
     <div>

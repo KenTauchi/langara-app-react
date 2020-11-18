@@ -1,11 +1,10 @@
 import React from "react";
+import { API_URL } from "../../global_variable";
 import useFetch from "../../component/useFetch";
 import "./_Contact.scss";
 
 export default function Contact() {
-  const contact = useFetch(
-    "http://localhost:8888/langara_web/wp-json/acf/v3/pages/402"
-  );
+  const contact = useFetch(`${API_URL}/wp-json/acf/v3/pages/402`);
 
   return contact !== null ? (
     <div className="contact-us-page">
