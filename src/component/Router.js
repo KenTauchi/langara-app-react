@@ -10,6 +10,7 @@ import ProjectCategoryPage from "../page/project-category-page/ProjectCategoryPa
 import NewsEventsListPage from "../page/news-events-list-page/NewsEventsListPage";
 import NewsEventsPage from "../page/news-events-page/NewsEventsPage";
 import Contact from "../page/contact/Contact";
+import ComingSoon from "../component/coming-soon/ComingSoon";
 
 export default function Router() {
   return (
@@ -28,6 +29,8 @@ export default function Router() {
       <Route exact path="/news-and-events" component={NewsEventsListPage} />
       <Route exact path="/news-and-events/:title" component={NewsEventsPage} />
       <Route exact path="/contact" component={Contact} />
+      <Route exact path="/about-this-site" component={ComingSoon} />
+      <Route exact path="/privacy-statement" component={ComingSoon} />
     </Switch>
   );
 }

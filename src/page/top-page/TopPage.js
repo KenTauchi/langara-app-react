@@ -65,7 +65,13 @@ export default function TopPage() {
               }}
             ></p>
             <h2>
-              <a href={cf.acf.apply_now_link}>{cf.acf.apply_now_button}</a>
+              <a
+                href={cf.acf.apply_now_link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {cf.acf.apply_now_button}
+              </a>
             </h2>
           </div>
         </div>

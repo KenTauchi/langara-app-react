@@ -11,6 +11,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    padding: 0 2rem;
     h1 {
       @extend %fontS !optional;
       // font-size: 23px;
@@ -26,8 +27,8 @@
     }
 
     .intro-desc-top {
-      margin: 0 41px 94px 41px;
-
+      margin: 0 41px 94px 0px;
+      text-align: left;
       @media screen and (min-width: 1200px) {
         margin: 0 calc(435px / 2) 142px;
       }

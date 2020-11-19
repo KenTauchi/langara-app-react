@@ -108,11 +108,21 @@ export default function TopPage() {
               }}
             ></p>
 
-            <a className="apply-now" href={cf.acf.apply_now_link}>
+            <a
+              className="apply-now"
+              href={cf.acf.apply_now_link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {cf.acf.apply_now_text}
             </a>
 
-            <a className="admission" href={cf.acf.see_requirement_link}>
+            <a
+              className="admission"
+              href={cf.acf.see_requirement_link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {cf.acf.see_requirement_text}
             </a>
           </div>

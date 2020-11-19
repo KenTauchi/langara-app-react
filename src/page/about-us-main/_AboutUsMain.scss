@@ -241,6 +241,8 @@
       // width: 45vw;
       // height: 32vw;
       margin: 0 34px 31px 34px;
+      display: block;
+      width: 100%;
       @media screen and (min-width: 1200px) {
         grid-column: 2 / 3;
         grid-row: 1 / -1;
@@ -249,10 +251,15 @@
     }
 
     .hear-alumni-img {
-      width: 45vw;
-      height: 32vw;
       background-position: center !important;
-      background-size: cover;
+      background-size: cover !important;
+      width: 84vw;
+      height: 78vw;
+      margin: 0 auto;
+      @media screen and (min-width: 1200px) {
+        width: 45vw;
+        height: 32vw;
+      }
     }
 
     a {
