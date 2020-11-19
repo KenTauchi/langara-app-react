@@ -17,6 +17,16 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(241, 90, 34, 0.3);
+      display: block;
+    }
 
     @media screen and (min-width: 1200px) {
       height: 48vw;
@@ -33,6 +43,7 @@
       top: 100%;
       left: 50%;
       transform: translate(-50%, -50%);
+      z-index: 1;
 
       @media screen and (min-width: 768px) {
         width: 60vw;
