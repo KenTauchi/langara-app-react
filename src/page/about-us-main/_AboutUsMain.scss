@@ -18,6 +18,7 @@
     align-items: center;
     background-position: center !important;
     margin-bottom: 199px;
+    background-size: cover !important;
 
     @media screen and (min-width: 1200px) {
       height: 48vw;
@@ -185,11 +186,13 @@
       width: calc(347 / 414 * 100vw);
       height: calc(324 / 414 * 100vw);
       margin: 0 34px 118px 34px;
+      background-size: cover !important;
+      background-position: center !important;
 
       @media screen and (min-width: 1200px) {
         margin: 0;
-        width: 40vw;
-        height: 13vw;
+        width: 45vw;
+        height: 22vw;
       }
     }
   }
@@ -234,17 +237,22 @@
       }
     }
 
-    .hear-alumni-img {
-      width: 45vw;
-      height: 32vw;
-      background-position: right !important;
+    .hear-alumni-img-container {
+      // width: 45vw;
+      // height: 32vw;
       margin: 0 34px 31px 34px;
-
       @media screen and (min-width: 1200px) {
         grid-column: 2 / 3;
         grid-row: 1 / -1;
         margin: 0;
       }
+    }
+
+    .hear-alumni-img {
+      width: 45vw;
+      height: 32vw;
+      background-position: center !important;
+      background-size: cover;
     }
 
     a {

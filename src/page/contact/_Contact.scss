@@ -3,19 +3,62 @@
   flex-flow: column;
   align-items: center;
 
+  @media screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-gap: 3rem;
+    margin: 0 calc(435px / 4);
+    height: 48vw;
+  }
+
+  .contact-us-desc {
+    @media screen and (min-width: 1200px) {
+      order: 2;
+    }
+  }
+
   h1 {
     @extend %fontS !optional;
     font-size: 23px;
     margin: 60px auto 9px auto;
     color: #f15a22;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+      font-size: 2.4rem;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  span {
+    display: block;
   }
 
   .map {
+    position: relative;
+
+    @media screen and (min-width: 1200px) {
+      margin: 0;
+    }
     iframe {
       width: 100vw;
       height: 133vw;
+      position: absolute;
+      top: 0;
+      left: 0;
       @media screen and (min-width: 768px) {
-        max-height: 470px;
+        height: 60vw;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    img {
+      transform: scale(0.1);
+      @media screen and (min-width: 1200px) {
+        transform: scale(1.2, 1.4);
       }
     }
 

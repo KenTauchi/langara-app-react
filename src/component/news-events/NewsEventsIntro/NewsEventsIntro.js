@@ -16,7 +16,7 @@ export default function NewsEventsIntro({ title, date, article, path, img }) {
           <Link
             className="news-event-title"
             to={{
-              pathname: `/news-and-events/`,
+              pathname: `/news-and-events/${path}`,
             }}
           >
             <h2>{title}</h2>

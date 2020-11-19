@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { API_URL } from "../../global_variable";
 import { Link } from "react-router-dom";
 // import StudentWork from "../../component/student-work/StudentWork";
@@ -6,11 +6,23 @@ import AlumniSuccess from "../../component/alumni-success/AlumniSuccess";
 import StudentWorkTopIntro from "../../component/student-work/student-work-top-intro/StudentWorkTopIntro";
 
 import useFetch from "../../component/useFetch";
+import MobileBanner from "../../assets/about-us-main_mobile.jpg";
 
 import "./_AboutUsMain.scss";
 
 export default function TopPage() {
   const cf = useFetch(`${API_URL}/wp-json/acf/v3/pages/370`);
+
+  const [width, setWidth] = useState(0);
+  const updateSize = () => setWidth(window.innerWidth);
+
+  const bcgAboutUsTopImg = () =>
+    width > 600 ? `url(${cf.acf.top_image})` : `url(${MobileBanner})`;
+
+  useEffect(() => {
+    window.addEventListener("resize", updateSize);
+    updateSize();
+  }, [width]);
 
   return (
     <div>
@@ -18,7 +30,7 @@ export default function TopPage() {
         <div className="about-us-main-page">
           <div
             className="aboutus-main-top"
-            style={{ background: `url(${cf.acf.top_image})` }}
+            style={{ background: bcgAboutUsTopImg() }}
           >
             <div className="top-desc">
               <h1>{cf.acf.top_title}</h1>
@@ -54,18 +66,28 @@ export default function TopPage() {
                 <li>{cf.acf.discovery_list_3}</li>
               </ul>
             </div>
-            <div className="discover-img">
-              <img src={cf.acf.discover_image} alt="discover-pic" />
+            <div
+              className="discover-img"
+              style={{ background: `url(${cf.acf.discover_image})` }}
+            >
+              {/*<img src={cf.acf.discover_image} alt="discover-pic" />*/}
             </div>
           </div>
 
           <div className="hear-alumni">
             <h1>{cf.acf.alumni_title}</h1>
             <p className="intro-desc">{cf.acf.alumni_description}</p>
-            <div
-              className="hear-alumni-img"
-              style={{ background: `url(${cf.acf.alumni_about_us_image})` }}
-            ></div>
+            <Link
+              className="hear-alumni-img-container"
+              to={{
+                pathname: "/alumni/",
+              }}
+            >
+              <div
+                className="hear-alumni-img"
+                style={{ background: `url(${cf.acf.alumni_about_us_image})` }}
+              ></div>
+            </Link>
             <Link
               className="link-to-alumni"
               to={{

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { API_URL } from "../../global_variable";
 import { Link } from "react-router-dom";
 // import StudentWork from "../../component/student-work/StudentWork";
@@ -6,6 +6,7 @@ import AlumniSuccess from "../../component/alumni-success/AlumniSuccess";
 import StudentWorkTopIntro from "../../component/student-work/student-work-top-intro/StudentWorkTopIntro";
 
 import useFetch from "../../component/useFetch";
+import MobileBanner from "../../assets/homepage-banner_mobile.jpg";
 import background from "../../assets/hp_bg.png";
 
 import "./_TopPage.scss";
@@ -13,14 +14,22 @@ import "./_TopPage.scss";
 export default function TopPage() {
   const cf = useFetch(`${API_URL}/wp-json/acf/v3/pages/356`);
 
+  const [width, setWidth] = useState(0);
+  const updateSize = () => setWidth(window.innerWidth);
+
+  const bcgTopImg = () =>
+    width > 600 ? `url(${cf.acf.front_top_image})` : `url(${MobileBanner})`;
+
+  useEffect(() => {
+    window.addEventListener("resize", updateSize);
+    updateSize();
+  }, [width]);
+
   return (
     <div>
       {cf !== null ? (
         <div className="front-page">
-          <div
-            className="intro"
-            style={{ background: `url(${cf.acf.front_top_image})` }}
-          >
+          <div className="intro" style={{ background: bcgTopImg() }}>
             <div className="intro-desc">
               <h1>{cf.acf.title_intro}</h1>
               <p
