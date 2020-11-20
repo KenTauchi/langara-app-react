@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: ./public/index.html
-    destination: /home/ec2-user/langara-app
+  - source: /index.html
+    destination: /var/www/html/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
