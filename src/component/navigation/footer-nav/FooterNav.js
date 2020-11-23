@@ -16,8 +16,13 @@ export default function FooterNav() {
       <ul>
         {footerNav.map((item, index) => (
           <li key={index}>
-            {/*<a href={item.url}>{item.title}</a>*/}
-            <Link to={`../../${endPoint(item.url)}`}>{item.title}</Link>
+            {item.title === "Privacy Statement" ? (
+              <a href="https://gateway.langara.ca/privacy-policy/">
+                {item.title}
+              </a>
+            ) : (
+              <Link to={`../../${endPoint(item.url)}`}>{item.title}</Link>
+            )}
           </li>
         ))}
       </ul>

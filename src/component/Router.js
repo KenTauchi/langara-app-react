@@ -30,7 +30,6 @@ export default function Router() {
       <Route exact path="/news-and-events/:title" component={NewsEventsPage} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/about-this-site" component={ComingSoon} />
-      <Route exact path="/privacy-statement" component={ComingSoon} />
     </Switch>
   );
 }
