@@ -16,7 +16,7 @@ SwiperCore.use([Pagination, Autoplay]);
 export default function AlumniSuccess() {
   const alumnis = useFetch(`${API_URL}/wp-json/acf/v3/alumni`);
 
-  console.log("alumni", alumnis);
+  // console.log("alumni", alumnis);
 
   const cf = useFetch(`${API_URL}/wp-json/acf/v3/pages/356`);
 

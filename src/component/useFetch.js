@@ -7,7 +7,7 @@ export default function useFetch(url) {
       .then((response) => response.json())
       .then((posts) => {
         setData(posts);
-        console.log(posts);
+        // console.log(posts);
       })
       .catch(() => null);
   }, [url]);
