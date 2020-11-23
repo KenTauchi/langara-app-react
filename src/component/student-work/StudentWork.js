@@ -1,5 +1,6 @@
 import React from "react";
 import { API_URL } from "../../global_variable";
+import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
 import "./_StudentWork.scss";
 
@@ -12,9 +13,15 @@ export default function StudentWork() {
     <div className="project-list">
       {studentWork.map((d, index) =>
         d.slug === "zaila" || d.slug === "nearest" || d.slug === "lair" ? (
-          <div className="student-work-image" key={index}>
+          <Link
+            className="student-work-image"
+            key={index}
+            to={{
+              pathname: `/project/${d.slug}`,
+            }}
+          >
             <img src={d.acf.app_picture} alt="app-img" />
-          </div>
+          </Link>
         ) : null
       )}
     </div>
