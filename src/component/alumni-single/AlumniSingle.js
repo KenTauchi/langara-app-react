@@ -4,7 +4,7 @@ import "./_AlumniSingle.scss";
 export default function AlumniSingle(props) {
   return (
     <div className="alumna">
-      {props.acf.alumni_name === "Andre" ? (
+      {props.acf.alumni_name === "Andre Luiz Falco" ? (
         <p>Coming Soon...</p>
       ) : (
         <div>
