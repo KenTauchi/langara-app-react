@@ -39,7 +39,14 @@ export default function ProjectListPage() {
         projectCats.map((projectCat) =>
           projectCat.length !== 0 ? (
             <div className="project-category">
-              <h1>{projectCat[0].categories_names[0]}</h1>
+              <Link
+                className="project-cat-title"
+                to={{
+                  pathname: `/projects/category/${projectCat[0].categories}`,
+                }}
+              >
+                <h1>{projectCat[0].categories_names[0]}</h1>
+              </Link>
               <p
                 className="intro-desc-top"
                 dangerouslySetInnerHTML={{

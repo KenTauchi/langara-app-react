@@ -26,7 +26,7 @@ export default function HeaderNav() {
     setExpanded(isExpanded ? panel : false);
   };
 
-  // const {submenu, setSubmenu} = useState(null);
+  console.log("isExpanded ", expanded);
   const endPoint = (url) => {
     let pathArr = url.split("/");
     return pathArr.slice(-2)[0];
@@ -39,72 +39,6 @@ export default function HeaderNav() {
     window.addEventListener("resize", updateSize);
     updateSize();
   }, [width]);
-
-  // return headerNav !== null ? (
-  //   <div className="primary-menu">
-  //     <Link to="/" className="logo">
-  //       <img src={Logo} alt="logo" />
-  //     </Link>
-  //     <Link to="#" className="menu-bars">
-  //       <img
-  //         className="hamburger"
-  //         src={Hamburger}
-  //         onClick={showSidebar}
-  //         alt="hamurger"
-  //       />
-  //     </Link>
-  //     <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-  //       <ul className="nav-menu-items">
-  //         <li>
-  //           <Link>
-  //             <img
-  //               className="cross"
-  //               src={Cross}
-  //               onClick={showSidebar}
-  //               alt="cross"
-  //             />
-  //           </Link>
-  //         </li>
-  //         {headerNav.map((item, index) =>
-  //           item.title === "The Program" ? (
-  //             <Accordion
-  //               key={index}
-  //               expanded={expanded === `panel${item.Id}`}
-  //               onChange={handleChange(`panel${item.Id}`)}
-  //             >
-  //               <AccordionSummary
-  //                 expandIcon={<ExpandMoreIcon />}
-  //                 aria-controls={`panel${item.Id}bh-content`}
-  //                 id={`panel${item.Id}bh-header`}
-  //               >
-  //                 <Typography>{item.title}</Typography>
-  //               </AccordionSummary>
-  //               {headerNav.map((navItem, index) =>
-  //                 navItem.menu_item_parent !== "0" ? (
-  //                   <AccordionDetails key={index} onClick={showSidebar}>
-  //                     <Typography>
-  //                       <Link to={`../../${endPoint(navItem.url)}`}>
-  //                         {navItem.title}
-  //                       </Link>
-  //                     </Typography>
-  //                   </AccordionDetails>
-  //                 ) : null
-  //               )}
-  //             </Accordion>
-  //           ) : item.menu_item_parent === "0" ? (
-  //             <li className="menu-item" key={index} onClick={showSidebar}>
-  //               <Link to={`../../${endPoint(item.url)}`}>{item.title}</Link>
-  //             </li>
-  //           ) : null
-  //         )}
-  //       </ul>
-  //     </nav>
-  //   </div>
-  // ) : (
-  //   <div>
-  //     <p>Loading...</p>
-  //   </div>
-  // );
 
   return headerNav !== null && width < 1200 ? (
     <div className="primary-menu">
@@ -141,16 +75,21 @@ export default function HeaderNav() {
               >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
-                  aria-controls={`panel${item.Id}bh-content`}
-                  id={`panel${item.Id}bh-header`}
+                  // aria-controls={`panel${item.Id}bh-content`}
+                  // id={`panel${item.Id}bh-header`}
                 >
-                  <Typography>{item.title}</Typography>
+                  <Typography onClick={() => setExpanded(false)}>
+                    {item.title}
+                  </Typography>
                 </AccordionSummary>
                 {headerNav.map((navItem, index) =>
                   navItem.menu_item_parent !== "0" ? (
                     <AccordionDetails key={index} onClick={showSidebar}>
                       <Typography>
-                        <Link to={`../../${endPoint(navItem.url)}`}>
+                        <Link
+                          to={`../../${endPoint(navItem.url)}`}
+                          onClick={() => setExpanded(false)}
+                        >
                           {navItem.title}
                         </Link>
                       </Typography>
@@ -160,7 +99,12 @@ export default function HeaderNav() {
               </Accordion>
             ) : item.menu_item_parent === "0" ? (
               <li className="menu-item" key={index} onClick={showSidebar}>
-                <Link to={`../../${endPoint(item.url)}`}>{item.title}</Link>
+                <Link
+                  to={`../../${endPoint(item.url)}`}
+                  onClick={() => setExpanded(false)}
+                >
+                  {item.title}
+                </Link>
               </li>
             ) : null
           )}
@@ -193,7 +137,10 @@ export default function HeaderNav() {
                   navItem.menu_item_parent !== "0" ? (
                     <AccordionDetails key={index} onClick={showSidebar}>
                       <Typography>
-                        <Link to={`../../${endPoint(navItem.url)}`}>
+                        <Link
+                          to={`../../${endPoint(navItem.url)}`}
+                          onClick={() => setExpanded(false)}
+                        >
                           {navItem.title}
                         </Link>
                       </Typography>
@@ -203,7 +150,12 @@ export default function HeaderNav() {
               </Accordion>
             ) : item.menu_item_parent === "0" ? (
               <li className="menu-item" key={index} onClick={showSidebar}>
-                <Link to={`../../${endPoint(item.url)}`}>{item.title}</Link>
+                <Link
+                  to={`../../${endPoint(item.url)}`}
+                  onClick={() => setExpanded(false)}
+                >
+                  {item.title}
+                </Link>
               </li>
             ) : null
           )}

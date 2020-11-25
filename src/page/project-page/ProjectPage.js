@@ -54,17 +54,23 @@ export default function ProjectPage() {
                   ></p>
 
                   <h2>
-                    <a href={p.acf.project_site_link}>
-                      View Project Here (Website Link)
-                    </a>
+                    {p.acf.project_site_link === "" ? null : (
+                      <a href={p.acf.project_site_link}>
+                        View Project Here (Website Link)
+                      </a>
+                    )}
                   </h2>
                   <h2>
-                    <a href={p.acf.case_study}>Case Study</a>
+                    {p.acf.case_study === "" ? null : (
+                      <a href={p.acf.case_study}>Case Study</a>
+                    )}
                   </h2>
                   <h2>
-                    <a href={p.acf.project_proposal_file}>
-                      Download Project Proposal
-                    </a>
+                    {p.acf.project_proposal_file === "" ? null : (
+                      <a href={p.acf.project_proposal_file}>
+                        Download Project Proposal
+                      </a>
+                    )}
                   </h2>
                 </div>
                 <div className="team-members">
