@@ -26,7 +26,6 @@ export default function HeaderNav() {
     setExpanded(isExpanded ? panel : false);
   };
 
-  console.log("isExpanded ", expanded);
   const endPoint = (url) => {
     let pathArr = url.split("/");
     return pathArr.slice(-2)[0];

@@ -11,8 +11,10 @@ export default function ProjectListPage() {
 
   const categories = useFetch(`${API_URL}/wp-json/wp/v2/categories`);
 
+  const orderCats = !categories ? null : categories.sort((a, b) => b.id - a.id);
+
   let foundCats =
-    categories !== null ? categories.map((category) => category.slug) : null;
+    orderCats !== null ? orderCats.map((category) => category.slug) : null;
 
   let projectCats =
     foundCats !== null && projects !== null
@@ -22,18 +24,6 @@ export default function ProjectListPage() {
           )
         )
       : null;
-
-  const orderCat = !projectCats
-    ? null
-    : projectCats.sort((a, b) => {
-        if (a.id > b.id) {
-          return 1;
-        }
-        if (b.id > a.id) {
-          return -1;
-        }
-        return 0;
-      });
 
   const [width, setWidth] = useState(0);
   const updateSize = () => setWidth(window.innerWidth);
@@ -45,8 +35,8 @@ export default function ProjectListPage() {
 
   return (
     <div className="project-list-page">
-      {projectCats !== null && orderCat !== null ? (
-        orderCat.map((projectCat) =>
+      {projectCats !== null ? (
+        projectCats.map((projectCat) =>
           projectCat.length !== 0 ? (
             <div className="project-category">
               <Link
