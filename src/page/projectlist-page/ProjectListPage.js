@@ -23,7 +23,17 @@ export default function ProjectListPage() {
         )
       : null;
 
-  // console.log("projects by category", projectCats);
+  const orderCat = !projectCats
+    ? null
+    : projectCats.sort((a, b) => {
+        if (a.id > b.id) {
+          return 1;
+        }
+        if (b.id > a.id) {
+          return -1;
+        }
+        return 0;
+      });
 
   const [width, setWidth] = useState(0);
   const updateSize = () => setWidth(window.innerWidth);
@@ -35,8 +45,8 @@ export default function ProjectListPage() {
 
   return (
     <div className="project-list-page">
-      {projectCats !== null ? (
-        projectCats.map((projectCat) =>
+      {projectCats !== null && orderCat !== null ? (
+        orderCat.map((projectCat) =>
           projectCat.length !== 0 ? (
             <div className="project-category">
               <Link
