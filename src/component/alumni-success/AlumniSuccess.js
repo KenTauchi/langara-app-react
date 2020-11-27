@@ -22,7 +22,7 @@ export default function AlumniSuccess() {
 
   return cf !== null && alumnis !== null ? (
     <div className="alumnis-success">
-      <h1>{cf.acf.alumni_front_title}</h1>
+      <h1>{cf.acf.alumni_title}</h1>
       <p className="intro-desc">{cf.acf.alumni_front_description}</p>
       <Swiper
         id="main"
