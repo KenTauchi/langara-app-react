@@ -33,8 +33,8 @@ export default function ProjectCategoryPage() {
             {projects[0].categories_description}
           </p>
           <div className="project-cat-list">
-            {projects.map((project) => (
-              <StudentWorkIntro {...project} />
+            {projects.map((project, index) => (
+              <StudentWorkIntro {...project} key={index} />
             ))}
           </div>
         </div>
