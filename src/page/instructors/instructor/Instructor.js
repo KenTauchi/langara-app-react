@@ -29,8 +29,8 @@ export default function Instructors() {
 
   return orderIns !== null && jasonInfo !== null && jesicaInfo !== null ? (
     <div className="instructor">
-      {jasonInfo.map((jason) => (
-        <div className="instructor-single">
+      {jasonInfo.map((jason, index) => (
+        <div className="instructor-single" key={index}>
           <div className="profile-img">
             <img src={jason.acf.instructor_profile_image} alt="jason-img" />
           </div>
@@ -41,8 +41,8 @@ export default function Instructors() {
           </div>
         </div>
       ))}
-      {jesicaInfo.map((jesica) => (
-        <div className="instructor-single">
+      {jesicaInfo.map((jesica, index) => (
+        <div className="instructor-single" key={index}>
           <div className="profile-img">
             <img src={jesica.acf.instructor_profile_image} alt="jesica-img" />
           </div>
@@ -54,10 +54,10 @@ export default function Instructors() {
         </div>
       ))}
 
-      {orderIns.map((instructor) =>
+      {orderIns.map((instructor, index) =>
         instructor.slug === "jason-madar" ||
         instructor.slug === "jesica-ortega-nava" ? null : (
-          <div className="instructor-single">
+          <div className="instructor-single" key={index}>
             <div className="profile-img">
               <img
                 src={instructor.acf.instructor_profile_image}

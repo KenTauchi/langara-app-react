@@ -36,9 +36,9 @@ export default function ProjectListPage() {
   return (
     <div className="project-list-page">
       {projectCats !== null ? (
-        projectCats.map((projectCat) =>
+        projectCats.map((projectCat, index) =>
           projectCat.length !== 0 ? (
-            <div className="project-category">
+            <div className="project-category" key={index}>
               <Link
                 className="project-cat-title"
                 to={{
@@ -56,7 +56,7 @@ export default function ProjectListPage() {
               <div className="project-cat-list">
                 {projectCat.map((project, index) =>
                   index > (width < 1200 ? 2 : 3) ? null : (
-                    <StudentWorkIntro {...project} />
+                    <StudentWorkIntro {...project} key={index} />
                   )
                 )}
               </div>

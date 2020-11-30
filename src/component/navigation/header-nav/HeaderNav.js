@@ -56,14 +56,14 @@ export default function HeaderNav() {
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items">
           <li>
-            <Link>
+            <span>
               <img
                 className="cross"
                 src={Cross}
                 onClick={showSidebar}
                 alt="cross"
               />
-            </Link>
+            </span>
           </li>
           {headerNav.map((item, index) =>
             item.title === "The Program" ? (

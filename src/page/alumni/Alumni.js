@@ -21,8 +21,8 @@ export default function Alumni() {
       ) : null}
       {alumni !== null ? (
         <div className="alumni-list">
-          {alumni.map((alumna) => (
-            <AlumniSingle {...alumna} />
+          {alumni.map((alumna, index) => (
+            <AlumniSingle {...alumna} key={index} />
           ))}
         </div>
       ) : (

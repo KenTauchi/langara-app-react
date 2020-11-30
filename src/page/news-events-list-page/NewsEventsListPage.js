@@ -28,13 +28,14 @@ export default function NewsEventsListPage() {
 
   return data !== null ? (
     <div className="news-events-list-page">
-      {data.map((news) => (
+      {data.map((news, index) => (
         <NewsEventsIntro
           title={news.title.rendered}
           date={news.date}
           article={news.acf.section1_article}
           path={news.slug}
           img={news.acf.article_image}
+          key={index}
         />
       ))}
       <p className="load-news-events" onClick={() => setLoad(!load)}>
