@@ -8,7 +8,7 @@ import StudentWorkTopIntro from "../../component/student-work/student-work-top-i
 import useFetch from "../../component/useFetch";
 import MobileBanner from "../../assets/homepage-banner_mobile.jpg";
 import WebBannerWebP from "../../assets/homepage-bannerFinal.webp";
-import WebBannerJPG from "../../assets/homepage-bannerFinal.jpp";
+import WebBannerJPG from "../../assets/homepage-bannerFinal.jpg";
 import background from "../../assets/hp_bg.png";
 
 import isWebPSupported from "is-webp-supported";
