@@ -7,6 +7,7 @@ import StudentWorkTopIntro from "../../component/student-work/student-work-top-i
 
 import useFetch from "../../component/useFetch";
 import MobileBanner from "../../assets/homepage-banner_mobile.jpg";
+import WebBanner from "../../assets/homepage-bannerFinal.webp";
 import background from "../../assets/hp_bg.png";
 
 import "./_TopPage.scss";
@@ -18,7 +19,7 @@ export default function TopPage() {
   const updateSize = () => setWidth(window.innerWidth);
 
   const bcgTopImg = () =>
-    width > 600 ? `url(${cf.acf.front_top_image})` : `url(${MobileBanner})`;
+    width > 600 ? `url(${WebBanner})` : `url(${MobileBanner})`;
 
   useEffect(() => {
     window.addEventListener("resize", updateSize);
