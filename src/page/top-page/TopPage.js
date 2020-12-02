@@ -7,8 +7,11 @@ import StudentWorkTopIntro from "../../component/student-work/student-work-top-i
 
 import useFetch from "../../component/useFetch";
 import MobileBanner from "../../assets/homepage-banner_mobile.jpg";
-import WebBanner from "../../assets/homepage-bannerFinal.webp";
+import WebBannerWebP from "../../assets/homepage-bannerFinal.webp";
+import WebBannerJPG from "../../assets/homepage-bannerFinal.jpp";
 import background from "../../assets/hp_bg.png";
+
+import isWebPSupported from "is-webp-supported";
 
 import "./_TopPage.scss";
 
@@ -19,7 +22,11 @@ export default function TopPage() {
   const updateSize = () => setWidth(window.innerWidth);
 
   const bcgTopImg = () =>
-    width > 600 ? `url(${WebBanner})` : `url(${MobileBanner})`;
+    width > 600 && isWebPSupported
+      ? `url(${WebBannerWebP})`
+      : width > 600 && !isWebPSupported
+      ? `url(${WebBannerJPG})`
+      : `url(${MobileBanner})`;
 
   useEffect(() => {
     window.addEventListener("resize", updateSize);
