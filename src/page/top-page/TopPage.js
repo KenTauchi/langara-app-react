@@ -21,10 +21,12 @@ export default function TopPage() {
   const [width, setWidth] = useState(0);
   const updateSize = () => setWidth(window.innerWidth);
 
+  const support = isWebPSupported();
+
   const bcgTopImg = () =>
-    width > 600 && isWebPSupported
+    width > 600 && support
       ? `url(${WebBannerWebP})`
-      : width > 600 && !isWebPSupported
+      : width > 600 && !support
       ? `url(${WebBannerJPG})`
       : `url(${MobileBanner})`;
 
