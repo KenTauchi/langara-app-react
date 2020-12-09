@@ -18,10 +18,10 @@ export default function Instructors() {
   const orderIns = !instructors
     ? null
     : instructors.sort((a, b) => {
-        if (a.slug > b.slug) {
+        if (a.title.rendered.split(" ")[1] > b.title.rendered.split(" ")[1]) {
           return 1;
         }
-        if (b.slug > a.slug) {
+        if (b.title.rendered.split(" ")[1] > a.title.rendered.split(" ")[1]) {
           return -1;
         }
         return 0;
