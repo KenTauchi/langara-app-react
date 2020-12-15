@@ -9,7 +9,7 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-const Faq = () => {
+const FaqDeskTop = () => {
   const faqTop = useFetch(`${API_URL}/wp-json/acf/v3/pages/854`);
   const faqs = useFetch(`${API_URL}/wp-json/wp/v2/faq?per_page=100`);
   const categories = useFetch(`${API_URL}/wp-json/wp/v2/categories`);
@@ -42,10 +42,9 @@ const Faq = () => {
     );
   };
 
-  //   useEffect(() => {
-  //     return faqArr !== null ? setData(faqArr[0]) : null;
-  //   }, []);
-  console.log(data);
+  useEffect(() => {
+    return faqs !== null ? setData(faqArr) : null;
+  }, [faqs]);
 
   return (
     <div className="faq-desktop">
@@ -101,8 +100,6 @@ const Faq = () => {
           ))}
           {data !== null ? null : <p>Please select category</p>}
         </div>
-      ) : faqArr !== null ? (
-        <h3>Please select question catgory</h3>
       ) : (
         <p>Loading...</p>
       )}
@@ -110,4 +107,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default FaqDeskTop;
