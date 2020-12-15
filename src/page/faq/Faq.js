@@ -26,7 +26,6 @@ const Faq = () => {
       : null;
 
   const faqArr = faqCats !== null ? faqCats.reverse() : null;
-  console.log(faqArr);
 
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
@@ -36,13 +35,13 @@ const Faq = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  const [expandedSub, setExpandedSub] = useState(false);
+  const [expandedsub, setExpandedSub] = useState(false);
   const handleChangeSub = (panel) => (event, isExpanded) => {
     setExpandedSub(isExpanded ? panel : false);
   };
 
   return (
-    <div>
+    <div className="faq">
       {faqTop !== null ? (
         <div className="faq-top">
           <h1>{faqTop.acf.faq_header}</h1>
@@ -54,7 +53,7 @@ const Faq = () => {
       )}
 
       {faqArr !== null ? (
-        <div>
+        <div className="faq-wrapper">
           {faqArr.map((faq, index) =>
             faq.length !== 0 ? (
               <Accordion
@@ -63,7 +62,7 @@ const Faq = () => {
                 onChange={handleChange(`panel${index}`)}
               >
                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography>
+                  <Typography className="faq-category">
                     {faq.length !== 0 ? faq[0].categories_names[0] : null}
                   </Typography>
                 </AccordionSummary>
@@ -71,11 +70,17 @@ const Faq = () => {
                   <AccordionDetails key={qa.id} onClick={showSidebar}>
                     <Accordion
                       key={qa.id}
-                      expandedSub={expandedSub === `panel${qa.id}`}
+                      expandedsub={
+                        typeof expandedsub === "boolean"
+                          ? expandedsub === `panel${qa.id}`
+                          : undefined
+                      }
                       onChange={handleChangeSub(`panel${qa.id}`)}
                     >
                       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                        <Typography>{qa.acf.question}</Typography>
+                        <Typography className="questoin">
+                          {qa.acf.question}
+                        </Typography>
                       </AccordionSummary>
 
                       <AccordionDetails key={qa.id} onClick={showSidebar}>
@@ -85,6 +90,10 @@ const Faq = () => {
                             __html: qa.acf.answer,
                           }}
                         ></p>
+
+                        <a href={qa.acf.link} className="link">
+                          {qa.acf.link}
+                        </a>
                       </AccordionDetails>
                     </Accordion>
                   </AccordionDetails>

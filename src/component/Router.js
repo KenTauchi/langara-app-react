@@ -11,6 +11,7 @@ import NewsEventsListPage from "../page/news-events-list-page/NewsEventsListPage
 import NewsEventsPage from "../page/news-events-page/NewsEventsPage";
 import Contact from "../page/contact/Contact";
 import Faq from "../page/faq/Faq";
+import FaqDeskTop from "../page/faq/FaqDeskTop";
 import ComingSoon from "../component/coming-soon/ComingSoon";
 
 export default function Router() {
@@ -31,6 +32,8 @@ export default function Router() {
       <Route exact path="/news-and-events/:title" component={NewsEventsPage} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/faq" component={Faq} />
+      <Route exact path="/faqdesktop" component={FaqDeskTop} />
+
       <Route exact path="/about-this-site" component={ComingSoon} />
     </Switch>
   );
