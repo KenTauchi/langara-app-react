@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { API_URL } from "../../global_variable";
 
 import useFetch from "../../component/useFetch";

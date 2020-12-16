@@ -9,6 +9,7 @@ import ProjectListPage from "../page/projectlist-page/ProjectListPage";
 import ProjectCategoryPage from "../page/project-category-page/ProjectCategoryPage";
 import NewsEventsListPage from "../page/news-events-list-page/NewsEventsListPage";
 import NewsEventsPage from "../page/news-events-page/NewsEventsPage";
+import AboutThisSite from "../page/about-this-site/AboutThisSite";
 import Contact from "../page/contact/Contact";
 import Faq from "../page/faq/Faq";
 import FaqDeskTop from "../page/faq/FaqDeskTop";
@@ -30,10 +31,11 @@ export default function Router() {
       <Route path="/project/:name" component={ProjectPage} />
       <Route exact path="/news-and-events" component={NewsEventsListPage} />
       <Route exact path="/news-and-events/:title" component={NewsEventsPage} />
+      <Route exact path="/abouthissite" component={AboutThisSite} />
+
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/faq" component={Faq} />
       <Route exact path="/faqdesktop" component={FaqDeskTop} />
-
       <Route exact path="/about-this-site" component={ComingSoon} />
     </Switch>
   );

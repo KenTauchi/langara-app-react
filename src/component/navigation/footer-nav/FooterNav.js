@@ -11,6 +11,7 @@ export default function FooterNav() {
     let pathArr = url.split("/");
     return pathArr.slice(-2)[0];
   };
+
   return footerNav !== null ? (
     <div className="footer-menu">
       <ul>
