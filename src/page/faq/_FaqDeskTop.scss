@@ -1,0 +1,90 @@
+.faq-desktop {
+  margin: 0 calc(435px / 4);
+  .faq-top {
+    h1 {
+      @extend %fontS !optional;
+
+      margin: 72px auto 29px;
+      font-size: 2.4rem;
+      width: 71vw;
+      color: #f15a22;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      margin: 1rem 35px;
+      padding: 0 2rem;
+      font-size: 20px;
+    }
+
+    .note {
+      margin-top: 57px;
+    }
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 170px auto 87px;
+    p {
+      font-family: Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 23px;
+      width: 19%;
+    }
+  }
+
+  .faq-wrapper {
+    margin: 1rem 35px 50px 30px;
+
+    h1 {
+      font-family: Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 34px;
+      color: #f15a22;
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .MuiAccordionSummary-root {
+      padding: 0;
+      p {
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+      }
+    }
+
+    .MuiPaper-elevation1 {
+      box-shadow: none;
+    }
+
+    .MuiAccordionSummary-content {
+      margin: 2rem 0;
+      p {
+        color: #707070;
+      }
+    }
+
+    .MuiAccordionDetails-root {
+      padding: 0;
+      display: block;
+      p,
+      a {
+        font-family: Helvetica, sans-serif;
+        font-size: 23px;
+        color: #707070;
+        margin: 0;
+        text-align: left;
+      }
+
+      a {
+        display: block;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+    }
+  }
+}

@@ -35,6 +35,8 @@ const Faq = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
+  // const headColor = expanded ? { color: "#f15a22" } : { color: "#707070" };
+
   const [expandedsub, setExpandedSub] = useState(false);
   const handleChangeSub = (panel) => (event, isExpanded) => {
     setExpandedSub(isExpanded ? panel : false);
@@ -47,6 +49,9 @@ const Faq = () => {
           <h1>{faqTop.acf.faq_header}</h1>
           <p>{faqTop.acf.faq_sub_header_1}</p>
           <p>{faqTop.acf.faq_sub_header_2}</p>
+          <p className="note">
+            Select a category that suites your query the best.
+          </p>
         </div>
       ) : (
         <p>Loading...</p>
@@ -69,6 +74,7 @@ const Faq = () => {
                 {faq.map((qa, index) => (
                   <AccordionDetails key={qa.id} onClick={showSidebar}>
                     <Accordion
+                      className="inner-accordion"
                       key={qa.id}
                       expandedsub={
                         typeof expandedsub === "boolean"
@@ -91,7 +97,12 @@ const Faq = () => {
                           }}
                         ></p>
 
-                        <a href={qa.acf.link} className="link">
+                        <a
+                          href={qa.acf.link}
+                          className="link"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           {qa.acf.link}
                         </a>
                       </AccordionDetails>

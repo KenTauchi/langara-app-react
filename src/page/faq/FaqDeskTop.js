@@ -36,6 +36,7 @@ const FaqDeskTop = () => {
   };
 
   const [data, setData] = useState();
+  const [cat, setCat] = useState("");
   const setCategory = (category) => {
     setData(
       faqArr.filter((faq) => faq.find((qa) => qa.categories_names == category))
@@ -45,6 +46,20 @@ const FaqDeskTop = () => {
   useEffect(() => {
     return faqs !== null ? setData(faqArr) : null;
   }, [faqs]);
+
+  useEffect(() => {
+    return faqs !== null ? setCat(data[0][0].categories_names) : null;
+  }, [data]);
+
+  console.log(cat);
+
+  const [ck, setCk] = useState("");
+
+  const checked = (innerText, className) => {
+    let short = innerText.toLowerCase().split(" ")[0];
+    let shortClass = className.slice(0, -1);
+    return short === shortClass ? setCk("y") : setCk("n");
+  };
 
   return (
     <div className="faq-desktop">
@@ -62,7 +77,16 @@ const FaqDeskTop = () => {
         {faqArr !== null
           ? faqArr.map((faq, index) =>
               faq.length !== 0 ? (
-                <p key={index} onClick={(e) => setCategory(e.target.innerHTML)}>
+                <p
+                  key={index}
+                  className={
+                    faq[0].categories_names[0].toLowerCase().split(" ")[0] + ck
+                  }
+                  onClick={(e) => {
+                    setCategory(e.target.innerText);
+                    checked(e.target.innerText, e.target.className);
+                  }}
+                >
                   {faq[0].categories_names[0]}
                 </p>
               ) : null
@@ -92,7 +116,12 @@ const FaqDeskTop = () => {
                   }}
                 ></p>
 
-                <a href={faq.acf.link} className="link">
+                <a
+                  href={faq.acf.link}
+                  className="link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {faq.acf.link}
                 </a>
               </AccordionDetails>
