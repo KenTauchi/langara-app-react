@@ -55,10 +55,28 @@ const FaqDeskTop = () => {
 
   const [ck, setCk] = useState("");
 
-  const checked = (innerText, className) => {
+  const checked = (innerText) => {
     let short = innerText.toLowerCase().split(" ")[0];
-    let shortClass = className.slice(0, -1);
-    return short === shortClass ? setCk("y") : setCk("n");
+
+    switch (short) {
+      case "wmdd":
+        setCk("-1");
+        break;
+      case "while":
+        setCk("-2");
+        break;
+      case "post":
+        setCk("-3");
+        break;
+      case "international":
+        setCk("-4");
+        break;
+      case "covid":
+        setCk("-5");
+        break;
+      default:
+        setCk("");
+    }
   };
 
   return (
@@ -84,7 +102,7 @@ const FaqDeskTop = () => {
                   }
                   onClick={(e) => {
                     setCategory(e.target.innerText);
-                    checked(e.target.innerText, e.target.className);
+                    checked(e.target.innerText);
                   }}
                 >
                   {faq[0].categories_names[0]}

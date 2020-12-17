@@ -34,6 +34,15 @@
       font-size: 23px;
       width: 19%;
     }
+    p.wmdd,
+    p.wmdd-1,
+    p.while-2,
+    p.post-3,
+    p.international-4,
+    p.covid-5 {
+      color: #f15a22;
+      border: 1px solid #f15a22;
+    }
   }
 
   .faq-wrapper {
@@ -46,6 +55,15 @@
       color: #f15a22;
       text-align: center;
       margin-bottom: 80px;
+    }
+
+    .MuiPaper-elevation1 {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      //   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .MuiAccordion-root:before {
+      opacity: 0;
     }
 
     .MuiAccordionSummary-root {
@@ -65,6 +83,7 @@
       margin: 2rem 0;
       p {
         color: #707070;
+        text-align: left;
       }
     }
 
@@ -85,6 +104,10 @@
         margin-bottom: 10px;
         text-align: left;
       }
+    }
+
+    .MuiSvgIcon-root {
+      font-size: 2.5rem;
     }
   }
 }
