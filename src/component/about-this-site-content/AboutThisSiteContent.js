@@ -9,7 +9,7 @@ const AboutThisSiteContent = ({
   index,
 }) => {
   return (
-    <div className={`content-${index + 1}`}>
+    <div className={`about-this-site-content content-${index + 1}`}>
       <h1>{title}</h1>
       <div>
         <img src={image} alt="content-img" />

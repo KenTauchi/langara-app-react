@@ -1,0 +1,73 @@
+.meet-the-team {
+  margin-top: 8.5vw;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+    // font-family: Helvetica, sans-serif;
+    @extend %fontS !optional;
+    // font-weight: bold;
+    color: #f15a22;
+    font-size: 4.6vw;
+    margin-bottom: 9vw;
+    @media screen and (min-width: 1200px) {
+      font-size: 2.5vw;
+      margin-bottom: 2.5vw;
+    }
+  }
+
+  .team-members {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  .team-member {
+    margin-bottom: 7vw;
+
+    .profile-image {
+      width: 27vw;
+      margin: 0 auto 5vw;
+      @media screen and (min-width: 1200px) {
+        width: 21vw;
+        margin-bottom: 3.1vw;
+      }
+    }
+    img {
+      border-radius: 50%;
+      @media screen and (min-width: 1200px) {
+        border-radius: 0;
+      }
+    }
+    span {
+      display: block;
+      @extend %fontR !optional;
+      @media screen and (min-width: 1200px) {
+        font-size: 1.25vw;
+      }
+    }
+    .member-name {
+      @extend %fontB !optional;
+      color: #f15a22;
+      @media screen and (min-width: 1200px) {
+        font-size: 1.25vw;
+      }
+    }
+  }
+
+  .special-note {
+    margin-bottom: 70px;
+    font-size: 3.1vw;
+    @extend %fontR !optional;
+    @media screen and (min-width: 1200px) {
+      font-size: 1.3vw;
+      margin-left: 26vw;
+      margin-right: 26vw;
+      text-align: center;
+    }
+  }
+}

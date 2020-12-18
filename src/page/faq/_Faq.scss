@@ -2,8 +2,7 @@
   .faq-top {
     h1 {
       @extend %fontS !optional;
-      // font-size: 23px;
-      margin: 72px auto 23px auto;
+      margin: 17vw auto 5.5vw auto;
       width: 71vw;
       color: #f15a22;
       text-align: center;
@@ -11,19 +10,20 @@
 
     p {
       text-align: left;
-      margin: 1rem 35px;
+      margin: 3.8vw 8.4vw;
+      font-size: 3.1vw;
       @media screen and (min-width: 768px) {
         padding: 0 2rem;
       }
     }
 
     .note {
-      margin-top: 57px;
+      margin-top: 13.7vw;
     }
   }
 
   .faq-wrapper {
-    margin: 1rem 35px 50px 30px;
+    margin: 3.86vw 8.5vw 12vw 7.2vw;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
@@ -32,7 +32,7 @@
       p {
         font-family: Helvetica, sans-serif;
         font-weight: bold;
-        font-size: 19px;
+        font-size: 4.6vw;
       }
     }
 
@@ -62,10 +62,10 @@
       //   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
       .MuiAccordionSummary-content {
-        margin: 18px 0;
+        margin: 4.3vw 0;
         p {
           font-family: Helvetica, sans-serif;
-          font-size: 15px;
+          font-size: 4.3vw;
           font-weight: bold;
           color: #707070;
         }
@@ -76,14 +76,14 @@
         p,
         a {
           font-family: Helvetica, sans-serif;
-          font-size: 15px;
+          font-size: 3.6vw;
           color: #707070;
           margin: 0;
         }
 
         a {
           display: block;
-          margin-bottom: 10px;
+          margin-bottom: 2vw;
           text-align: left;
         }
       }
