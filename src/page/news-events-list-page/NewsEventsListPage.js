@@ -36,6 +36,7 @@ export default function NewsEventsListPage() {
           path={news.slug}
           img={news.acf.article_image}
           key={index}
+          index={index}
         />
       ))}
       <p className="load-news-events" onClick={() => setLoad(!load)}>
