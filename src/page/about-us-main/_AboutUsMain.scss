@@ -8,6 +8,10 @@
     @media screen and (min-width: 680px) {
       padding: 0 2rem;
     }
+    @media screen and (min-width: 1200px) {
+      padding: 0;
+      text-align: center;
+    }
   }
 
   .aboutus-main-top {
@@ -22,7 +26,8 @@
 
     @media screen and (min-width: 1200px) {
       height: 48vw;
-      margin-bottom: 110px;
+
+      margin-bottom: 5.7vw;
     }
 
     &::after {
@@ -32,7 +37,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background: rgba(241, 90, 34, 0.5);
+      background: rgba(241, 90, 34, 0.3);
       display: block;
     }
 
@@ -47,11 +52,12 @@
       left: 50%;
       transform: translate(-50%, -50%);
       @media screen and (min-width: 1200px) {
-        top: calc(48vw * 0.6);
+        top: 28.4vw;
         left: 0;
         transform: translate(0, 0);
-        width: 48vw;
-        padding: 0 0 0 7rem;
+        width: 53.4vw;
+        height: 14.7vw;
+        padding: 0 0 0 8.4vw;
       }
     }
     h1 {
@@ -61,7 +67,8 @@
       text-align: center;
       @media screen and (min-width: 1200px) {
         text-align: left;
-        font-size: 2.4rem;
+        font-size: 2.5vw;
+        margin: 2.1vw 14.9vw 1.3vw 0;
       }
     }
     p {
@@ -69,6 +76,7 @@
       margin: 0 19px 21px 19px;
       @media screen and (min-width: 1200px) {
         text-align: left;
+        margin: 0 3vw 2vw 0;
       }
     }
   }
@@ -80,26 +88,36 @@
 
     h1 {
       @extend %fontS !optional;
-      // font-size: 23px;
+
       margin: 0 93px 30px 93px;
       color: #f15a22;
       text-align: center;
+      @media screen and (min-width: 1200px) {
+        margin: 0 auto 4.16vw;
+      }
     }
 
     p {
       text-align: left;
       margin: 0 33px 34px 33px;
+      @media screen and (min-width: 1200px) {
+        margin: 0 auto 3vw;
+      }
     }
 
     a {
       @extend %fontS !optional;
-      // font-size: 22px;
+
       color: #ffffff;
       padding: 15px 18px;
       background-color: #f15a22;
       text-decoration: none;
       margin: 0 auto;
       border-radius: 5px;
+      @media screen and (min-width: 1200px) {
+        font-size: 1.5vw;
+        width: 25.3vw;
+      }
     }
 
     @media screen and (min-width: 1200px) {
@@ -117,7 +135,7 @@
     align-items: center;
 
     @media screen and (min-width: 1200px) {
-      margin: 0 calc(435px / 4) 270px;
+      margin: 0 calc(435px / 4) 20vw;
 
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -181,7 +199,7 @@
         padding: 0;
         font-size: 13px;
         @media screen and (min-width: 1200px) {
-          font-size: 1rem;
+          font-size: 1vw;
         }
       }
     }
@@ -272,7 +290,7 @@
       width: 20vw;
 
       @media screen and (min-width: 1200px) {
-        font-size: 20px;
+        font-size: 1vw;
         @media screen and (min-width: 1200px) {
           grid-column: 1 / 2;
           grid-row: 3 / 4;
@@ -288,7 +306,7 @@
     flex-flow: column;
     align-items: center;
     @media screen and (min-width: 1200px) {
-      margin-bottom: 100px;
+      margin-bottom: 10.2vw;
     }
 
     h1 {
@@ -296,10 +314,16 @@
       // font-size: 23px;
       margin: 0 90px 31px 90px;
       color: #707070;
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 1.3vw;
+      }
     }
 
     p {
       margin: 0 35px 41px 35px;
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 2.4vw;
+      }
     }
 
     a {
@@ -315,11 +339,17 @@
     .apply-now {
       padding: 15px 26px;
       border-radius: 0;
+      @media screen and (min-width: 1200px) {
+        width: 14.5vw;
+      }
     }
     .admission {
       padding: 15px 18px;
       margin: 0 auto 41px auto;
       border-radius: 0;
+      @media screen and (min-width: 1200px) {
+        width: 28.8vw;
+      }
     }
   }
 }

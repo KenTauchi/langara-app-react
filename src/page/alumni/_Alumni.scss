@@ -20,8 +20,7 @@
       }
 
       @media screen and (min-width: 1200px) {
-        margin: 0 calc(435px / 2) 130px;
-        padding: 0 6rem;
+        margin: 0 25vw 6.7vw;
         text-align: center;
       }
     }
@@ -32,6 +31,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 5rem;
+      margin: 0 8.3vw;
     }
   }
 }

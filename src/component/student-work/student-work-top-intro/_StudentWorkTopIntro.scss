@@ -6,7 +6,7 @@
   align-items: center;
 
   @media screen and (min-width: 1200px) {
-    margin: calc(156px / 1.5) calc(435px / 4);
+    margin: 10vw calc(435px / 4) 14vw;
   }
 
   h1 {
@@ -27,6 +27,7 @@
 
     @media screen and (min-width: 1200px) {
       width: 60vw;
+      margin-bottom: 8.6vw;
     }
   }
 
@@ -36,7 +37,7 @@
     color: #707070;
     font-family: Arial;
     @media screen and (min-width: 1200px) {
-      font-size: 20px;
+      font-size: 1vw;
     }
   }
 }

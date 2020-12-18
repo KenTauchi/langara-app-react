@@ -98,10 +98,12 @@
   h2 {
     width: 100%;
     a {
-      // font-size: 16px;
       @extend %fontB !optional;
       color: #707070;
       text-decoration: underline;
+      @media screen and (min-width: 1200px) {
+        font-size: 1vw;
+      }
     }
     margin: 0;
 
@@ -125,7 +127,7 @@
       text-align: left;
 
       @media screen and (min-width: 1200px) {
-        font-size: 22px;
+        font-size: 1.2vw;
         margin-bottom: 45px;
       }
     }

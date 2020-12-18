@@ -4,7 +4,7 @@
   @media screen and (min-width: 1200px) {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    height: 125px;
+    height: 7.4vw;
   }
   ul {
     margin: 25px 0 25px 0;
@@ -27,7 +27,7 @@
       font-size: 12px;
       text-decoration: none;
       @media screen and (min-width: 1200px) {
-        font-size: 1.5rem;
+        font-size: 1.66vw;
         border: none;
       }
     }
@@ -51,7 +51,7 @@
       font-family: Helvetica;
       font-size: 9px;
       @media screen and (min-width: 1200px) {
-        font-size: 1rem;
+        font-size: 1vw;
       }
     }
   }
