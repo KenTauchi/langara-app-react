@@ -79,8 +79,6 @@ const FaqDeskTop = () => {
     }
   };
 
-  
-
   return (
     <div className="faq-desktop">
       {faqTop !== null ? (
