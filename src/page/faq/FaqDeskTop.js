@@ -36,7 +36,7 @@ const FaqDeskTop = () => {
   };
 
   const [data, setData] = useState();
-  const [cat, setCat] = useState("");
+
   const setCategory = (category) => {
     setData(
       faqArr.filter((faq) => faq.find((qa) => qa.categories_names == category))
@@ -46,12 +46,6 @@ const FaqDeskTop = () => {
   useEffect(() => {
     return faqs !== null ? setData(faqArr) : null;
   }, [faqs]);
-
-  useEffect(() => {
-    return faqs !== null ? setCat(data[0][0].categories_names) : null;
-  }, [data]);
-
-  console.log(cat);
 
   const [ck, setCk] = useState("");
 

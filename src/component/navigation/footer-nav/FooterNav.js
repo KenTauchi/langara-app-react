@@ -1,26 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { API_URL } from "../../../global_variable";
-import useFetch from "../../useFetch";
+// import { API_URL } from "../../../global_variable";
+// import useFetch from "../../useFetch";
 import "./_FooterNav.scss";
 
+import FooterNavData from "./FooterNavData";
+
 export default function FooterNav() {
-  const footerNav = useFetch(`${API_URL}/wp-json/menu/footer`);
+  // const footerNav = useFetch(`${API_URL}/wp-json/menu/footer`);
+  const menuData = FooterNavData;
 
   const endPoint = (url) => {
     let pathArr = url.split("/");
     return pathArr.slice(-2)[0];
   };
 
-  return footerNav !== null ? (
+  return menuData !== null ? (
     <div className="footer-menu">
       <ul>
-        {footerNav.map((item, index) => (
+        {menuData.map((item, index) => (
           <li key={index}>
             {item.title === "Privacy Statement" ? (
-              <a href="https://gateway.langara.ca/privacy-policy/">
-                {item.title}
-              </a>
+              <a href={item.url}>{item.title}</a>
             ) : (
               <Link to={`../../${endPoint(item.url)}`}>{item.title}</Link>
             )}

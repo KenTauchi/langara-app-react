@@ -39,7 +39,7 @@ export default function Router() {
       <Route path="/project/:name" component={ProjectPage} />
       <Route exact path="/news-and-events" component={NewsEventsListPage} />
       <Route exact path="/news-and-events/:title" component={NewsEventsPage} />
-      <Route exact path="/abouthissite" component={AboutThisSite} />
+      <Route exact path="/about-this-site" component={AboutThisSite} />
 
       <Route exact path="/contact" component={Contact} />
       {width < 1200 ? (

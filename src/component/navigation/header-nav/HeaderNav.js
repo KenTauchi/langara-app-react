@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import useFetch from "../../useFetch";
-import { API_URL } from "../../../global_variable";
+// import useFetch from "../../useFetch";
+// import { API_URL } from "../../../global_variable";
 import { Link } from "react-router-dom";
 
 import Accordion from "@material-ui/core/Accordion";
@@ -13,10 +13,13 @@ import Logo from "../../../assets/logo.svg";
 import Hamburger from "../../../assets/hamburger.svg";
 import Cross from "../../../assets/cross.svg";
 
+import HeaderNavData from "./HeaderNavData";
+
 import "./_HeaderNav.scss";
 
 export default function HeaderNav() {
-  const headerNav = useFetch(`${API_URL}/wp-json/menu/primary`);
+  // const headerNav = useFetch(`${API_URL}/wp-json/menu/primary`);
+  const menuData = HeaderNavData;
 
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
@@ -39,7 +42,7 @@ export default function HeaderNav() {
     updateSize();
   }, [width]);
 
-  return headerNav !== null && width < 1200 ? (
+  return menuData !== null && width < 1200 ? (
     <div className="primary-menu">
       <Link to="/" className="logo">
         <img src={Logo} alt="logo" />
@@ -65,7 +68,7 @@ export default function HeaderNav() {
               />
             </span>
           </li>
-          {headerNav.map((item, index) =>
+          {menuData.map((item, index) =>
             item.title === "The Program" ? (
               <Accordion
                 key={index}
@@ -81,8 +84,8 @@ export default function HeaderNav() {
                     {item.title}
                   </Typography>
                 </AccordionSummary>
-                {headerNav.map((navItem, index) =>
-                  navItem.menu_item_parent !== "0" ? (
+                {menuData.map((navItem, index) =>
+                  navItem.child ? (
                     <AccordionDetails key={index} onClick={showSidebar}>
                       <Typography>
                         <Link
@@ -96,7 +99,7 @@ export default function HeaderNav() {
                   ) : null
                 )}
               </Accordion>
-            ) : item.menu_item_parent === "0" ? (
+            ) : !item.parent && !item.child ? (
               <li className="menu-item" key={index} onClick={showSidebar}>
                 <Link
                   to={`../../${endPoint(item.url)}`}
@@ -110,7 +113,7 @@ export default function HeaderNav() {
         </ul>
       </nav>
     </div>
-  ) : headerNav !== null && width > 1200 ? (
+  ) : menuData !== null && width > 1200 ? (
     <div className="primary-menu">
       <Link to="/" className="logo">
         <img src={Logo} alt="logo" />
@@ -118,7 +121,7 @@ export default function HeaderNav() {
 
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items">
-          {headerNav.map((item, index) =>
+          {menuData.map((item, index) =>
             item.title === "The Program" ? (
               <Accordion
                 key={index}
@@ -132,8 +135,8 @@ export default function HeaderNav() {
                 >
                   <Typography>{item.title}</Typography>
                 </AccordionSummary>
-                {headerNav.map((navItem, index) =>
-                  navItem.menu_item_parent !== "0" ? (
+                {menuData.map((navItem, index) =>
+                  navItem.child ? (
                     <AccordionDetails key={index} onClick={showSidebar}>
                       <Typography>
                         <Link
@@ -147,7 +150,7 @@ export default function HeaderNav() {
                   ) : null
                 )}
               </Accordion>
-            ) : item.menu_item_parent === "0" ? (
+            ) : !item.parent && !item.child ? (
               <li className="menu-item" key={index} onClick={showSidebar}>
                 <Link
                   to={`../../${endPoint(item.url)}`}

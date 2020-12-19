@@ -37,9 +37,9 @@ export default function TopPage() {
 
   return (
     <div>
-      {cf !== null ? (
-        <div className="front-page">
-          <div className="intro" style={{ background: bcgTopImg() }}>
+      <div className="front-page">
+        <div className="intro" style={{ background: bcgTopImg() }}>
+          {cf !== null ? (
             <div className="intro-desc">
               <h1>{cf.acf.title_intro}</h1>
               <p
@@ -51,45 +51,48 @@ export default function TopPage() {
                 {cf.acf.link_text_front_top}
               </Link>
             </div>
-          </div>
+          ) : null}
+        </div>
+        {cf !== null ? (
+          <div>
+            <div className="intro-movie-wrap">
+              <img src={background} alt="hp-bg" />
+              <div className="intro-movie">
+                <iframe src={cf.acf.intro_movie} title="intro-movie"></iframe>
+              </div>
+            </div>
 
-          <div className="intro-movie-wrap">
-            <img src={background} alt="hp-bg" />
-            <div className="intro-movie">
-              <iframe src={cf.acf.intro_movie} title="intro-movie"></iframe>
+            <StudentWorkTopIntro {...cf} />
+
+            <AlumniSuccess />
+
+            <div
+              className="top-apply bcg-img"
+              style={{ background: `url(${cf.acf.apply_now_image})` }}
+            >
+              <h1>{cf.acf.bottom_message_title}</h1>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: cf.acf.bottom_message,
+                }}
+              ></p>
+              <h2>
+                <a
+                  href={cf.acf.apply_now_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {cf.acf.apply_now_button}
+                </a>
+              </h2>
             </div>
           </div>
-
-          <StudentWorkTopIntro {...cf} />
-
-          <AlumniSuccess />
-
-          <div
-            className="top-apply bcg-img"
-            style={{ background: `url(${cf.acf.apply_now_image})` }}
-          >
-            <h1>{cf.acf.bottom_message_title}</h1>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: cf.acf.bottom_message,
-              }}
-            ></p>
-            <h2>
-              <a
-                href={cf.acf.apply_now_link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {cf.acf.apply_now_button}
-              </a>
-            </h2>
+        ) : (
+          <div>
+            <p>Loading...</p>
           </div>
-        </div>
-      ) : (
-        <div>
-          <p>Loading...</p>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
