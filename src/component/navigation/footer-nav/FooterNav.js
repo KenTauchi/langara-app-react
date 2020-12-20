@@ -29,7 +29,7 @@ export default function FooterNav() {
         ))}
       </ul>
       <div className="copyright">
-        <p>&copy; 2020 Langara College all rights reserved</p>
+        <p>&copy; 2020 Langara College. All rights reserved.</p>
       </div>
     </div>
   ) : (

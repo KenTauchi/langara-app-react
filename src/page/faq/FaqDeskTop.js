@@ -134,7 +134,7 @@ const FaqDeskTop = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {faq.acf.link}
+                  {faq.acf.link !== undefined ? "Link" : null}
                 </a>
               </AccordionDetails>
             </Accordion>
