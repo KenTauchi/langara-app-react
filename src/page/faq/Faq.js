@@ -103,7 +103,7 @@ const Faq = () => {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          Link
+                          {qa.acf.link !== undefined ? "More details" : null}
                         </a>
                       </AccordionDetails>
                     </Accordion>
