@@ -6,6 +6,10 @@ import useFetch from "../../component/useFetch";
 import AboutThisSiteContent from "../../component/about-this-site-content/AboutThisSiteContent";
 import TeamMember from "../../component/about-this-site-content/TeamMember";
 
+import icon01 from "../../assets/icons01.svg";
+import icon02 from "../../assets/icons02.svg";
+import icon03 from "../../assets/icons03.svg";
+
 const AboutThisSite = () => {
   const header = useFetch(
     `${API_URL}/wp-json/wp/v2/pages?slug=about-this-site-top `
@@ -19,13 +23,13 @@ const AboutThisSite = () => {
         <h1>{header[0].acf.header}</h1>
         <div className="icons">
           <div className="icon icon-1">
-            <img src={header[0].acf.icon1} alt="icon" />
+            <img src={icon01} alt="icon" />
           </div>
           <div className="icon icon-2">
-            <img src={header[0].acf.icon2} alt="icon" />
+            <img src={icon02} alt="icon" />
           </div>
           <div className="icon icon-3">
-            <img src={header[0].acf.icon3} alt="icon" />
+            <img src={icon03} alt="icon" />
           </div>
         </div>
         <p
