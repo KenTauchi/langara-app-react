@@ -12,7 +12,7 @@
 
   .intro {
     position: relative;
-    margin-bottom: 365px;
+    margin-bottom: 300px;
     height: 422px;
     display: flex;
     flex-flow: column;
@@ -30,6 +30,7 @@
 
     @media screen and (min-width: 1200px) {
       height: 48vw;
+      margin-bottom: 21vw;
     }
 
     .intro-desc {
@@ -86,7 +87,8 @@
         width: 30vw;
       }
       @media screen and (min-width: 1200px) {
-        width: 25vw;
+        width: 19.5vw;
+        font-size: 1.5vw;
       }
     }
   }
@@ -128,6 +130,10 @@
     flex-flow: column;
     align-items: center;
 
+    @media screen and (min-width: 1200px) {
+      height: 43vw;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -150,23 +156,28 @@
     h1 {
       margin: 73px 110px 22px 110px;
       @extend %fontS !optional;
-      // font-size: 23px;
+      @media screen and (min-width: 1200px) {
+        margin: 12.7vw 31vw 2.9vw;
+      }
     }
 
     p {
       margin: 0 44px 59px 44px;
       @media screen and (min-width: 1200px) {
-        width: 45vw;
+        margin: 0 27vw 2vw;
       }
     }
 
     h2 a {
       @extend %fontS !optional;
-      // font-size: 22px;
-      padding: 16px 55px;
+
+      padding: 1.4px 55px;
       background-color: #ffffff;
       color: #f15a22;
       text-decoration: none;
+      @media screen and (min-width: 1200px) {
+        padding: 1.4vw 3.8vw;
+      }
     }
   }
 }

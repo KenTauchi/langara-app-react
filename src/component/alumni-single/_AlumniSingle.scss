@@ -6,18 +6,25 @@
     border-left: 33px solid #f15a22;
     padding-left: 33px;
     @media screen and (min-width: 1200px) {
-      border-left: 8px solid #f15a22;
+      border-left: 0.4vw solid #f15a22;
     }
     h2 {
       font-size: 18px;
       color: #707070;
-      @extend %fontB !optional;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
       margin: 0;
+      @media screen and (min-width: 1200px) {
+        font-size: 1.2vw;
+      }
     }
     p {
       text-align: left;
       margin: 0;
       font-size: 15px;
+      @media screen and (min-width: 1200px) {
+        font-size: 1.2vw;
+      }
     }
     @media screen and (min-width: 768px) {
       .stream,

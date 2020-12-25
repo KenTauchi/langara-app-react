@@ -7,6 +7,10 @@ import StudentWorkIntro from "../../component/student-work/student-work-intro/St
 
 import "./_ProjectCategoryPage.scss";
 
+// Third Party Libraries ========================
+import ReactLoading from "react-loading";
+// =============================================
+
 export default function ProjectCategoryPage() {
   let params = useParams();
   const projects = useFetch(
@@ -39,7 +43,9 @@ export default function ProjectCategoryPage() {
           </div>
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="loading">
+          <ReactLoading type={"bars"} color={"#F15a22"} className="bar" />
+        </div>
       )}
     </div>
   );

@@ -1,6 +1,6 @@
 .project-category-page {
   @media screen and (min-width: 1200px) {
-    margin: 0 calc(435px / 4);
+    margin: 0 8.5vw;
   }
   div {
     display: flex;
@@ -44,7 +44,8 @@
       margin: 0 41px 94px 41px;
 
       @media screen and (min-width: 1200px) {
-        margin: 0 calc(435px / 2) 142px;
+        margin: 0 15vw 7.4vw;
+        text-align: center;
       }
     }
     p {
@@ -55,6 +56,9 @@
     .intro-desc {
       @media screen and (min-width: 680px) {
         padding: 0 2rem;
+      }
+      @media screen and (min-width: 120px) {
+        padding: 0;
       }
     }
 

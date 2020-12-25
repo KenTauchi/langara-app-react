@@ -1,0 +1,111 @@
+.faq-desktop {
+  margin: 0 7.8vw;
+  .faq-top {
+    h1 {
+      @extend %fontS !optional;
+
+      margin: 3.7vw auto 1.5vw;
+      font-size: 2.4rem;
+      width: 71vw;
+      color: #f15a22;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      margin: 4vw 18.7vw;
+      padding: 0 2rem;
+      font-size: 1vw;
+    }
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 8.8vw auto 4.5vw;
+    p {
+      font-family: Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 1.2vw;
+      width: 19%;
+      padding: 0.3vw;
+      cursor: pointer;
+    }
+    p.wmdd,
+    p.wmdd-1,
+    p.while-2,
+    p.post-3,
+    p.international-4,
+    p.covid-5 {
+      color: #f15a22;
+      border: 1px solid #f15a22;
+    }
+  }
+
+  .faq-wrapper {
+    margin: 0.8vw 6vw 2.6vw;
+
+    h1 {
+      font-family: Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 1.8vw;
+      color: #f15a22;
+      text-align: center;
+      margin-bottom: 4.1vw;
+    }
+
+    .MuiPaper-elevation1 {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      //   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .MuiAccordion-root:before {
+      opacity: 0;
+    }
+
+    .MuiAccordionSummary-root {
+      padding: 0;
+      p {
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 1.2vw;
+      }
+    }
+
+    .MuiPaper-elevation1 {
+      box-shadow: none;
+    }
+
+    .MuiAccordionSummary-content {
+      margin: 1.66vw 0;
+      p {
+        color: #707070;
+        text-align: left;
+      }
+    }
+
+    .MuiAccordionDetails-root {
+      padding: 0;
+      display: block;
+      p,
+      a {
+        font-family: Helvetica, sans-serif;
+        font-size: 1.2vw;
+        color: #707070;
+        margin: 0;
+        text-align: left;
+      }
+
+      a {
+        display: block;
+        margin-bottom: 0.5vw;
+        text-align: left;
+      }
+    }
+
+    .MuiSvgIcon-root {
+      font-size: 2vw;
+    }
+  }
+}

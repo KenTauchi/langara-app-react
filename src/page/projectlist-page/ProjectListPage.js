@@ -6,6 +6,10 @@ import useFetch from "../../component/useFetch";
 import StudentWorkIntro from "../../component/student-work/student-work-intro/StudentWorkIntro";
 import "./_ProjectListPage.scss";
 
+// Third Party Libraries ========================
+import ReactLoading from "react-loading";
+// =============================================
+
 export default function ProjectListPage() {
   const projects = useFetch(`${API_URL}/wp-json/wp/v2/projects?per_page=100`);
 
@@ -73,8 +77,8 @@ export default function ProjectListPage() {
           ) : null
         )
       ) : (
-        <div>
-          <p>Loading...</p>
+        <div className="loading">
+          <ReactLoading type={"bars"} color={"#F15a22"} className="bar" />
         </div>
       )}
     </div>

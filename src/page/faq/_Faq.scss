@@ -1,0 +1,97 @@
+.faq {
+  .faq-top {
+    h1 {
+      @extend %fontS !optional;
+      font-size: 5.5vw;
+      margin: 17vw auto 5.5vw auto;
+      width: 71vw;
+      color: #f15a22;
+      text-align: center;
+    }
+
+    p {
+      text-align: left;
+      margin: 3.8vw 8.4vw;
+      font-size: 3.1vw;
+      @media screen and (min-width: 768px) {
+        padding: 0 2rem;
+      }
+    }
+
+    .note {
+      margin-top: 13.7vw;
+    }
+  }
+
+  .faq-wrapper {
+    margin: 3.86vw 8.5vw 12vw 7.2vw;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    .MuiAccordionSummary-root {
+      padding: 0;
+      p {
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 4.6vw;
+      }
+    }
+
+    .MuiPaper-elevation1 {
+      box-shadow: none;
+    }
+
+    .MuiAccordionSummary-content {
+      p {
+        color: #707070;
+      }
+      &.Mui-expanded {
+        p {
+          color: #f15a22;
+        }
+      }
+    }
+
+    .MuiAccordionDetails-root {
+      padding: 0;
+    }
+
+    .inner-accordion {
+      border-radius: 0;
+      box-shadow: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      //   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      .MuiAccordionSummary-content {
+        margin: 4.3vw 0;
+        p {
+          font-family: Helvetica, sans-serif;
+          font-size: 3.6vw;
+          font-weight: bold;
+          color: #707070;
+        }
+      }
+
+      .MuiAccordionDetails-root {
+        display: block;
+        p,
+        a {
+          font-family: Helvetica, sans-serif;
+          font-size: 3.6vw;
+          color: #707070;
+          margin: 0;
+        }
+
+        a {
+          display: block;
+          margin-bottom: 2vw;
+          text-align: left;
+        }
+      }
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+}

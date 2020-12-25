@@ -1,6 +1,6 @@
 .project-list-page {
   @media screen and (min-width: 1200px) {
-    margin: 0 calc(435px / 4);
+    margin: 0 8.5vw;
   }
   img {
     width: 100%;
@@ -33,7 +33,8 @@
       margin: 0 41px 94px 0px;
       text-align: left;
       @media screen and (min-width: 1200px) {
-        margin: 0 calc(435px / 2) 142px;
+        margin: 0 15vw 7.4vw;
+        text-align: center;
       }
     }
 
@@ -48,16 +49,10 @@
         margin-bottom: 121px;
 
         span {
-          font-size: 20px;
+          font-size: 1vw;
         }
       }
     }
-
-    // &:last-child {
-    //   a {
-    //     margin-bottom: 94px;
-    //   }
-    // }
   }
 
   .project-cat-list {

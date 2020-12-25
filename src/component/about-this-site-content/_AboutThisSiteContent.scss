@@ -1,0 +1,117 @@
+.about-this-site-content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 30vw;
+
+  @media screen and (min-width: 1200px) {
+    margin: 5.5vw 0;
+  }
+
+  h1 {
+    text-align: center;
+    // font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    color: #f15a22;
+    font-size: 4.5vw;
+    margin-bottom: 22vw;
+    @extend %fontS !optional;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 2vw;
+      margin-bottom: 1.9vw;
+      text-align: left;
+      align-self: end;
+    }
+  }
+
+  p {
+    margin-top: 16.5vw;
+    text-align: left;
+    @media screen and (min-width: 1200px) {
+      margin-top: 0;
+      margin-bottom: 1.5vw;
+      font-size: 1vw;
+    }
+  }
+
+  a {
+    align-self: start;
+    @extend %fontR !optional;
+    font-size: 2.9vw;
+    @media screen and (min-width: 1200px) {
+      font-size: 1vw;
+    }
+  }
+}
+
+.content-1,
+.content-3 {
+  @media screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    grid-template-rows: repeat(3, 0.01fr);
+    grid-column-gap: 3.2vw;
+
+    h1 {
+      grid-column: 1/ 2;
+      grid-row: 1 / 2;
+    }
+
+    div {
+      grid-column: 2/ 3;
+      grid-row: 1 / -1;
+    }
+
+    p {
+      grid-column: 1/ 2;
+      grid-row: 2 / 3;
+    }
+
+    a {
+      grid-column: 1/ 2;
+      grid-row: 3 / 4;
+      margin: 0;
+      text-align: left;
+    }
+  }
+}
+
+.content-1 {
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 17vw;
+  }
+}
+
+.content-2,
+.content-4 {
+  @media screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    grid-template-rows: repeat(3, 0.01fr);
+    grid-column-gap: 3.2vw;
+
+    h1 {
+      grid-column: 2/ 3;
+      grid-row: 1 / 2;
+    }
+
+    div {
+      grid-column: 1/ 2;
+      grid-row: 1 / -1;
+    }
+
+    p {
+      grid-column: 2/ 3;
+      grid-row: 2 / 3;
+    }
+
+    a {
+      grid-column: 2/ 3;
+      grid-row: 3 / 4;
+      margin: 0;
+      text-align: left;
+    }
+  }
+}
