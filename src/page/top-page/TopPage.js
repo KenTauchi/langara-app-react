@@ -11,7 +11,10 @@ import WebBannerWebP from "../../assets/homepage-bannerFinal.webp";
 import WebBannerJPG from "../../assets/homepage-bannerFinal.jpg";
 import background from "../../assets/hp_bg.png";
 
+// Third Party Libraries ========================
 import isWebPSupported from "is-webp-supported";
+import ReactLoading from "react-loading";
+// =============================================
 
 import "./_TopPage.scss";
 
@@ -88,8 +91,8 @@ export default function TopPage() {
             </div>
           </div>
         ) : (
-          <div>
-            <p>Loading...</p>
+          <div className="loading">
+            <ReactLoading type={"bars"} color={"#F15a22"} className="bar" />
           </div>
         )}
       </div>

@@ -6,6 +6,10 @@ import AlumniSingle from "../../component/alumni-single/AlumniSingle";
 
 import "./_Alumni.scss";
 
+// Third Party Libraries ========================
+import ReactLoading from "react-loading";
+// =============================================
+
 export default function Alumni() {
   const cf = useFetch(`${API_URL}/wp-json/wp/v2/pages?slug="alumni`);
 
@@ -26,7 +30,9 @@ export default function Alumni() {
           ))}
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="loading">
+          <ReactLoading type={"bars"} color={"#F15a22"} className="bar" />
+        </div>
       )}
     </div>
   );

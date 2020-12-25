@@ -3,12 +3,14 @@ import React from "react";
 import HeaderNav from "./component/navigation/header-nav/HeaderNav";
 import FooterNav from "./component/navigation/footer-nav/FooterNav";
 import Router from "./component/Router";
+import ScrollToTop from "./component/ScrollToTop";
 
 import CookieConsent from "react-cookie-consent";
 
 function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <HeaderNav />
       <Router />
       <FooterNav />

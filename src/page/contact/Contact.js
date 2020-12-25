@@ -5,6 +5,10 @@ import background from "../../assets/hp_bg.png";
 import useFetch from "../../component/useFetch";
 import "./_Contact.scss";
 
+// Third Party Libraries ========================
+import ReactLoading from "react-loading";
+// =============================================
+
 export default function Contact() {
   const contact = useFetch(`${API_URL}/wp-json/acf/v3/pages/402`);
 
@@ -29,6 +33,8 @@ export default function Contact() {
       </div>
     </div>
   ) : (
-    <p>Loading...</p>
+    <div className="loading">
+      <ReactLoading type={"bars"} color={"#F15a22"} className="bar" />
+    </div>
   );
 }

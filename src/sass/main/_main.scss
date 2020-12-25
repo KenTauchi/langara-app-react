@@ -47,6 +47,18 @@ a {
   font-size: 22px;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+
+  margin: 10rem auto 40rem;
+
+  .bar {
+    height: 100%;
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   h1 {
     font-size: 2.5vw;

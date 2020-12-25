@@ -3,11 +3,15 @@ import { API_URL } from "../../global_variable";
 
 import useFetch from "../../component/useFetch";
 
+// Third Party Libraries ========================
+import ReactLoading from "react-loading";
+
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+// =============================================
 
 const FaqDeskTop = () => {
   const faqTop = useFetch(`${API_URL}/wp-json/acf/v3/pages/854`);
@@ -82,7 +86,9 @@ const FaqDeskTop = () => {
           <p>{faqTop.acf.faq_sub_header_2}</p>
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="loading">
+          <ReactLoading type={"bars"} color={"#F15a22"} className="bar" />
+        </div>
       )}
 
       <div className="categories">
@@ -134,7 +140,7 @@ const FaqDeskTop = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {faq.acf.link !== undefined ? "Link" : null}
+                  {faq.acf.link !== undefined ? "More details" : null}
                 </a>
               </AccordionDetails>
             </Accordion>
@@ -142,7 +148,9 @@ const FaqDeskTop = () => {
           {data !== null ? null : <p>Please select category</p>}
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="loading">
+          <ReactLoading type={"bars"} color={"#F15a22"} className="bar" />
+        </div>
       )}
     </div>
   );

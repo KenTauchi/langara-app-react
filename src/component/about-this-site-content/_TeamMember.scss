@@ -19,6 +19,8 @@
   }
 
   .team-members {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     @media screen and (min-width: 1200px) {
       display: flex;
       flex-direction: row;
@@ -30,15 +32,14 @@
     margin-bottom: 7vw;
 
     .profile-image {
-      width: 27vw;
-      margin: 0 auto 5vw;
+      //   width: 27vw;
+      margin-bottom: 5vw;
       @media screen and (min-width: 1200px) {
         width: 21vw;
         margin-bottom: 3.1vw;
       }
     }
     img {
-      border-radius: 50%;
       @media screen and (min-width: 1200px) {
         border-radius: 0;
       }

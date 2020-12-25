@@ -9,6 +9,10 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
+// Third Party Libraries ========================
+import ReactLoading from "react-loading";
+// =============================================
+
 const Faq = () => {
   const faqTop = useFetch(`${API_URL}/wp-json/acf/v3/pages/854`);
   const faqs = useFetch(`${API_URL}/wp-json/wp/v2/faq?per_page=100`);
@@ -54,7 +58,9 @@ const Faq = () => {
           </p>
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="loading">
+          <ReactLoading type={"bars"} color={"#F15a22"} className="bar" />
+        </div>
       )}
 
       {faqArr !== null ? (
@@ -114,7 +120,9 @@ const Faq = () => {
           )}
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="loading">
+          <ReactLoading type={"bars"} color={"#F15a22"} className="bar" />
+        </div>
       )}
     </div>
   );

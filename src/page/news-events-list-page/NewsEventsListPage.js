@@ -5,8 +5,11 @@ import { API_URL } from "../../global_variable";
 
 import useFetch from "../../component/useFetch";
 import "./_NewsEventsListPage.scss";
-// import NewsEventsPage from "../news-events-page/NewsEventsPage;
 import NewsEventsIntro from "../../component/news-events/NewsEventsIntro/NewsEventsIntro";
+
+// Third Party Libraries ========================
+import ReactLoading from "react-loading";
+// =============================================
 
 export default function NewsEventsListPage() {
   const newsEventsTop = useFetch(
@@ -44,8 +47,8 @@ export default function NewsEventsListPage() {
       </p>
     </div>
   ) : (
-    <div>
-      <p>Loading...</p>
+    <div className="loading">
+      <ReactLoading type={"bars"} color={"#F15a22"} className="bar" />
     </div>
   );
 }

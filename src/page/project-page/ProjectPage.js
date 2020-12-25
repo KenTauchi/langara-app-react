@@ -7,6 +7,10 @@ import dateFormat from "../../component/dateFormat";
 
 import "./_ProjectPage.scss";
 
+// Third Party Libraries ========================
+import ReactLoading from "react-loading";
+// =============================================
+
 export default function ProjectPage() {
   let params = useParams();
   const project = useFetch(
@@ -92,8 +96,8 @@ export default function ProjectPage() {
           </div>
         ))
       ) : (
-        <div>
-          <p>Loading...</p>
+        <div className="loading">
+          <ReactLoading type={"bars"} color={"#F15a22"} className="bar" />
         </div>
       )}
     </div>

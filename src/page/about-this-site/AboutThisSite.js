@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { API_URL } from "../../global_variable";
 
 import useFetch from "../../component/useFetch";
@@ -6,9 +6,12 @@ import useFetch from "../../component/useFetch";
 import AboutThisSiteContent from "../../component/about-this-site-content/AboutThisSiteContent";
 import TeamMember from "../../component/about-this-site-content/TeamMember";
 
+import ReactLoading from "react-loading";
+
 import icon01 from "../../assets/icons01.svg";
 import icon02 from "../../assets/icons02.svg";
 import icon03 from "../../assets/icons03.svg";
+import video from "../../assets/branding-videor1.gif";
 
 const AboutThisSite = () => {
   const header = useFetch(
@@ -16,6 +19,10 @@ const AboutThisSite = () => {
   );
   const contents = useFetch(`${API_URL}/wp-json/acf/v3/about_this_site `);
   const members = useFetch(`${API_URL}/wp-json/acf/v3/langara_teammember`);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return contents !== null && header !== null ? (
     <div className="about-this-site">
@@ -42,7 +49,11 @@ const AboutThisSite = () => {
       {contents.reverse().map((content, index) => (
         <AboutThisSiteContent
           title={content.acf.title}
-          image={content.acf.image}
+          image={
+            content.acf.title !== "Branding Identity"
+              ? content.acf.image
+              : video
+          }
           description={content.acf.description}
           link_title={content.acf.link_title}
           link={content.acf.link}
@@ -70,7 +81,9 @@ const AboutThisSite = () => {
       ) : null}
     </div>
   ) : (
-    <p>Loading...</p>
+    <div className="loading">
+      <ReactLoading type={"bars"} color={"#F15a22"} className="bar" />
+    </div>
   );
 };
 

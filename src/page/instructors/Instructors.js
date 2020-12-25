@@ -6,6 +6,10 @@ import useFetch from "../../component/useFetch";
 
 import "./_Instructors.scss";
 
+// Third Party Libraries ========================
+import ReactLoading from "react-loading";
+// =============================================
+
 export default function Instructors() {
   const cf = useFetch(`${API_URL}/wp-json/acf/v3/pages/383`);
 
@@ -24,8 +28,8 @@ export default function Instructors() {
           </div>
         </div>
       ) : (
-        <div>
-          <p>Loading...</p>
+        <div className="loading">
+          <ReactLoading type={"bars"} color={"#F15a22"} className="bar" />
         </div>
       )}
     </div>
