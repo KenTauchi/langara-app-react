@@ -8,9 +8,9 @@ import TeamMember from "../../component/about-this-site-content/TeamMember";
 
 import ReactLoading from "react-loading";
 
-import icon01 from "../../assets/icons01.svg";
-import icon02 from "../../assets/icons02.svg";
-import icon03 from "../../assets/icons03.svg";
+import icon01 from "../../assets/icons-04.svg";
+import icon02 from "../../assets/icons-05.svg";
+import icon03 from "../../assets/icons-06.svg";
 import video from "../../assets/branding-videor1.gif";
 
 const AboutThisSite = () => {

@@ -22,10 +22,13 @@
     margin: 0;
 
     a {
-      padding: 0 1rem;
+      padding: 0 0.5rem;
       border-right: 1px solid #707070;
       font-size: 12px;
       text-decoration: none;
+      @media screen and (min-width: 414px) {
+        padding: 0 1rem;
+      }
       @media screen and (min-width: 1200px) {
         font-size: 1.66vw;
         border: none;
