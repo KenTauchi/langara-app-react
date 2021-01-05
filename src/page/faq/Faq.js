@@ -52,7 +52,7 @@ const Faq = () => {
         <div className="faq-top">
           <h1>{faqTop.acf.faq_header}</h1>
           <p>{faqTop.acf.faq_sub_header_1}</p>
-          <p>{faqTop.acf.faq_sub_header_2}</p>
+          {/* <p>{faqTop.acf.faq_sub_header_2}</p> */}
           <p className="note">
             Select a category that suites your query the best.
           </p>
