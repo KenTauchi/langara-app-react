@@ -20,7 +20,7 @@ const AboutThisSiteContent = ({
           __html: description,
         }}
       ></p>
-      <a href={link}>{link_title}</a>
+      {link_title === "" ? null : <a href={link}>{link_title}</a>}
     </div>
   );
 };
