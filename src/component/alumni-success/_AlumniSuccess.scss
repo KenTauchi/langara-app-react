@@ -33,23 +33,32 @@
   }
   .swiper-slide {
     width: 367px;
-    height: 220vw;
+    height: 190vw;
     text-align: left;
 
     @media screen and (min-width: 414px) {
-      height: 200vw;
+      height: 190vw;
     }
-
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 450px) {
       height: 180vw;
     }
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 500px) {
       height: 170vw;
+    }
+    @media screen and (min-width: 550px) {
+      height: 160vw;
+    }
+
+    @media screen and (min-width: 600px) {
+      height: 155vw;
+    }
+    @media screen and (min-width: 650px) {
+      height: 150vw;
     }
 
     @media screen and (min-width: 700px) {
-      height: 160vw;
+      height: 145vw;
     }
     @media screen and (min-width: 768px) {
       height: 60vw;
@@ -88,8 +97,8 @@
     }
 
     .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
+      width: 15px;
+      height: 15px;
       background: #f15a22;
       margin: 0 7px;
     }
