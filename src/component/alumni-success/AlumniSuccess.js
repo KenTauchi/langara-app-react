@@ -31,7 +31,7 @@ export default function AlumniSuccess() {
         paginationstyle={{ bottom: 0 }}
       >
         {alumnis.map((alumni, index) => {
-          return (
+          return alumni.acf.alumni_name === "Eduard Landa" ? null : (
             <SwiperSlide tag="li" key={index}>
               <div className="slide">
                 <h2 className="char1">“</h2>
